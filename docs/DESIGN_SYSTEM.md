@@ -5,6 +5,7 @@
 ### Primary Colors
 
 #### Background
+
 ```
 Hex: #1a1a2e
 HSL: 214 24% 18%
@@ -13,6 +14,7 @@ Usage: Main page background, dark theme foundation
 ```
 
 #### Surface
+
 ```
 Hex: #16213e
 HSL: 214 29% 24%
@@ -21,6 +23,7 @@ Usage: Cards, panels, elevated elements
 ```
 
 #### Surface Elevated
+
 ```
 Hex: #1f2b47
 HSL: 215 16% 28%
@@ -33,6 +36,7 @@ Usage: Hover states, active elements, raised surfaces
 ### Accent Colors
 
 #### Primary Accent (Red)
+
 ```
 Hex: #e94560
 HSL: 350 82% 60%
@@ -41,6 +45,7 @@ Usage: Primary buttons, links, main CTAs
 ```
 
 #### Primary Accent Hover
+
 ```
 Hex: #d63d56
 HSL: 350 82% 48%
@@ -49,6 +54,7 @@ Usage: Button hover states, interactive feedback
 ```
 
 #### Primary Accent Light
+
 ```
 Hex: #f8b4c4
 HSL: 343 91% 79%
@@ -57,6 +63,7 @@ Usage: Light backgrounds, highlights, focus states
 ```
 
 #### Secondary Accent (Teal)
+
 ```
 Hex: #4ecdc4
 HSL: 178 62% 55%
@@ -65,6 +72,7 @@ Usage: Secondary actions, success states, complementary highlights
 ```
 
 #### Secondary Accent Light
+
 ```
 Hex: #7eddd6
 HSL: 174 62% 69%
@@ -77,6 +85,7 @@ Usage: Light secondary backgrounds, hover states
 ### Text Colors
 
 #### Primary Text
+
 ```
 Hex: #ffffff
 HSL: 0 0% 100%
@@ -85,6 +94,7 @@ Usage: Main body text, headings
 ```
 
 #### Muted Text
+
 ```
 Hex: #9ca3af
 HSL: 220 9% 61%
@@ -93,6 +103,7 @@ Usage: Secondary text, labels, metadata
 ```
 
 #### Subtle Text
+
 ```
 Hex: #6b7280
 HSL: 217 12% 43%
@@ -105,6 +116,7 @@ Usage: Tertiary text, disabled states, hints
 ### Border & Divider
 
 #### Border (Primary)
+
 ```
 Hex: #4a3f6b
 HSL: 270 11% 43%
@@ -113,6 +125,7 @@ Usage: Card borders, dividers, separators
 ```
 
 #### Border Light
+
 ```
 RGBA: rgba(255, 255, 255, 0.1)
 Usage: Subtle borders, light dividers
@@ -123,6 +136,7 @@ Usage: Subtle borders, light dividers
 ### Semantic Colors
 
 #### Success
+
 ```
 Hex: #4ecdc4
 HSL: 178 62% 55%
@@ -131,6 +145,7 @@ Usage: Success messages, positive feedback, checks
 ```
 
 #### Warning
+
 ```
 Hex: #ffd93d
 HSL: 46 100% 50%
@@ -139,6 +154,7 @@ Usage: Warnings, cautions, alerts
 ```
 
 #### Error
+
 ```
 Hex: #e94560
 HSL: 350 82% 60%
@@ -151,16 +167,19 @@ Usage: Errors, destructive actions, failures
 ## 📐 Typography
 
 ### Font Family
+
 - **Primary**: Inter (imported from Google Fonts)
 - **Fallback**: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif
 
 ### Font Weights
+
 - **Regular (400)**: Body text, descriptions
 - **Semibold (600)**: Labels, secondary headings
 - **Bold (700)**: Main headings, emphasis
 - **Black (800)**: Hero text, major headings
 
 ### Font Sizes
+
 ```
 Headings:
 - H1 (Hero): 3.5rem - 4.5rem / 56px - 72px
@@ -177,6 +196,7 @@ Body:
 ```
 
 ### Line Height
+
 - Headings: 1.1 (tight)
 - Body: 1.6 (comfortable)
 - Code: 1.5 (readable)
@@ -206,6 +226,7 @@ Spacing Scale:
 ```
 
 ### Common Padding
+
 ```
 Containers: 24px (6 units)
 Cards: 24px (6 units)
@@ -214,6 +235,7 @@ Inputs: 10px vertical / 12px horizontal
 ```
 
 ### Common Margins
+
 ```
 Section spacing: 32px - 48px (8-12 units)
 Element spacing: 16px - 24px (4-6 units)
@@ -234,6 +256,7 @@ Full: 9999px (rounded)
 ```
 
 **Applied to:**
+
 - Buttons: 8px
 - Input fields: 8px
 - Cards: 8px
@@ -245,6 +268,7 @@ Full: 9999px (rounded)
 ## 💫 Animations & Transitions
 
 ### Duration
+
 - **Instant**: 0ms
 - **Fast**: 100ms (feedback)
 - **Normal**: 200ms (standard)
@@ -252,6 +276,7 @@ Full: 9999px (rounded)
 - **Glacial**: 500ms (complex)
 
 ### Easing Functions
+
 ```
 ease-out (exit): cubic-bezier(0.16, 1, 0.3, 1)
 ease-in (enter): cubic-bezier(0.7, 0, 0.84, 0)
@@ -259,6 +284,7 @@ ease-in-out: cubic-bezier(0.4, 0, 0.2, 1)
 ```
 
 ### Common Animations
+
 - **Fade**: Opacity 200ms ease-out
 - **Slide**: Transform 200ms ease-out
 - **Scale**: Transform 200ms ease-out
@@ -303,6 +329,7 @@ xl: 1280px
 ### Buttons
 
 #### Primary Button
+
 ```
 Background: #e94560 (Primary Accent)
 Text: #ffffff (White)
@@ -317,6 +344,7 @@ Disabled: #6b7280
 ```
 
 #### Secondary Button
+
 ```
 Background: #4ecdc4 (Secondary Accent)
 Text: #1a1a2e (Background)
@@ -331,6 +359,7 @@ Disabled: #6b7280
 ```
 
 #### Outline Button
+
 ```
 Background: transparent
 Border: 1px solid #4a3f6b
@@ -343,6 +372,7 @@ Focus: Border #e94560
 ```
 
 ### Cards
+
 ```
 Background: #16213e (Surface)
 Border: 1px solid #4a3f6b
@@ -358,6 +388,7 @@ Hover:
 ```
 
 ### Input Fields
+
 ```
 Background: #1a1a2e (Background)
 Border: 1px solid #4a3f6b
@@ -374,6 +405,7 @@ Disabled: #6b7280, opacity 0.5
 ```
 
 ### Badges
+
 ```
 Background: #e94560 (Primary)
 Text: #ffffff
@@ -393,17 +425,17 @@ Variants:
 
 ## 🎨 Color Usage by Component
 
-| Component | Primary | Secondary | Background | Usage |
-|-----------|---------|-----------|------------|-------|
-| Buttons | #e94560 | #4ecdc4 | #1a1a2e | CTAs |
-| Links | #e94560 | - | - | Navigation |
-| Badges | #e94560 | #4ecdc4 | #1a1a2e | Status |
-| Cards | - | - | #16213e | Containers |
-| Text | #ffffff | #9ca3af | - | Content |
-| Borders | - | - | #4a3f6b | Dividers |
-| Success | #4ecdc4 | - | #16213e | Positive |
-| Warning | #ffd93d | - | #16213e | Cautions |
-| Error | #e94560 | - | #16213e | Failures |
+| Component | Primary | Secondary | Background | Usage      |
+| --------- | ------- | --------- | ---------- | ---------- |
+| Buttons   | #e94560 | #4ecdc4   | #1a1a2e    | CTAs       |
+| Links     | #e94560 | -         | -          | Navigation |
+| Badges    | #e94560 | #4ecdc4   | #1a1a2e    | Status     |
+| Cards     | -       | -         | #16213e    | Containers |
+| Text      | #ffffff | #9ca3af   | -          | Content    |
+| Borders   | -       | -         | #4a3f6b    | Dividers   |
+| Success   | #4ecdc4 | -         | #16213e    | Positive   |
+| Warning   | #ffd93d | -         | #16213e    | Cautions   |
+| Error     | #e94560 | -         | #16213e    | Failures   |
 
 ---
 
@@ -432,22 +464,26 @@ Variants:
 ```
 
 ### Usage in Tailwind
+
 ```html
 <!-- Background -->
 <div class="bg-atelier-bg">
-<div class="bg-atelier-surface">
-<div class="bg-atelier-surface-elevated">
-
-<!-- Text -->
-<p class="text-atelier-text">
-<p class="text-atelier-text-muted">
-
-<!-- Buttons -->
-<button class="bg-atelier-primary">
-<button class="hover:bg-atelier-primary-hover">
-
-<!-- Borders -->
-<div class="border border-atelier-border">
+  <div class="bg-atelier-surface">
+    <div class="bg-atelier-surface-elevated">
+      <!-- Text -->
+      <p class="text-atelier-text"></p>
+      <p class="text-atelier-text-muted">
+        <!-- Buttons -->
+        <button class="bg-atelier-primary">
+          <button class="hover:bg-atelier-primary-hover">
+            <!-- Borders -->
+            <div class="border border-atelier-border"></div>
+          </button>
+        </button>
+      </p>
+    </div>
+  </div>
+</div>
 ```
 
 ---
@@ -455,24 +491,28 @@ Variants:
 ## 📚 Design Patterns
 
 ### Call-to-Action (CTA)
+
 - Primary button in primary accent color
 - 16px minimum padding
 - Clear, action-oriented text
 - Subtle shadow on hover
 
 ### Form Layout
+
 - Labels above inputs
 - 16px spacing between fields
 - Error messages in red (#e94560)
 - Success messages in teal (#4ecdc4)
 
 ### Cards
+
 - White text on dark surface
 - Subtle borders
 - Hover state with elevated background
 - Consistent padding (24px)
 
 ### Typography Hierarchy
+
 - H1: Hero text, largest
 - H2: Section headers
 - H3: Subsection headers
@@ -484,6 +524,7 @@ Variants:
 ## 🌙 Dark Mode
 
 The design system is dark-mode first:
+
 - Dark backgrounds (#1a1a2e base)
 - Light text (#ffffff)
 - Vibrant accents (red #e94560, teal #4ecdc4)
@@ -496,16 +537,19 @@ All colors maintain accessibility (WCAG AA minimum).
 ## ♿ Accessibility
 
 ### Color Contrast
+
 - Text on background: 6.5:1 ratio (AAA)
 - Button text: 7:1 ratio (AAA)
 - Secondary text: 4.5:1 ratio (AA)
 
 ### Color Independence
+
 - Don't rely on color alone
 - Use text labels with icons
 - Provide alternative indicators
 
 ### Focus States
+
 - Visible focus rings on all interactive elements
 - High contrast on focus
 - At least 3px visible focus indicator
@@ -515,6 +559,7 @@ All colors maintain accessibility (WCAG AA minimum).
 ## 🎓 Design System Usage
 
 ### For Developers
+
 ```tsx
 // Using Tailwind classes
 <button className="bg-atelier-primary text-atelier-bg hover:bg-atelier-primary-hover">
@@ -528,6 +573,7 @@ All colors maintain accessibility (WCAG AA minimum).
 ```
 
 ### For Designers
+
 - Export colors to design tool
 - Use spacing scale (4px base)
 - Follow typography hierarchy
@@ -539,12 +585,15 @@ All colors maintain accessibility (WCAG AA minimum).
 ## 📦 Exporting for Other Projects
 
 ### CSS File
+
 All colors available in `/client/global.css`
 
 ### Tailwind Config
+
 All tokens configured in `tailwind.config.ts`
 
 ### Design Tokens (JSON)
+
 ```json
 {
   "colors": {
@@ -561,16 +610,19 @@ All tokens configured in `tailwind.config.ts`
 ## 🔮 Design System Evolution
 
 ### v1.0 (Current)
+
 - Dark mode only
 - 2 primary colors
 - Basic component patterns
 
 ### v1.1 (Planned)
+
 - Light mode variant
 - Extended color palette
 - Component documentation
 
 ### v2.0 (Planned)
+
 - CSS-in-JS support
 - Figma integration
 - Design tokens package

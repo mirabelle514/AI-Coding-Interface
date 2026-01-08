@@ -5,6 +5,7 @@
 ## 1️⃣ Voice-to-Code 🎤
 
 ### What It Does
+
 Converts spoken words directly into functional code using speech recognition and AI code generation.
 
 ### How It Works
@@ -21,15 +22,17 @@ User Experience:
 ### Example Flow
 
 **User Says:**
+
 > "Create a TypeScript function that checks if a number is prime"
 
 **System Generates:**
+
 ```typescript
 function isPrime(num: number): boolean {
   if (num <= 1) return false;
   if (num <= 3) return true;
   if (num % 2 === 0 || num % 3 === 0) return false;
-  
+
   for (let i = 5; i * i <= num; i += 6) {
     if (num % i === 0 || num % (i + 2) === 0) return false;
   }
@@ -48,13 +51,13 @@ function isPrime(num: number): boolean {
 
 ### Benefits
 
-| Benefit | Impact |
-|---------|--------|
-| **Speed** | 3-5x faster than typing |
+| Benefit           | Impact                                 |
+| ----------------- | -------------------------------------- |
+| **Speed**         | 3-5x faster than typing                |
 | **Accessibility** | Better for people with mobility issues |
-| **Context** | Great for explaining logic |
-| **Accuracy** | AI understands natural language |
-| **Learning** | See how natural language maps to code |
+| **Context**       | Great for explaining logic             |
+| **Accuracy**      | AI understands natural language        |
+| **Learning**      | See how natural language maps to code  |
 
 ### Use Cases
 
@@ -62,7 +65,7 @@ function isPrime(num: number): boolean {
 ✅ Rapid prototyping  
 ✅ Generating boilerplate code  
 ✅ Code documentation via voice  
-✅ Accessibility-focused development  
+✅ Accessibility-focused development
 
 ### Technical Implementation
 
@@ -85,6 +88,7 @@ function isPrime(num: number): boolean {
 ## 2️⃣ Gesture Recognition 🤖
 
 ### What It Does
+
 Control IDE and manipulate code using hand gestures captured via webcam.
 
 ### How It Works
@@ -100,14 +104,14 @@ User Experience:
 
 ### Gesture Commands
 
-| Gesture | Action | Use Case |
-|---------|--------|----------|
-| **Open Hand** | Select/Highlight | Select code block |
-| **Two Fingers** | Copy | Copy selected code |
-| **Thumbs Up** | Format | Auto-format code |
-| **Fist** | Delete | Delete selection |
-| **Swipe Left** | Previous Line | Navigate up |
-| **Swipe Right** | Next Line | Navigate down |
+| Gesture         | Action           | Use Case           |
+| --------------- | ---------------- | ------------------ |
+| **Open Hand**   | Select/Highlight | Select code block  |
+| **Two Fingers** | Copy             | Copy selected code |
+| **Thumbs Up**   | Format           | Auto-format code   |
+| **Fist**        | Delete           | Delete selection   |
+| **Swipe Left**  | Previous Line    | Navigate up        |
+| **Swipe Right** | Next Line        | Navigate down      |
 
 ### Key Features
 
@@ -120,13 +124,13 @@ User Experience:
 
 ### Benefits
 
-| Benefit | Impact |
-|---------|--------|
-| **Hands-Free** | No keyboard/mouse required |
-| **Intuitive** | Natural hand movements |
-| **Accessibility** | Multiple input methods |
-| **RSI Prevention** | Reduces repetitive strain |
-| **Fun Factor** | More engaging interaction |
+| Benefit            | Impact                     |
+| ------------------ | -------------------------- |
+| **Hands-Free**     | No keyboard/mouse required |
+| **Intuitive**      | Natural hand movements     |
+| **Accessibility**  | Multiple input methods     |
+| **RSI Prevention** | Reduces repetitive strain  |
+| **Fun Factor**     | More engaging interaction  |
 
 ### Use Cases
 
@@ -134,7 +138,7 @@ User Experience:
 ✅ Accessibility for mobility-impaired users  
 ✅ Reducing keyboard strain  
 ✅ Interactive education/mentoring  
-✅ Futuristic development experience  
+✅ Futuristic development experience
 
 ### Technical Implementation
 
@@ -157,6 +161,7 @@ User Experience:
 ## 3️⃣ Collaborative Coding 👥
 
 ### What It Does
+
 Real-time pair programming with AI assistance via WebRTC peer-to-peer connections.
 
 ### How It Works
@@ -198,12 +203,14 @@ Timeline:
 ### Connection Types
 
 **WebRTC P2P** (Primary)
+
 - Direct connection between peers
 - No server intermediary for code sync
 - Ultra-low latency (10-50ms)
 - Better privacy
 
 **WebSocket Fallback**
+
 - Server-mediated connection
 - Works through more firewalls
 - Slightly higher latency
@@ -211,13 +218,13 @@ Timeline:
 
 ### Benefits
 
-| Benefit | Impact |
-|---------|--------|
-| **Low Latency** | Real-time synchronization |
-| **Knowledge Sharing** | Learning from peers |
-| **Bug Reduction** | Pair review catches issues |
-| **Remote Friendly** | Distributed teams can pair |
-| **AI Assistance** | Smart suggestions for both |
+| Benefit               | Impact                     |
+| --------------------- | -------------------------- |
+| **Low Latency**       | Real-time synchronization  |
+| **Knowledge Sharing** | Learning from peers        |
+| **Bug Reduction**     | Pair review catches issues |
+| **Remote Friendly**   | Distributed teams can pair |
+| **AI Assistance**     | Smart suggestions for both |
 
 ### Use Cases
 
@@ -225,7 +232,7 @@ Timeline:
 ✅ Remote onboarding  
 ✅ Pair programming sessions  
 ✅ Technical interviews  
-✅ Complex problem-solving  
+✅ Complex problem-solving
 
 ### Technical Implementation
 
@@ -250,6 +257,7 @@ Timeline:
 ## 4️⃣ AI Assistant Overlay ✨
 
 ### What It Does
+
 Context-aware real-time coding assistance with inline suggestions, code analysis, and quality metrics.
 
 ### How It Works
@@ -296,13 +304,13 @@ function calculateTotal(items) {
 
 ### Suggestion Types
 
-| Type | Example | Impact |
-|------|---------|--------|
-| **Performance** | Use `reduce()` instead of loop | Better performance |
-| **Security** | Add input validation | Fewer vulnerabilities |
-| **Readability** | Extract to named function | Cleaner code |
-| **Type Safety** | Add type annotations | Fewer runtime errors |
-| **Best Practices** | Use async/await instead of promises | Modern code |
+| Type               | Example                             | Impact                |
+| ------------------ | ----------------------------------- | --------------------- |
+| **Performance**    | Use `reduce()` instead of loop      | Better performance    |
+| **Security**       | Add input validation                | Fewer vulnerabilities |
+| **Readability**    | Extract to named function           | Cleaner code          |
+| **Type Safety**    | Add type annotations                | Fewer runtime errors  |
+| **Best Practices** | Use async/await instead of promises | Modern code           |
 
 ### Code Quality Metrics
 
@@ -326,13 +334,13 @@ Security (85%)
 
 ### Benefits
 
-| Benefit | Impact |
-|---------|--------|
-| **Learning** | Learn best practices as you code |
-| **Bug Prevention** | Catch issues before commit |
-| **Improved Quality** | Higher code standards |
-| **Faster Development** | Less time on code review |
-| **Knowledge Transfer** | Onboard juniors faster |
+| Benefit                | Impact                           |
+| ---------------------- | -------------------------------- |
+| **Learning**           | Learn best practices as you code |
+| **Bug Prevention**     | Catch issues before commit       |
+| **Improved Quality**   | Higher code standards            |
+| **Faster Development** | Less time on code review         |
+| **Knowledge Transfer** | Onboard juniors faster           |
 
 ### Use Cases
 
@@ -340,7 +348,7 @@ Security (85%)
 ✅ Code quality improvement  
 ✅ Security hardening  
 ✅ Performance optimization  
-✅ Onboarding junior developers  
+✅ Onboarding junior developers
 
 ### Technical Implementation
 
@@ -363,37 +371,41 @@ Security (85%)
 
 ## Prototype Comparison
 
-| Feature | Voice | Gesture | Collab | AI Overlay |
-|---------|-------|---------|--------|-----------|
-| **Speed** | ⚡⚡⚡ | ⚡⚡ | ⚡⚡⚡ | ⚡ |
-| **Learning Curve** | Medium | Easy | Easy | Easy |
-| **Accessibility** | High | High | Medium | High |
-| **Team Features** | Low | Low | High | Medium |
-| **Real-time** | Yes | Yes | Yes | Yes |
-| **Works Offline** | No* | Yes | No* | Partial |
+| Feature            | Voice  | Gesture | Collab | AI Overlay |
+| ------------------ | ------ | ------- | ------ | ---------- |
+| **Speed**          | ⚡⚡⚡ | ⚡⚡    | ⚡⚡⚡ | ⚡         |
+| **Learning Curve** | Medium | Easy    | Easy   | Easy       |
+| **Accessibility**  | High   | High    | Medium | High       |
+| **Team Features**  | Low    | Low     | High   | Medium     |
+| **Real-time**      | Yes    | Yes     | Yes    | Yes        |
+| **Works Offline**  | No\*   | Yes     | No\*   | Partial    |
 
-*Voice and Collab require backend/network connection
+\*Voice and Collab require backend/network connection
 
 ---
 
 ## 🎯 How to Choose a Prototype
 
 **Use Voice-to-Code when:**
+
 - Writing from scratch
 - Need speed for boilerplate
 - Explaining logic out loud
 
 **Use Gesture Recognition when:**
+
 - Need hands-free control
 - Presenting to audience
 - Reducing RSI/fatigue
 
 **Use Collaborative Coding when:**
+
 - Pair programming
 - Code reviews with feedback
 - Remote teamwork
 
 **Use AI Overlay when:**
+
 - Learning best practices
 - Improving code quality
 - Security/performance review

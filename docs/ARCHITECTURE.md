@@ -163,15 +163,18 @@ User sees suggestions inline
 ## 🔐 Security Considerations
 
 ### Authentication
+
 - Future: OAuth2 / JWT tokens
 - Current: Session-based (demo mode)
 
 ### Data Privacy
+
 - No data persisted without consent
 - P2P connections don't route through servers
 - End-to-end encryption for collaborative sessions (planned)
 
 ### Input Validation
+
 - All API inputs validated with Zod schemas
 - XSS protection via React's built-in escaping
 - CSRF tokens for state-changing operations
@@ -181,17 +184,20 @@ User sees suggestions inline
 ## 🚀 Performance Optimizations
 
 ### Frontend
+
 - **Code Splitting** - Each page lazy-loaded
 - **Tree Shaking** - Unused code removed at build
 - **Component Memoization** - Prevent unnecessary re-renders
 - **Image Optimization** - Compressed assets
 
 ### Real-Time
+
 - **WebRTC Direct** - Bypass server for P2P sync
 - **Message Batching** - Reduce network overhead
 - **Delta Compression** - Send only changes, not full state
 
 ### Backend
+
 - **Concurrent Processing** - Handle multiple requests efficiently
 - **Caching** - Store frequent responses
 - **Connection Pooling** - Reuse database connections
@@ -201,6 +207,7 @@ User sees suggestions inline
 ## 🔌 API Endpoints (Future)
 
 ### Voice-to-Code
+
 ```
 POST /api/transcribe
   Request: { audio: AudioBlob, language: string }
@@ -212,6 +219,7 @@ POST /api/generate-code
 ```
 
 ### Gesture Recognition
+
 ```
 POST /api/process-gesture
   Request: { handData: HandLandmarks, command: string }
@@ -219,6 +227,7 @@ POST /api/process-gesture
 ```
 
 ### Collaborative Coding
+
 ```
 WS /ws/collaborate/:sessionId
   - Real-time code synchronization
@@ -232,10 +241,11 @@ POST /api/create-session
 ```
 
 ### AI Overlay
+
 ```
 POST /api/analyze-code
   Request: { code: string, language: string }
-  Response: { 
+  Response: {
     suggestions: Suggestion[],
     metrics: { readability: number, performance: number, security: number },
     issues: Issue[]
@@ -251,16 +261,19 @@ POST /api/apply-suggestion
 ## 🧪 Testing Strategy
 
 ### Unit Tests
+
 - Component rendering
 - Hook behavior
 - Utility functions
 
 ### Integration Tests
+
 - API calls and responses
 - WebRTC connection handling
 - State synchronization
 
 ### E2E Tests
+
 - Full user workflows
 - Multi-device interactions
 - Error scenarios
@@ -270,11 +283,13 @@ POST /api/apply-suggestion
 ## 📈 Scalability
 
 ### Horizontal Scaling
+
 - Stateless frontend (served via CDN)
 - Backend load balancing
 - Database replication
 
 ### Vertical Optimization
+
 - Connection pooling
 - Query optimization
 - Caching strategies
@@ -295,24 +310,28 @@ POST /api/apply-suggestion
 ## 📚 Design Decisions
 
 ### Why WebRTC over WebSockets?
+
 - Direct P2P for lower latency
 - No single point of failure
 - Better for collaborative features
 - Scales to many concurrent connections
 
 ### Why Atelier Design System?
+
 - Professional, modern aesthetic
 - Comprehensive color palette
 - Accessible by default
 - Consistent across all prototypes
 
 ### Why React Router v6?
+
 - Modern routing patterns
 - Nested routes support
 - Better TypeScript support
 - Improved performance
 
 ### Why Go Backend?
+
 - High performance
 - Concurrent request handling
 - Compiled language (safety)

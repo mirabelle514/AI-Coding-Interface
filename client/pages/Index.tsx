@@ -15,7 +15,9 @@ export default function Index() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-atelier-primary/10 border border-atelier-border mb-6">
               <Code2 className="w-4 h-4 text-atelier-primary" />
-              <span className="text-xs font-semibold text-atelier-primary uppercase tracking-wide">Design-to-Code Bridge</span>
+              <span className="text-xs font-semibold text-atelier-primary uppercase tracking-wide">
+                Design-to-Code Bridge
+              </span>
             </div>
 
             {/* Main headline */}
@@ -31,7 +33,9 @@ export default function Index() {
 
             {/* Subtitle */}
             <p className="text-base md:text-lg text-atelier-text-muted max-w-2xl mb-8 leading-relaxed">
-              Experience the future of coding with voice-to-code, gesture recognition, and collaborative pair programming powered by AI. Real-time, WebRTC-driven development at your fingertips.
+              Experience the future of coding with voice-to-code, gesture
+              recognition, and collaborative pair programming powered by AI.
+              Real-time, WebRTC-driven development at your fingertips.
             </p>
 
             {/* CTA Buttons */}
@@ -79,14 +83,18 @@ export default function Index() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 md:py-32 px-4 bg-atelier-surface/50">
+      <section
+        id="features"
+        className="py-20 md:py-32 px-4 bg-atelier-surface/50"
+      >
         <div className="container max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-atelier-text mb-4">
               Advanced Prototypes
             </h2>
             <p className="text-base text-atelier-text-muted max-w-2xl mx-auto">
-              Four cutting-edge prototypes showcasing the future of AI-assisted development
+              Four cutting-edge prototypes showcasing the future of AI-assisted
+              development
             </p>
           </div>
 
@@ -164,21 +172,11 @@ export default function Index() {
             {[
               {
                 category: "Frontend",
-                items: [
-                  "React 18",
-                  "TypeScript",
-                  "Tailwind CSS",
-                  "Vite",
-                ],
+                items: ["React 18", "TypeScript", "Tailwind CSS", "Vite"],
               },
               {
                 category: "Real-time",
-                items: [
-                  "WebRTC",
-                  "WebSocket",
-                  "P2P Connections",
-                  "Live Sync",
-                ],
+                items: ["WebRTC", "WebSocket", "P2P Connections", "Live Sync"],
               },
               {
                 category: "Backend",
@@ -221,7 +219,8 @@ export default function Index() {
             Ready to Experience the Future?
           </h2>
           <p className="text-base text-atelier-text-muted mb-10 max-w-2xl mx-auto">
-            Explore our prototypes and discover how AI can transform your development workflow.
+            Explore our prototypes and discover how AI can transform your
+            development workflow.
           </p>
           <Link
             to="/voice-to-code"
@@ -243,64 +242,98 @@ export default function Index() {
                 D2C Bridge
               </div>
               <p className="text-sm text-atelier-text-muted">
-                Design-to-Code Bridge: Advanced AI coding interfaces for the future of development.
+                Design-to-Code Bridge: Advanced AI coding interfaces for the
+                future of development.
               </p>
             </div>
             <div>
-              <h4 className="font-semibold text-atelier-text mb-4">Prototypes</h4>
+              <h4 className="font-semibold text-atelier-text mb-4">
+                Prototypes
+              </h4>
               <ul className="space-y-2 text-sm text-atelier-text-muted">
                 <li>
-                  <Link to="/voice-to-code" className="hover:text-atelier-primary transition-colors duration-200">
+                  <Link
+                    to="/voice-to-code"
+                    className="hover:text-atelier-primary transition-colors duration-200"
+                  >
                     Voice-to-Code
                   </Link>
                 </li>
                 <li>
-                  <Link to="/gesture-recognition" className="hover:text-atelier-primary transition-colors duration-200">
+                  <Link
+                    to="/gesture-recognition"
+                    className="hover:text-atelier-primary transition-colors duration-200"
+                  >
                     Gesture Recognition
                   </Link>
                 </li>
                 <li>
-                  <Link to="/collaborative-coding" className="hover:text-atelier-primary transition-colors duration-200">
+                  <Link
+                    to="/collaborative-coding"
+                    className="hover:text-atelier-primary transition-colors duration-200"
+                  >
                     Collaborative Coding
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-atelier-text mb-4">Technology</h4>
+              <h4 className="font-semibold text-atelier-text mb-4">
+                Technology
+              </h4>
               <ul className="space-y-2 text-sm text-atelier-text-muted">
                 <li>
-                  <a href="#" className="hover:text-atelier-primary transition-colors duration-200">
+                  <a
+                    href="#"
+                    className="hover:text-atelier-primary transition-colors duration-200"
+                  >
                     WebRTC
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-atelier-primary transition-colors duration-200">
+                  <a
+                    href="#"
+                    className="hover:text-atelier-primary transition-colors duration-200"
+                  >
                     React
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-atelier-primary transition-colors duration-200">
+                  <a
+                    href="#"
+                    className="hover:text-atelier-primary transition-colors duration-200"
+                  >
                     Go Backend
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-atelier-text mb-4">Resources</h4>
+              <h4 className="font-semibold text-atelier-text mb-4">
+                Resources
+              </h4>
               <ul className="space-y-2 text-sm text-atelier-text-muted">
                 <li>
-                  <a href="#" className="hover:text-atelier-primary transition-colors duration-200">
+                  <a
+                    href="#"
+                    className="hover:text-atelier-primary transition-colors duration-200"
+                  >
                     Documentation
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-atelier-primary transition-colors duration-200">
+                  <a
+                    href="#"
+                    className="hover:text-atelier-primary transition-colors duration-200"
+                  >
                     GitHub
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-atelier-primary transition-colors duration-200">
+                  <a
+                    href="#"
+                    className="hover:text-atelier-primary transition-colors duration-200"
+                  >
                     Support
                   </a>
                 </li>
@@ -311,13 +344,22 @@ export default function Index() {
           <div className="border-t border-atelier-border pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-atelier-text-muted">
             <p>&copy; 2024 Design-to-Code Bridge. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-atelier-primary transition-colors duration-200">
+              <a
+                href="#"
+                className="hover:text-atelier-primary transition-colors duration-200"
+              >
                 Privacy
               </a>
-              <a href="#" className="hover:text-atelier-primary transition-colors duration-200">
+              <a
+                href="#"
+                className="hover:text-atelier-primary transition-colors duration-200"
+              >
                 Terms
               </a>
-              <a href="#" className="hover:text-atelier-primary transition-colors duration-200">
+              <a
+                href="#"
+                className="hover:text-atelier-primary transition-colors duration-200"
+              >
                 Contact
               </a>
             </div>

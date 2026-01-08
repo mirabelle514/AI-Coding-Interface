@@ -37,15 +37,19 @@ All documentation is located in the `/docs` folder and tracked locally in git:
 ## 🎯 Four AI Prototypes
 
 ### 1. Voice-to-Code 🎤
+
 Convert spoken words directly into functional code using speech recognition and AI.
 
 ### 2. Gesture Recognition 🤖
+
 Control IDE and manipulate code using hand gestures captured via webcam.
 
 ### 3. Collaborative Coding 👥
+
 Real-time pair programming with AI assistance via WebRTC peer-to-peer connections.
 
 ### 4. AI Assistant Overlay ✨
+
 Context-aware real-time coding assistance with inline suggestions and quality metrics.
 
 ---
@@ -150,6 +154,7 @@ git log --oneline
 ## 🚀 Deployment
 
 See [ARCHITECTURE.md](/docs/ARCHITECTURE.md) for deployment options:
+
 - Netlify (recommended)
 - Vercel
 - Traditional hosting

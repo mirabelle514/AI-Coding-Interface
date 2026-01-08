@@ -13,18 +13,21 @@ pnpm install
 To ensure commits are under your name (Mirabelle Doiron), configure your git user:
 
 #### Global Configuration (all projects)
+
 ```bash
 git config --global user.name "Mirabelle Doiron"
 git config --global user.email "your.email@example.com"
 ```
 
 #### Project-Only Configuration (this project only)
+
 ```bash
 git config user.name "Mirabelle Doiron"
 git config user.email "your.email@example.com"
 ```
 
 **Verify configuration:**
+
 ```bash
 git config user.name
 git config user.email
@@ -69,11 +72,13 @@ design-to-code-bridge/
 ## 🔧 Available Commands
 
 ### Development
+
 ```bash
 pnpm run dev          # Start dev server (Vite + Express)
 ```
 
 ### Build & Production
+
 ```bash
 pnpm run build        # Build for production
 pnpm run build:client # Build client only
@@ -82,12 +87,14 @@ pnpm run start        # Start production server
 ```
 
 ### Code Quality
+
 ```bash
 pnpm run typecheck    # TypeScript type checking
 pnpm run format.fix   # Format code with Prettier
 ```
 
 ### Testing
+
 ```bash
 pnpm run test         # Run Vitest tests
 ```
@@ -123,6 +130,7 @@ git commit -m "feat: Add new feature"
 ```
 
 **Verify commit author:**
+
 ```bash
 git log --oneline
 # Should show: Your Name <your.email@example.com>
@@ -164,7 +172,7 @@ The project is set up for local development:
 ✅ All source code in repository  
 ✅ No external dependencies for docs  
 ✅ Git configured with your name  
-✅ Hot reload enabled (Vite)  
+✅ Hot reload enabled (Vite)
 
 ---
 
@@ -211,6 +219,7 @@ Opens at: `http://localhost:3000` (production build)
 ### Production Deployment
 
 See `/docs/ARCHITECTURE.md` for deployment strategies:
+
 - Netlify/Vercel (recommended)
 - Docker containers
 - Traditional hosting
@@ -220,6 +229,7 @@ See `/docs/ARCHITECTURE.md` for deployment strategies:
 ## 🐛 Troubleshooting
 
 ### Port Already in Use
+
 ```bash
 # Kill process on port 8080
 # macOS/Linux:
@@ -231,6 +241,7 @@ taskkill /PID <PID> /F
 ```
 
 ### Git Commits Not Under Your Name
+
 ```bash
 # Check current config
 git config user.name
@@ -242,6 +253,7 @@ git config user.email "your.email@example.com"
 ```
 
 ### Dependencies Issues
+
 ```bash
 # Clear cache and reinstall
 rm -rf node_modules pnpm-lock.yaml
@@ -249,6 +261,7 @@ pnpm install
 ```
 
 ### Build Failures
+
 ```bash
 # Clean build
 pnpm run build:client
