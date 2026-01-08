@@ -240,10 +240,10 @@ export default function Index() {
             <div>
               <div className="flex items-center gap-2 font-bold text-lg text-atelier-primary mb-4">
                 <Code2 className="w-5 h-5" />
-                CodeAI
+                D2C Bridge
               </div>
               <p className="text-sm text-atelier-text-muted">
-                Advanced AI coding interfaces for the future of development.
+                Design-to-Code Bridge: Advanced AI coding interfaces for the future of development.
               </p>
             </div>
             <div>
