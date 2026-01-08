@@ -17,26 +17,31 @@
 **Design-to-Code Bridge** addresses critical challenges in modern software development:
 
 #### 1. **Slow Code Writing**
+
 - **Issue**: Traditional keyboard typing is time-consuming for complex logic and boilerplate code
 - **Impact**: Developers waste 30-40% of time on repetitive code patterns
 - **Solution**: Voice-to-code converts natural language to functional code instantly
 
 #### 2. **Developer Isolation**
+
 - **Issue**: Remote collaboration is difficult, especially for pair programming
 - **Impact**: Knowledge transfer is slow, code quality suffers
 - **Solution**: Real-time collaborative coding with WebRTC P2P synchronization
 
 #### 3. **Code Quality Issues**
+
 - **Issue**: Manual code review and optimization takes significant time
 - **Impact**: Bugs reach production, technical debt accumulates
 - **Solution**: AI-powered real-time code analysis with quality metrics
 
 #### 4. **Accessibility Barriers**
+
 - **Issue**: Keyboard-only interaction limits productivity and excludes users with mobility issues
 - **Impact**: Reduced diversity in tech, higher RSI rates
 - **Solution**: Gesture-based controls and voice input
 
 #### 5. **Context Loss**
+
 - **Issue**: Switching between tools causes mental overhead
 - **Impact**: 15-20% productivity loss from context switching
 - **Solution**: Integrated AI overlay with inline suggestions
@@ -72,12 +77,14 @@
 ### Business Value
 
 #### For Developers
+
 - FAST: 50-70% faster code generation
 - QUALITY: Fewer bugs and security issues
 - COLLAB: Better collaboration and mentoring
 - ACCESS: More accessible development environment
 
 #### For Organizations
+
 - PROD: Increased productivity - 30-40% reduction in development time
 - COST: Reduced costs - Less code review overhead
 - SPEED: Faster time-to-market
@@ -92,6 +99,7 @@
 ### Technology Stack
 
 #### Frontend (React)
+
 ```
 React 18.3.1 + TypeScript 5.9.2
 ├── UI Framework: React + React Router DOM 6.30.1
@@ -103,6 +111,7 @@ React 18.3.1 + TypeScript 5.9.2
 ```
 
 #### Backend (Express.js)
+
 ```
 Express 5.1.0 (TypeScript)
 ├── Server: Node.js + Express
@@ -139,6 +148,7 @@ Express 5.1.0 (TypeScript)
 ### How It Was Built
 
 #### Development Process
+
 1. **Frontend-first approach** - React SPA with component library
 2. **Design system** - Atelier color system for consistent UI
 3. **Type safety** - TypeScript throughout
@@ -146,6 +156,7 @@ Express 5.1.0 (TypeScript)
 5. **Progressive enhancement** - Features planned but not fully implemented
 
 #### Build & Deployment
+
 - **Build Tool**: Vite for fast HMR and optimized builds
 - **Package Manager**: pnpm for efficient dependency management
 - **Deployment**: Vercel-ready configuration
@@ -154,6 +165,7 @@ Express 5.1.0 (TypeScript)
 ### How to Use It
 
 #### Quick Start
+
 ```bash
 # Install dependencies
 npm install  # or pnpm install
@@ -167,6 +179,7 @@ npm run dev  # or pnpm dev
 #### Usage Workflows
 
 **1. Voice-to-Code**
+
 ```
 1. Navigate to /voice-to-code
 2. Click "Start Recording"
@@ -176,6 +189,7 @@ npm run dev  # or pnpm dev
 ```
 
 **2. Gesture Recognition**
+
 ```
 1. Navigate to /gesture-recognition
 2. Enable camera
@@ -184,6 +198,7 @@ npm run dev  # or pnpm dev
 ```
 
 **3. Collaborative Coding**
+
 ```
 1. Navigate to /collaborative-coding
 2. Initiate session
@@ -192,6 +207,7 @@ npm run dev  # or pnpm dev
 ```
 
 **4. AI Overlay**
+
 ```
 1. Navigate to /ai-overlay
 2. Type code in editor
@@ -206,10 +222,12 @@ npm run dev  # or pnpm dev
 ### Critical Security Vulnerabilities
 
 #### 1. **No Authentication/Authorization** [CRITICAL]
+
 **Severity**: HIGH  
 **Impact**: Unauthorized access to all features and data
 
 **Issues**:
+
 - No user authentication system
 - No role-based access control (RBAC)
 - All endpoints are publicly accessible
@@ -217,32 +235,38 @@ npm run dev  # or pnpm dev
 - No JWT or OAuth implementation
 
 **Risk**:
+
 - Anyone can access collaborative sessions
 - No audit trail
 - Potential data leakage
 - Cannot track malicious users
 
 #### 2. **CORS Misconfiguration** [HIGH]
+
 **Severity**: HIGH  
 **Impact**: Cross-origin attacks possible
 
 **Issues**:
+
 ```typescript
 // server/index.ts - Line 10
-app.use(cors());  // Allows ALL origins
+app.use(cors()); // Allows ALL origins
 ```
 
 **Risk**:
+
 - Any website can make requests to your API
 - CSRF attacks possible
 - Credential theft risk
 - Data exfiltration
 
 #### 3. **No Input Validation** [HIGH]
+
 **Severity**: HIGH  
 **Impact**: Injection attacks, XSS, code execution
 
 **Issues**:
+
 - No request size limits
 - No input sanitization
 - Zod schemas mentioned but not implemented
@@ -250,48 +274,57 @@ app.use(cors());  // Allows ALL origins
 - Code generation accepts arbitrary input
 
 **Risk**:
+
 - Code injection attacks
 - XSS via generated code
 - ReDoS (Regular Expression Denial of Service)
 - Memory exhaustion attacks
 
 #### 4. **Missing Rate Limiting** [MEDIUM]
+
 **Severity**: MEDIUM  
 **Impact**: DoS attacks, resource exhaustion
 
 **Issues**:
+
 - No rate limiting on API endpoints
 - No protection against brute force
 - Unlimited requests allowed
 - AI service calls could be abused
 
 **Risk**:
+
 - DoS attacks
 - High API costs
 - Service unavailability
 - Resource exhaustion
 
 #### 5. **Unencrypted Data Transmission** [MEDIUM]
+
 **Severity**: MEDIUM  
 **Impact**: Man-in-the-middle attacks
 
 **Issues**:
+
 - No HTTPS enforcement
 - No certificate pinning
 - WebRTC connections not encrypted (planned but not implemented)
 - Session data in plaintext
 
 **Risk**:
+
 - Eavesdropping on code/data
 - Session hijacking
 - Data interception
 - Man-in-the-middle attacks
 
 #### 6. **Missing Security Headers** [MEDIUM]
+
 **Severity**: MEDIUM  
 **Impact**: XSS, clickjacking, MIME sniffing
 
 **Issues**:
+
 - No Content-Security-Policy (CSP)
 - No X-Frame-Options
 - No X-Content-Type-Options
@@ -299,16 +332,19 @@ app.use(cors());  // Allows ALL origins
 - No Referrer-Policy
 
 **Risk**:
+
 - XSS attacks
 - Clickjacking
 - MIME sniffing attacks
 - Information leakage via referrer
 
 #### 7. **Environment Variable Exposure** [LOW]
+
 **Severity**: LOW  
 **Impact**: Configuration leakage
 
 **Issues**:
+
 ```typescript
 // server/index.ts - Line 16
 const ping = process.env.PING_MESSAGE ?? "ping";
@@ -316,63 +352,73 @@ const ping = process.env.PING_MESSAGE ?? "ping";
 ```
 
 **Risk**:
+
 - API keys could be exposed
 - Configuration leakage
 - Debug information disclosure
 
 #### 8. **No Request Logging/Monitoring** [LOW]
+
 **Severity**: LOW  
 **Impact**: No attack detection
 
 **Issues**:
+
 - No request logging
 - No error tracking (Sentry mentioned but not implemented)
 - No intrusion detection
 - No audit logs
 
 **Risk**:
+
 - Attacks go undetected
 - No forensic capabilities
 - Cannot track malicious behavior
 
 #### 9. **Client-Side Security Issues** [MEDIUM]
+
 **Severity**: MEDIUM  
 **Impact**: Client-side attacks
 
 **Issues**:
+
 - API endpoints exposed in client code
 - No CSRF tokens
 - No secure cookie flags
 - Sensitive data in localStorage (if used)
 
 **Risk**:
+
 - CSRF attacks
 - API endpoint enumeration
 - Client-side data theft
 
 #### 10. **WebRTC Security Concerns** [MEDIUM]
+
 **Severity**: MEDIUM  
 **Impact**: P2P security issues
 
 **Issues**:
+
 - WebRTC not fully implemented
 - No STUN/TURN server security
 - No ICE candidate validation
 - No encryption key management
 
 **Risk**:
+
 - Unauthorized peer connections
 - Data interception
 - Session hijacking
 
 ### Security Flaw Summary
 
-| Severity | Count | Examples |
-|----------|-------|----------|
-| **CRITICAL** | 1 | No authentication |
-| **HIGH** | 3 | CORS, Input validation, No rate limiting |
-| **MEDIUM** | 4 | Encryption, Headers, Client-side, WebRTC |
-| **LOW** | 2 | Logging, Environment variables |
+| Severity     | Count | Examples                                 |
+| ------------ | ----- | ---------------------------------------- |
+| **CRITICAL** | 1     | No authentication                        |
+| **HIGH**     | 3     | CORS, Input validation, No rate limiting |
+| **MEDIUM**   | 4     | Encryption, Headers, Client-side, WebRTC |
+| **LOW**      | 2     | Logging, Environment variables           |
 
 **Total Security Issues**: 10 critical flaws identified
 
@@ -424,6 +470,7 @@ const ping = process.env.PING_MESSAGE ?? "ping";
 #### 1. **Authentication & Authorization**
 
 **Go Backend (JWT + OAuth2)**
+
 ```go
 // JWT-based authentication
 // OAuth2 for third-party providers (GitHub, Google)
@@ -433,6 +480,7 @@ const ping = process.env.PING_MESSAGE ?? "ping";
 ```
 
 **Angular Frontend**
+
 ```typescript
 // Auth Guards for route protection
 // HTTP Interceptor for JWT injection
@@ -443,6 +491,7 @@ const ping = process.env.PING_MESSAGE ?? "ping";
 #### 2. **Input Validation & Sanitization**
 
 **Go Backend**
+
 ```go
 // Struct validation with go-playground/validator
 // Input sanitization for XSS prevention
@@ -452,6 +501,7 @@ const ping = process.env.PING_MESSAGE ?? "ping";
 ```
 
 **Angular Frontend**
+
 ```typescript
 // Reactive forms with validators
 // Input sanitization (Angular DomSanitizer)
@@ -517,6 +567,7 @@ Angular Frontend
 ### Technology Stack (Secure)
 
 #### Frontend: Angular 18+
+
 ```
 Angular 18+ with Standalone Components
 ├── TypeScript 5.9+ (strict mode)
@@ -528,6 +579,7 @@ Angular 18+ with Standalone Components
 ```
 
 #### Backend: Go 1.21+
+
 ```
 Go 1.21+ (Microservices)
 ├── Gin or Echo (HTTP framework)
@@ -540,6 +592,7 @@ Go 1.21+ (Microservices)
 ```
 
 #### Security Libraries
+
 ```
 Go Security Stack
 ├── github.com/golang-jwt/jwt/v5
@@ -734,83 +787,91 @@ design-to-code-bridge-go-angular/
 #### 1. Angular Auth Service (`frontend/src/app/core/services/auth.service.ts`)
 
 ```typescript
-import { Injectable, inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
-import { Observable, BehaviorSubject } from 'rxjs';
-import { tap } from 'rxjs/operators';
-import { User, LoginRequest, RegisterRequest } from '../models/user.model';
+import { Injectable, inject } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Router } from "@angular/router";
+import { Observable, BehaviorSubject } from "rxjs";
+import { tap } from "rxjs/operators";
+import { User, LoginRequest, RegisterRequest } from "../models/user.model";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class AuthService {
   private http = inject(HttpClient);
   private router = inject(Router);
-  private apiUrl = 'https://api.design-to-code-bridge.com/v1';
-  
+  private apiUrl = "https://api.design-to-code-bridge.com/v1";
+
   private currentUser$ = new BehaviorSubject<User | null>(null);
-  
-  login(credentials: LoginRequest): Observable<{ accessToken: string; refreshToken: string }> {
-    return this.http.post<{ accessToken: string; refreshToken: string }>(
-      `${this.apiUrl}/auth/login`,
-      credentials
-    ).pipe(
-      tap(response => {
-        this.setTokens(response.accessToken, response.refreshToken);
-        this.loadUser();
-      })
-    );
+
+  login(
+    credentials: LoginRequest,
+  ): Observable<{ accessToken: string; refreshToken: string }> {
+    return this.http
+      .post<{
+        accessToken: string;
+        refreshToken: string;
+      }>(`${this.apiUrl}/auth/login`, credentials)
+      .pipe(
+        tap((response) => {
+          this.setTokens(response.accessToken, response.refreshToken);
+          this.loadUser();
+        }),
+      );
   }
-  
-  register(data: RegisterRequest): Observable<{ accessToken: string; refreshToken: string }> {
-    return this.http.post<{ accessToken: string; refreshToken: string }>(
-      `${this.apiUrl}/auth/register`,
-      data
-    ).pipe(
-      tap(response => {
-        this.setTokens(response.accessToken, response.refreshToken);
-        this.loadUser();
-      })
-    );
+
+  register(
+    data: RegisterRequest,
+  ): Observable<{ accessToken: string; refreshToken: string }> {
+    return this.http
+      .post<{
+        accessToken: string;
+        refreshToken: string;
+      }>(`${this.apiUrl}/auth/register`, data)
+      .pipe(
+        tap((response) => {
+          this.setTokens(response.accessToken, response.refreshToken);
+          this.loadUser();
+        }),
+      );
   }
-  
+
   logout(): void {
     this.clearTokens();
     this.currentUser$.next(null);
-    this.router.navigate(['/login']);
+    this.router.navigate(["/login"]);
   }
-  
+
   private setTokens(accessToken: string, refreshToken: string): void {
-    localStorage.setItem('accessToken', accessToken);
-    localStorage.setItem('refreshToken', refreshToken);
+    localStorage.setItem("accessToken", accessToken);
+    localStorage.setItem("refreshToken", refreshToken);
   }
-  
+
   private clearTokens(): void {
-    localStorage.removeItem('accessToken');
-    localStorage.removeItem('refreshToken');
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
   }
-  
+
   getAccessToken(): string | null {
-    return localStorage.getItem('accessToken');
+    return localStorage.getItem("accessToken");
   }
-  
+
   isAuthenticated(): boolean {
     return !!this.getAccessToken() && !this.isTokenExpired();
   }
-  
+
   private isTokenExpired(): boolean {
     const token = this.getAccessToken();
     if (!token) return true;
-    
+
     try {
-      const payload = JSON.parse(atob(token.split('.')[1]));
+      const payload = JSON.parse(atob(token.split(".")[1]));
       return payload.exp * 1000 < Date.now();
     } catch {
       return true;
     }
   }
-  
+
   private loadUser(): void {
     // Load user from JWT token or API
   }
@@ -820,24 +881,24 @@ export class AuthService {
 #### 2. Angular Auth Interceptor (`frontend/src/app/core/interceptors/auth.interceptor.ts`)
 
 ```typescript
-import { HttpInterceptorFn, HttpErrorResponse } from '@angular/common/http';
-import { inject } from '@angular/core';
-import { catchError, switchMap, throwError } from 'rxjs';
-import { AuthService } from '../services/auth.service';
+import { HttpInterceptorFn, HttpErrorResponse } from "@angular/common/http";
+import { inject } from "@angular/core";
+import { catchError, switchMap, throwError } from "rxjs";
+import { AuthService } from "../services/auth.service";
 
 export const authInterceptor: HttpInterceptorFn = (req, next) => {
   const authService = inject(AuthService);
-  
+
   const token = authService.getAccessToken();
-  
+
   if (token) {
     req = req.clone({
       setHeaders: {
-        Authorization: `Bearer ${token}`
-      }
+        Authorization: `Bearer ${token}`,
+      },
     });
   }
-  
+
   return next(req).pipe(
     catchError((error: HttpErrorResponse) => {
       if (error.status === 401) {
@@ -845,7 +906,7 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
         authService.logout();
       }
       return throwError(() => error);
-    })
+    }),
   );
 };
 ```
@@ -976,7 +1037,7 @@ import (
 	"fmt"
 	"regexp"
 	"strings"
-	
+
 	"github.com/go-playground/validator/v10"
 )
 
@@ -988,7 +1049,7 @@ type CodeGenerationRequest struct {
 
 func ValidateAndSanitize(request *CodeGenerationRequest) error {
 	validate := validator.New()
-	
+
 	if err := validate.Struct(request); err != nil {
 		return fmt.Errorf("validation failed: %w", err)
 	}
@@ -1079,9 +1140,9 @@ func SecureCORSMiddleware(allowedOrigins []string) gin.HandlerFunc {
 #### 7. Angular Auth Guard (`frontend/src/app/core/guards/auth.guard.ts`)
 
 ```typescript
-import { inject } from '@angular/core';
-import { Router, CanActivateFn } from '@angular/router';
-import { AuthService } from '../services/auth.service';
+import { inject } from "@angular/core";
+import { Router, CanActivateFn } from "@angular/router";
+import { AuthService } from "../services/auth.service";
 
 export const authGuard: CanActivateFn = (route, state) => {
   const authService = inject(AuthService);
@@ -1091,7 +1152,7 @@ export const authGuard: CanActivateFn = (route, state) => {
     return true;
   }
 
-  router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
+  router.navigate(["/login"], { queryParams: { returnUrl: state.url } });
   return false;
 };
 ```
@@ -1107,7 +1168,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/redis/go-redis/v9"
-	
+
 	"design-to-code-bridge/internal/api-gateway/middleware"
 	"design-to-code-bridge/internal/api-gateway/handlers"
 )

@@ -7,7 +7,9 @@ This document shows **exactly how** the Design-to-Code Bridge solves real proble
 ## Scenario 1: Rapid Component Prototyping (Voice-to-Code)
 
 ### The Problem
+
 Designer finishes a button component mockup in Figma. Engineer needs to turn it into code. Normally:
+
 - Designer explains mockup verbally
 - Engineer asks clarifying questions
 - Engineer codes from scratch
@@ -17,9 +19,11 @@ Designer finishes a button component mockup in Figma. Engineer needs to turn it 
 ### The Solution with Voice-to-Code
 
 **Designer speaks:**
+
 > "I need a button component that's 140 pixels wide, has a dark background with a pink hover state, includes an icon on the left, and text that says 'Get Started'. Make it TypeScript and React with Tailwind."
 
 **What happens:**
+
 1. Designer uses Voice-to-Code prototype
 2. Speaks the requirement clearly
 3. AI generates production-ready code:
@@ -38,8 +42,8 @@ export function GetStartedButton({
     <button
       onClick={onClick}
       disabled={disabled}
-      className="w-[140px] px-4 py-3 bg-slate-900 text-white rounded-md font-semibold 
-                 flex items-center gap-2 hover:bg-pink-600 transition-colors 
+      className="w-[140px] px-4 py-3 bg-slate-900 text-white rounded-md font-semibold
+                 flex items-center gap-2 hover:bg-pink-600 transition-colors
                  disabled:opacity-50 disabled:cursor-not-allowed"
     >
       <ArrowRight className="w-4 h-4" />
@@ -49,7 +53,8 @@ export function GetStartedButton({
 }
 ```
 
-**Result:** 
+**Result:**
+
 - ✓ Engineer gets working code in 2 minutes
 - ✓ Code matches design intent exactly
 - ✓ Accessible, typed, production-ready
@@ -60,7 +65,9 @@ export function GetStartedButton({
 ## Scenario 2: Cross-Team Collaboration (Collaborative Coding)
 
 ### The Problem
+
 Designer and engineer are on different continents, different timezones. Designer describes a feature:
+
 - Designer: "Add filtering logic for the product list"
 - Engineer: "What kind of filtering? Which fields? What's the logic?"
 - Designer: "Oh, filter by price range, category, and rating"
@@ -83,6 +90,7 @@ Designer and engineer are on different continents, different timezones. Designer
 9. **Both accept the suggestion** with one click
 
 **Result:**
+
 - ✓ No timezone delays (both seeing same code live)
 - ✓ Designer understands exactly what engineer is building
 - ✓ Engineer gets instant feedback on implementation
@@ -97,11 +105,12 @@ interface FilterState {
 }
 
 const filteredProducts = useMemo(() => {
-  return products.filter(product => 
-    product.price >= filterState.priceRange[0] &&
-    product.price <= filterState.priceRange[1] &&
-    filterState.categories.includes(product.category) &&
-    product.rating >= filterState.minRating
+  return products.filter(
+    (product) =>
+      product.price >= filterState.priceRange[0] &&
+      product.price <= filterState.priceRange[1] &&
+      filterState.categories.includes(product.category) &&
+      product.rating >= filterState.minRating,
   );
 }, [products, filterState]);
 ```
@@ -111,13 +120,16 @@ const filteredProducts = useMemo(() => {
 ## Scenario 3: Complex Business Logic (Voice-to-Code + AI Overlay)
 
 ### The Problem
+
 Product manager explains discount calculation logic verbally:
+
 - "We give 10% off for orders over $100"
 - "But 15% off for bulk orders (5+ items)"
 - "And double points on weekends"
 - "Loyalty members get an extra 5% stacked"
 
 Engineer tries to code this but:
+
 - Gets the logic wrong (AND vs OR confusion)
 - Forgets edge cases (what if both conditions apply?)
 - Missing type safety
@@ -127,6 +139,7 @@ Engineer tries to code this but:
 ### The Solution with Voice-to-Code + AI Overlay
 
 **Designer/PM speaks:**
+
 > "Create a discount calculator function that applies 10 percent off for orders over 100 dollars, 15 percent off for orders with 5 or more items, and 5 percent extra for loyalty members. Stack the discounts together."
 
 **What happens:**
@@ -183,6 +196,7 @@ export function calculateDiscount(input: DiscountInput): {
 5. **Engineer clicks to apply suggestions**, code improves automatically
 
 **Result:**
+
 - ✓ Business logic captured exactly as described
 - ✓ Type-safe from the start
 - ✓ Edge cases caught by AI
@@ -194,13 +208,16 @@ export function calculateDiscount(input: DiscountInput): {
 ## Scenario 4: Multi-Platform Code Generation (Voice-to-Code)
 
 ### The Problem
+
 Company needs the same feature in multiple languages:
+
 - **Frontend:** JavaScript/React (web)
-- **Mobile:** Swift (iOS) 
+- **Mobile:** Swift (iOS)
 - **Mobile:** Kotlin (Android)
 - **Backend:** Python (API)
 
 Designer describes once, engineer manually codes 4 times:
+
 - 4x the work
 - 4x chances for bugs
 - 4x different implementations
@@ -210,13 +227,19 @@ Designer describes once, engineer manually codes 4 times:
 ### The Solution with Multi-Language Voice-to-Code
 
 **Designer speaks once:**
+
 > "Create an authentication helper that validates email format, checks if password is at least 12 characters, and ensures both match. Return true if all checks pass, false otherwise."
 
 **Engineer generates code for all 4 platforms:**
 
 **1. JavaScript/React:**
+
 ```typescript
-export const validateSignup = (email: string, password: string, confirmPassword: string): boolean => {
+export const validateSignup = (
+  email: string,
+  password: string,
+  confirmPassword: string,
+): boolean => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return (
     emailRegex.test(email) &&
@@ -227,19 +250,21 @@ export const validateSignup = (email: string, password: string, confirmPassword:
 ```
 
 **2. Swift (iOS):**
+
 ```swift
 func validateSignup(email: String, password: String, confirmPassword: String) -> Bool {
   let emailPattern = "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"
   let emailRegex = try! NSRegularExpression(pattern: emailPattern)
   let emailValid = emailRegex.firstMatch(in: email, range: NSRange(email.startIndex..., in: email)) != nil
-  
-  return emailValid && 
-         password.count >= 12 && 
+
+  return emailValid &&
+         password.count >= 12 &&
          password == confirmPassword
 }
 ```
 
 **3. Kotlin (Android):**
+
 ```kotlin
 fun validateSignup(email: String, password: String, confirmPassword: String): Boolean {
   val emailRegex = Regex("^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$")
@@ -250,6 +275,7 @@ fun validateSignup(email: String, password: String, confirmPassword: String): Bo
 ```
 
 **4. Python (Backend):**
+
 ```python
 import re
 
@@ -263,15 +289,17 @@ def validate_signup(email: str, password: str, confirm_password: str) -> bool:
 ```
 
 **How it works:**
+
 1. Engineer uses Voice-to-Code once
 2. Speaks the requirement
 3. Changes "Code Language" dropdown to "JavaScript"
 4. AI generates JavaScript
 5. Then changes to "Swift" → Gets Swift
-6. Then "Kotlin" → Gets Kotlin  
+6. Then "Kotlin" → Gets Kotlin
 7. Then "Python" → Gets Python
 
 **Result:**
+
 - ✓ Same logic implemented 4 times in 10 minutes
 - ✓ All implementations match exactly
 - ✓ No sync bugs across platforms
@@ -282,21 +310,23 @@ def validate_signup(email: str, password: str, confirm_password: str) -> bool:
 
 ## The Bridge in Action: Summary
 
-| Scenario | Designer Action | Bridge Does | Result |
-|----------|-----------------|-------------|--------|
-| **Component** | Speaks design spec | Generates React code | Working component in 2 min |
-| **Collab** | Discusses intent live | Syncs code + AI assists | Team aligned, 20 min vs 2 hours |
-| **Logic** | Explains business rules | Generates + suggests improvements | Type-safe, tested, production code |
-| **Multi-Lang** | Describes once | Generates 4 language versions | 10 min vs 4 hours |
+| Scenario       | Designer Action         | Bridge Does                       | Result                             |
+| -------------- | ----------------------- | --------------------------------- | ---------------------------------- |
+| **Component**  | Speaks design spec      | Generates React code              | Working component in 2 min         |
+| **Collab**     | Discusses intent live   | Syncs code + AI assists           | Team aligned, 20 min vs 2 hours    |
+| **Logic**      | Explains business rules | Generates + suggests improvements | Type-safe, tested, production code |
+| **Multi-Lang** | Describes once          | Generates 4 language versions     | 10 min vs 4 hours                  |
 
 ---
 
 ## Why This Matters
 
 ### Without Bridge:
+
 - Designer → Mockup → Verbal explanation → Engineer asks questions → Miscommunication → Rework → Delays
 
 ### With Bridge:
+
 - Designer → Spoken intent → Generated code → Ready to use → Success
 
 **The bridge doesn't replace engineers. It removes the translation layer between design and code.**
@@ -313,4 +343,3 @@ Engineer skill moves from "How do I type this?" to "How do I make this scale?" B
 4. **Try Scenario 4**: Change code language and speak again
 
 The bridge works best when designers and engineers **think together** about intent, not implementation.
-
