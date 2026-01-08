@@ -101,11 +101,14 @@
 ## 📚 Documentation Structure
 
 - **PROJECT_OVERVIEW.md** - This file
+- **TESTING_DESIGN_TO_CODE_BRIDGE.md** - [START HERE] Complete testing guide showing how design intent flows to code
 - **ARCHITECTURE.md** - Technical architecture and design decisions
 - **PROTOTYPES.md** - Detailed explanation of each prototype
 - **USER_GUIDE.md** - How to use the platform
 - **TECH_STACK.md** - Technologies and dependencies
 - **DESIGN_SYSTEM.md** - Atelier Design System color tokens
+- **QUICK_START_AI.md** - 5-minute setup guide for OpenAI API integration
+- **AI_PROVIDER_INTEGRATION.md** - Detailed AI provider setup documentation
 
 ---
 
