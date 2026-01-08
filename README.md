@@ -144,9 +144,9 @@ git log --oneline
 
 ## Getting Started
 
-1. **Read** [PROJECT_OVERVIEW.md](/docs/PROJECT_OVERVIEW.md) to understand the vision
-2. **Explore** [PROTOTYPES.md](/docs/PROTOTYPES.md) to learn each feature
-3. **Follow** [SETUP.md](/docs/SETUP.md) for configuration
+1. **Read** [project_overview.md](/docs/project_overview.md) to understand the vision
+2. **Explore** [design_to_code_scenarios.md](/docs/design_to_code_scenarios.md) to see 4 real-world use cases
+3. **Follow** [setup.md](/docs/setup.md) for configuration
 4. **Try** the prototypes at `http://localhost:8080`
 5. **Reference** other docs as needed
 
