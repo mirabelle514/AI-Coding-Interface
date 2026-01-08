@@ -24,13 +24,14 @@ Visit: `http://localhost:8080`
 
 All documentation is located in the `/docs` folder and tracked locally in git:
 
-- **[PROJECT_OVERVIEW.md](/docs/PROJECT_OVERVIEW.md)** - What this project does and why
-- **[PROTOTYPES.md](/docs/PROTOTYPES.md)** - The 4 AI prototypes explained
-- **[USER_GUIDE.md](/docs/USER_GUIDE.md)** - How to use the platform
-- **[ARCHITECTURE.md](/docs/ARCHITECTURE.md)** - Technical architecture
-- **[TECH_STACK.md](/docs/TECH_STACK.md)** - Technologies and dependencies
-- **[DESIGN_SYSTEM.md](/docs/DESIGN_SYSTEM.md)** - Atelier color system
-- **[SETUP.md](/docs/SETUP.md)** - Configuration and setup guide
+- **[project_overview.md](/docs/project_overview.md)** - What this project does and why
+- **[design_to_code_scenarios.md](/docs/design_to_code_scenarios.md)** - 4 real-world scenarios showing the bridge in action
+- **[prototypes.md](/docs/prototypes.md)** - The 4 AI prototypes explained
+- **[user_guide.md](/docs/user_guide.md)** - How to use the platform
+- **[architecture.md](/docs/architecture.md)** - Technical architecture
+- **[tech_stack.md](/docs/tech_stack.md)** - Technologies and dependencies
+- **[design_system.md](/docs/design_system.md)** - Atelier color system
+- **[setup.md](/docs/setup.md)** - Configuration and setup guide
 
 ---
 
