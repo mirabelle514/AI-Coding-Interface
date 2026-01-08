@@ -317,7 +317,7 @@ pnpm update --interactive
 
 ---
 
-## 🎯 Why These Technologies?
+## Why These Technologies?
 
 ### React + TypeScript
 
