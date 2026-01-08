@@ -79,13 +79,13 @@ export default function Index() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 md:py-32 px-4 bg-card/30">
+      <section id="features" className="py-20 md:py-32 px-4 bg-atelier-surface/50">
         <div className="container max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-atelier-text mb-4">
               Advanced Prototypes
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base text-atelier-text-muted max-w-2xl mx-auto">
               Four cutting-edge prototypes showcasing the future of AI-assisted development
             </p>
           </div>
@@ -102,7 +102,6 @@ export default function Index() {
                 "Multi-language support",
               ]}
               href="/voice-to-code"
-              color="voice"
             />
 
             <FeatureCard
@@ -116,7 +115,7 @@ export default function Index() {
                 "Spatial awareness",
               ]}
               href="/gesture-recognition"
-              color="gesture"
+              accent="secondary"
             />
 
             <FeatureCard
@@ -130,13 +129,12 @@ export default function Index() {
                 "AI suggestions",
               ]}
               href="/collaborative-coding"
-              color="collab"
             />
 
             <FeatureCard
               title="AI Assistant Overlay"
               description="Context-aware coding assistance with intelligent suggestions and auto-completion."
-              icon={<Sparkles className="w-full h-full" />}
+              icon={<Lightbulb className="w-full h-full" />}
               features={[
                 "Context awareness",
                 "Smart suggestions",
@@ -144,7 +142,7 @@ export default function Index() {
                 "Code analysis",
               ]}
               href="/ai-overlay"
-              color="overlay"
+              accent="secondary"
             />
           </div>
         </div>
