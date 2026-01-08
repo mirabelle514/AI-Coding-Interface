@@ -55,36 +55,52 @@ export default function VoiceToCode() {
         });
     }
 
-    // Initialize speech recognition
+    // Initialize speech recognition with proper settings to reduce sensitivity
     recognitionRef.current = new SpeechRecognition();
-    recognitionRef.current.continuous = true;
-    recognitionRef.current.interimResults = true;
+    recognitionRef.current.continuous = false; // Stop after one phrase (not continuous)
+    recognitionRef.current.interimResults = false; // Only show final, confirmed results
     recognitionRef.current.lang = "en-US";
+    recognitionRef.current.maxAlternatives = 1; // Only get best match, not alternatives
 
     recognitionRef.current.onstart = () => {
       console.log("Speech recognition started");
       setTranscript("");
-      setPermissionStatus("Recording active - microphone is listening");
+      setPermissionStatus("Recording active - speak clearly");
+      interimTranscriptRef.current = "";
+
+      // Auto-stop after 15 seconds of recording (safety limit)
+      if (silenceTimeoutRef.current) {
+        clearTimeout(silenceTimeoutRef.current);
+      }
+      silenceTimeoutRef.current = setTimeout(() => {
+        console.log("Auto-stopping recording (time limit reached)");
+        recognitionRef.current?.stop();
+      }, 15000);
     };
 
     recognitionRef.current.onresult = (event: any) => {
-      let interimTranscript = "";
+      // Only process final, high-confidence results
+      if (!event.results || event.results.length === 0) return;
 
-      for (let i = event.resultIndex; i < event.results.length; i++) {
-        const transcriptSegment = event.results[i][0].transcript;
+      const lastResult = event.results[event.results.length - 1];
 
-        if (event.results[i].isFinal) {
-          setTranscript((prev) => prev + transcriptSegment + " ");
-        } else {
-          interimTranscript += transcriptSegment;
+      // Check if this is a final result with sufficient confidence
+      if (lastResult.isFinal) {
+        const confidence = lastResult[0].confidence;
+        const transcript = lastResult[0].transcript.trim();
+
+        // Only accept results with >50% confidence to filter out noise
+        if (confidence > 0.5 && transcript.length > 0) {
+          setTranscript((prev) => {
+            // Avoid duplicate additions
+            if (prev.includes(transcript)) {
+              return prev;
+            }
+            return prev ? prev + " " + transcript : transcript;
+          });
+
+          console.log(`Recognized (confidence: ${(confidence * 100).toFixed(1)}%): ${transcript}`);
         }
-      }
-
-      if (interimTranscript) {
-        setTranscript((prev) => {
-          const final = prev;
-          return final + interimTranscript;
-        });
       }
     };
 
