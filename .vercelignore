@@ -1,0 +1,15 @@
+docs
+netlify
+server
+dist/server
+.git
+.gitignore
+README.md
+AGENTS.md
+node_modules
+pnpm-lock.yaml
+*.test.ts
+*.spec.ts
+.env.local
+.env.*.local
+vite.config.server.ts
