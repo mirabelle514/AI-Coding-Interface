@@ -98,13 +98,13 @@ design-to-code-bridge/
 │   └── global.css        # Atelier design system
 ├── server/               # Express backend
 ├── docs/                 # All documentation (git tracked)
-│   ├── PROJECT_OVERVIEW.md
-│   ├── ARCHITECTURE.md
-│   ├── PROTOTYPES.md
-│   ├── USER_GUIDE.md
-│   ├── TECH_STACK.md
-│   ├── DESIGN_SYSTEM.md
-│   └── SETUP.md
+│   ├── project_overview.md
+│   ├── architecture.md
+│   ├── prototypes.md
+│   ├── user_guide.md
+│   ├── tech_stack.md
+│   ├── design_system.md
+│   └── setup.md
 └── public/               # Static assets
 ```
 
