@@ -326,4 +326,4 @@ Start with these in order:
 
 ---
 
-Happy coding! 🚀
+Happy coding!
