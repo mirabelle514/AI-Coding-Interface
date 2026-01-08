@@ -1,4 +1,4 @@
-import { Mic, Hand, Users, Lightbulb, ArrowRight, Code2, Volume2, GestureIcon } from "lucide-react";
+import { Mic, Hand, Users, Lightbulb, ArrowRight, Code2 } from "lucide-react";
 import Header from "@/components/Header";
 import FeatureCard from "@/components/FeatureCard";
 import { Link } from "react-router-dom";
