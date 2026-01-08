@@ -14,6 +14,8 @@ export default function VoiceToCode() {
   const [browserSupport, setBrowserSupport] = useState<string | null>(null);
   const [permissionStatus, setPermissionStatus] = useState<string | null>(null);
   const recognitionRef = useRef<any>(null);
+  const interimTranscriptRef = useRef<string>("");
+  const silenceTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     // Check browser support
