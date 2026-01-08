@@ -99,7 +99,9 @@ export default function VoiceToCode() {
             return prev ? prev + " " + transcript : transcript;
           });
 
-          console.log(`Recognized (confidence: ${(confidence * 100).toFixed(1)}%): ${transcript}`);
+          console.log(
+            `Recognized (confidence: ${(confidence * 100).toFixed(1)}%): ${transcript}`,
+          );
         }
       }
     };
