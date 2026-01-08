@@ -248,6 +248,35 @@ export default function VoiceToCode() {
             </p>
           </div>
 
+          {/* Diagnostic Panel */}
+          <div className="mb-8 p-4 rounded-md border border-atelier-border/50 bg-atelier-surface/50">
+            <div className="flex items-start gap-3">
+              <AlertCircle className="w-5 h-5 text-atelier-secondary flex-shrink-0 mt-0.5" />
+              <div className="flex-1 text-sm">
+                <p className="font-semibold text-atelier-text mb-2">System Status</p>
+                <div className="space-y-1 text-atelier-text-muted text-xs">
+                  <p>
+                    {browserSupport ? (
+                      <span className="text-atelier-secondary">✓ {browserSupport}</span>
+                    ) : (
+                      <span className="text-atelier-error">✗ Checking browser support...</span>
+                    )}
+                  </p>
+                  <p>
+                    {permissionStatus ? (
+                      <span>{permissionStatus}</span>
+                    ) : (
+                      <span>Checking microphone permission...</span>
+                    )}
+                  </p>
+                  <p className="mt-2 text-atelier-text-muted/80">
+                    When you click "Start Recording", your browser will ask for microphone access. You must allow it for the prototype to work.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Main Content Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
             {/* Left: Controls */}
