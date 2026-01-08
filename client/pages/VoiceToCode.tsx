@@ -107,6 +107,15 @@ export default function VoiceToCode() {
     recognitionRef.current.onerror = (event: any) => {
       console.error("Speech recognition error:", event.error);
 
+      // Clear timeout on error
+      if (silenceTimeoutRef.current) {
+        clearTimeout(silenceTimeoutRef.current);
+        silenceTimeoutRef.current = null;
+      }
+
+      setIsRecording(false);
+      interimTranscriptRef.current = "";
+
       if (event.error === "no-speech") {
         toast.error("No speech detected. Please speak louder or clearer.");
       } else if (event.error === "network") {
@@ -131,6 +140,13 @@ export default function VoiceToCode() {
     recognitionRef.current.onend = () => {
       console.log("Speech recognition ended");
       setIsRecording(false);
+
+      // Clear timeout when recording ends
+      if (silenceTimeoutRef.current) {
+        clearTimeout(silenceTimeoutRef.current);
+        silenceTimeoutRef.current = null;
+      }
+
       setPermissionStatus("Recording stopped");
     };
 
