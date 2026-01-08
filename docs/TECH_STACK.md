@@ -321,51 +321,51 @@ pnpm update --interactive
 
 ### React + TypeScript
 
-- ✅ Industry standard
-- ✅ Large ecosystem
-- ✅ Great developer experience
-- ✅ Type safety
-- ✅ Strong community
+- [+] Industry standard
+- [+] Large ecosystem
+- [+] Great developer experience
+- [+] Type safety
+- [+] Strong community
 
 ### Tailwind CSS
 
-- ✅ Highly customizable
-- ✅ Small bundle size
-- ✅ Great documentation
-- ✅ Rapid development
-- ✅ Built-in responsive design
+- [+] Highly customizable
+- [+] Small bundle size
+- [+] Great documentation
+- [+] Rapid development
+- [+] Built-in responsive design
 
 ### Radix UI
 
-- ✅ Accessible by default
-- ✅ Unstyled (full control)
-- ✅ No design opinion
-- ✅ Well-tested components
-- ✅ Keyboard navigation
+- [+] Accessible by default
+- [+] Unstyled (full control)
+- [+] No design opinion
+- [+] Well-tested components
+- [+] Keyboard navigation
 
 ### Vite
 
-- ✅ Lightning fast development
-- ✅ Zero config (mostly)
-- ✅ Modern tooling
-- ✅ Great HMR
-- ✅ Optimized builds
+- [+] Lightning fast development
+- [+] Zero config (mostly)
+- [+] Modern tooling
+- [+] Great HMR
+- [+] Optimized builds
 
 ### React Router v6
 
-- ✅ Modern routing patterns
-- ✅ Nested routes
-- ✅ Better TypeScript support
-- ✅ Improved performance
-- ✅ Data loaders
+- [+] Modern routing patterns
+- [+] Nested routes
+- [+] Better TypeScript support
+- [+] Improved performance
+- [+] Data loaders
 
 ### pnpm
 
-- ✅ Faster than npm/yarn
-- ✅ Disk space efficient
-- ✅ Better dependency resolution
-- ✅ Monorepo support
-- ✅ Strict dependency management
+- [+] Faster than npm/yarn
+- [+] Disk space efficient
+- [+] Better dependency resolution
+- [+] Monorepo support
+- [+] Strict dependency management
 
 ---
 
