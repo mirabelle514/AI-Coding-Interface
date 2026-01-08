@@ -11,6 +11,7 @@ import VoiceToCode from "./pages/VoiceToCode";
 import GestureRecognition from "./pages/GestureRecognition";
 import CollaborativeCoding from "./pages/CollaborativeCoding";
 import AIOverlay from "./pages/AIOverlay";
+import Integrations from "./pages/Integrations";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
