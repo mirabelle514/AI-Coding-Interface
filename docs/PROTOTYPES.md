@@ -316,20 +316,20 @@ function calculateTotal(items) {
 
 ```
 Readability (92%)
-├─ Variable naming ✓
-├─ Function complexity ✓
-└─ Comments presence ✓
+├─ Variable naming [pass]
+├─ Function complexity [pass]
+└─ Comments presence [pass]
 
 Performance (78%)
-├─ Algorithm efficiency ✓
-├─ Memory usage ⚠
-└─ Execution speed ✓
+├─ Algorithm efficiency [pass]
+├─ Memory usage [warn]
+└─ Execution speed [pass]
 
 Security (85%)
-├─ Input validation ✓
-├─ XSS prevention ✓
-├─ SQL injection prevention ⚠
-└─ Error handling ✓
+├─ Input validation [pass]
+├─ XSS prevention [pass]
+├─ SQL injection prevention [warn]
+└─ Error handling [pass]
 ```
 
 ### Benefits
