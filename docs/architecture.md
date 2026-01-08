@@ -79,12 +79,12 @@ design-to-code-bridge/
 │   └── api.ts                       # Shared interfaces
 │
 ├── docs/                            # Documentation
-│   ├── PROJECT_OVERVIEW.md
-│   ├── ARCHITECTURE.md
-│   ├── PROTOTYPES.md
-│   ├── USER_GUIDE.md
-│   ├── TECH_STACK.md
-│   └── DESIGN_SYSTEM.md
+│   ├── project_overview.md
+│   ├── architecture.md
+│   ├── prototypes.md
+│   ├── user_guide.md
+│   ├── tech_stack.md
+│   └── design_system.md
 │
 ├── public/                          # Static assets
 ├── tailwind.config.ts               # Tailwind configuration
