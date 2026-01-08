@@ -306,6 +306,116 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Design System Integrations Section */}
+      <section className="py-20 md:py-32 px-4 bg-atelier-bg">
+        <div className="container max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-atelier-primary/10 border border-atelier-border mb-6">
+              <Code2 className="w-4 h-4 text-atelier-primary" />
+              <span className="text-xs font-semibold text-atelier-primary uppercase tracking-wide">
+                Next Phase
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-atelier-text mb-4">
+              Connect Your Design System
+            </h2>
+            <p className="text-base text-atelier-text-muted max-w-2xl mx-auto">
+              Integrate your Figma libraries, GitHub repositories, and documentation to power smarter code generation
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="p-8 rounded-md border border-atelier-border bg-atelier-surface hover:border-atelier-primary transition-all duration-200">
+              <div className="flex items-center gap-3 mb-4">
+                <Figma className="w-6 h-6 text-atelier-primary" />
+                <h3 className="text-lg font-semibold text-atelier-text">
+                  Figma Libraries
+                </h3>
+              </div>
+              <p className="text-sm text-atelier-text-muted mb-4">
+                Connect your design system file to extract components, colors, and patterns for code generation.
+              </p>
+              <ul className="space-y-2 text-sm text-atelier-text-muted">
+                <li className="flex items-center gap-2">
+                  <span className="text-atelier-primary">+</span>
+                  <span>Component extraction</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-atelier-primary">+</span>
+                  <span>Design token mapping</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-atelier-primary">+</span>
+                  <span>Visual consistency</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="p-8 rounded-md border border-atelier-border bg-atelier-surface hover:border-atelier-primary transition-all duration-200">
+              <div className="flex items-center gap-3 mb-4">
+                <Github className="w-6 h-6 text-atelier-primary" />
+                <h3 className="text-lg font-semibold text-atelier-text">
+                  GitHub Repos
+                </h3>
+              </div>
+              <p className="text-sm text-atelier-text-muted mb-4">
+                Link your design system repository to learn your coding patterns and conventions.
+              </p>
+              <ul className="space-y-2 text-sm text-atelier-text-muted">
+                <li className="flex items-center gap-2">
+                  <span className="text-atelier-primary">+</span>
+                  <span>Code pattern learning</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-atelier-primary">+</span>
+                  <span>Architecture alignment</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-atelier-primary">+</span>
+                  <span>Naming conventions</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="p-8 rounded-md border border-atelier-border bg-atelier-surface hover:border-atelier-primary transition-all duration-200">
+              <div className="flex items-center gap-3 mb-4">
+                <FileText className="w-6 h-6 text-atelier-primary" />
+                <h3 className="text-lg font-semibold text-atelier-text">
+                  Documentation
+                </h3>
+              </div>
+              <p className="text-sm text-atelier-text-muted mb-4">
+                Connect your design documentation to provide AI context for guidelines and best practices.
+              </p>
+              <ul className="space-y-2 text-sm text-atelier-text-muted">
+                <li className="flex items-center gap-2">
+                  <span className="text-atelier-primary">+</span>
+                  <span>Best practices guidance</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-atelier-primary">+</span>
+                  <span>Design system rules</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-atelier-primary">+</span>
+                  <span>Implementation examples</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link
+              to="/integrations"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-atelier-primary text-atelier-bg rounded-md font-semibold hover:bg-atelier-primary-hover transition-colors duration-200"
+            >
+              Configure Integrations
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 md:py-32 px-4 bg-atelier-surface border-t border-b border-atelier-border">
         <div className="container max-w-4xl mx-auto text-center">
