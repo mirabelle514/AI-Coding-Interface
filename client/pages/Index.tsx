@@ -149,18 +149,18 @@ export default function Index() {
       </section>
 
       {/* Tech Stack Section */}
-      <section className="py-20 md:py-32 px-4">
+      <section className="py-20 md:py-32 px-4 bg-atelier-bg">
         <div className="container max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-atelier-text mb-4">
               Modern Tech Stack
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base text-atelier-text-muted max-w-2xl mx-auto">
               Built with cutting-edge technologies for optimal performance
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 category: "Frontend",
@@ -192,18 +192,18 @@ export default function Index() {
             ].map((stack, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-2xl border border-border bg-card hover:border-primary/50 transition-colors"
+                className="p-6 rounded-md border border-atelier-border bg-atelier-surface hover:border-atelier-primary hover:bg-atelier-surface-elevated transition-all duration-200"
               >
-                <h3 className="text-xl font-bold text-foreground mb-6">
+                <h3 className="text-lg font-semibold text-atelier-text mb-4">
                   {stack.category}
                 </h3>
-                <ul className="space-y-3">
+                <ul className="space-y-2">
                   {stack.items.map((item, itemIdx) => (
                     <li
                       key={itemIdx}
-                      className="text-muted-foreground flex items-center gap-3"
+                      className="text-sm text-atelier-text-muted flex items-center gap-3"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                      <span className="w-1 h-1 rounded-full bg-atelier-secondary flex-shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -215,17 +215,17 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-32 px-4 bg-gradient-to-r from-primary/10 to-accent/10 border-t border-b border-border">
+      <section className="py-20 md:py-32 px-4 bg-atelier-surface border-t border-b border-atelier-border">
         <div className="container max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-atelier-text mb-6">
             Ready to Experience the Future?
           </h2>
-          <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
+          <p className="text-base text-atelier-text-muted mb-10 max-w-2xl mx-auto">
             Explore our prototypes and discover how AI can transform your development workflow.
           </p>
           <Link
             to="/voice-to-code"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-lg font-bold text-lg hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-atelier-primary text-atelier-bg rounded-md font-bold hover:bg-atelier-primary-hover transition-colors duration-200"
           >
             Start Exploring
             <ArrowRight className="w-5 h-5" />
@@ -234,73 +234,73 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-12 px-4">
+      <footer className="border-t border-atelier-border py-12 px-4 bg-atelier-bg">
         <div className="container max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="flex items-center gap-2 font-bold text-xl text-primary mb-4">
-                <Zap className="w-5 h-5" />
+              <div className="flex items-center gap-2 font-bold text-lg text-atelier-primary mb-4">
+                <Code2 className="w-5 h-5" />
                 CodeAI
               </div>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-atelier-text-muted">
                 Advanced AI coding interfaces for the future of development.
               </p>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Prototypes</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <h4 className="font-semibold text-atelier-text mb-4">Prototypes</h4>
+              <ul className="space-y-2 text-sm text-atelier-text-muted">
                 <li>
-                  <Link to="/voice-to-code" className="hover:text-primary transition-colors">
+                  <Link to="/voice-to-code" className="hover:text-atelier-primary transition-colors duration-200">
                     Voice-to-Code
                   </Link>
                 </li>
                 <li>
-                  <Link to="/gesture-recognition" className="hover:text-primary transition-colors">
+                  <Link to="/gesture-recognition" className="hover:text-atelier-primary transition-colors duration-200">
                     Gesture Recognition
                   </Link>
                 </li>
                 <li>
-                  <Link to="/collaborative-coding" className="hover:text-primary transition-colors">
+                  <Link to="/collaborative-coding" className="hover:text-atelier-primary transition-colors duration-200">
                     Collaborative Coding
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Technology</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <h4 className="font-semibold text-atelier-text mb-4">Technology</h4>
+              <ul className="space-y-2 text-sm text-atelier-text-muted">
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors">
+                  <a href="#" className="hover:text-atelier-primary transition-colors duration-200">
                     WebRTC
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors">
+                  <a href="#" className="hover:text-atelier-primary transition-colors duration-200">
                     React
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors">
+                  <a href="#" className="hover:text-atelier-primary transition-colors duration-200">
                     Go Backend
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Resources</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <h4 className="font-semibold text-atelier-text mb-4">Resources</h4>
+              <ul className="space-y-2 text-sm text-atelier-text-muted">
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors">
+                  <a href="#" className="hover:text-atelier-primary transition-colors duration-200">
                     Documentation
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors">
+                  <a href="#" className="hover:text-atelier-primary transition-colors duration-200">
                     GitHub
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors">
+                  <a href="#" className="hover:text-atelier-primary transition-colors duration-200">
                     Support
                   </a>
                 </li>
@@ -308,16 +308,16 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-muted-foreground">
+          <div className="border-t border-atelier-border pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-atelier-text-muted">
             <p>&copy; 2024 CodeAI. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-primary transition-colors">
+              <a href="#" className="hover:text-atelier-primary transition-colors duration-200">
                 Privacy
               </a>
-              <a href="#" className="hover:text-primary transition-colors">
+              <a href="#" className="hover:text-atelier-primary transition-colors duration-200">
                 Terms
               </a>
-              <a href="#" className="hover:text-primary transition-colors">
+              <a href="#" className="hover:text-atelier-primary transition-colors duration-200">
                 Contact
               </a>
             </div>
