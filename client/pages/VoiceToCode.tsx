@@ -22,7 +22,8 @@ export default function VoiceToCode() {
       (window as any).webkitSpeechRecognition;
 
     if (!SpeechRecognition) {
-      const errorMsg = "Speech Recognition not supported in your browser. Use Chrome, Edge, or Safari.";
+      const errorMsg =
+        "Speech Recognition not supported in your browser. Use Chrome, Edge, or Safari.";
       setBrowserSupport(errorMsg);
       toast.error(errorMsg);
       return;
@@ -32,19 +33,24 @@ export default function VoiceToCode() {
 
     // Check microphone permission
     if (navigator.permissions && navigator.permissions.query) {
-      navigator.permissions.query({ name: "microphone" as any }).then((result) => {
-        setPermissionStatus(`Microphone permission: ${result.state}`);
-        if (result.state === "denied") {
-          toast.error("Microphone permission denied. Please enable it in browser settings.");
-        }
-
-        // Listen for permission changes
-        result.addEventListener("change", () => {
+      navigator.permissions
+        .query({ name: "microphone" as any })
+        .then((result) => {
           setPermissionStatus(`Microphone permission: ${result.state}`);
+          if (result.state === "denied") {
+            toast.error(
+              "Microphone permission denied. Please enable it in browser settings.",
+            );
+          }
+
+          // Listen for permission changes
+          result.addEventListener("change", () => {
+            setPermissionStatus(`Microphone permission: ${result.state}`);
+          });
+        })
+        .catch(() => {
+          setPermissionStatus("Unable to check microphone permission");
         });
-      }).catch(() => {
-        setPermissionStatus("Unable to check microphone permission");
-      });
     }
 
     // Initialize speech recognition
@@ -88,11 +94,17 @@ export default function VoiceToCode() {
       } else if (event.error === "network") {
         toast.error("Network error. Check your internet connection.");
       } else if (event.error === "permission-denied") {
-        setPermissionStatus("Permission denied - you blocked microphone access");
-        toast.error("Microphone permission denied. Please allow microphone access in browser settings.");
+        setPermissionStatus(
+          "Permission denied - you blocked microphone access",
+        );
+        toast.error(
+          "Microphone permission denied. Please allow microphone access in browser settings.",
+        );
       } else if (event.error === "not-allowed") {
         setPermissionStatus("Not allowed - check browser permissions");
-        toast.error("Microphone access not allowed. Check your browser settings.");
+        toast.error(
+          "Microphone access not allowed. Check your browser settings.",
+        );
       } else {
         toast.error(`Speech recognition error: ${event.error}`);
       }
@@ -121,9 +133,11 @@ export default function VoiceToCode() {
       // Request microphone permission explicitly
       try {
         setPermissionStatus("Requesting microphone access...");
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        const stream = await navigator.mediaDevices.getUserMedia({
+          audio: true,
+        });
         // Permission granted, now start recording
-        stream.getTracks().forEach(track => track.stop()); // Stop the stream, we just needed permission
+        stream.getTracks().forEach((track) => track.stop()); // Stop the stream, we just needed permission
         setPermissionStatus("Microphone access granted");
 
         setTranscript("");
@@ -132,15 +146,24 @@ export default function VoiceToCode() {
         setIsRecording(true);
       } catch (error: any) {
         console.error("Microphone permission error:", error);
-        if (error.name === "NotAllowedError" || error.name === "PermissionDeniedError") {
+        if (
+          error.name === "NotAllowedError" ||
+          error.name === "PermissionDeniedError"
+        ) {
           setPermissionStatus("Microphone permission denied by user");
-          toast.error("Microphone access denied. Please allow microphone access in your browser settings and try again.");
+          toast.error(
+            "Microphone access denied. Please allow microphone access in your browser settings and try again.",
+          );
         } else if (error.name === "NotFoundError") {
           setPermissionStatus("No microphone found");
-          toast.error("No microphone found. Please connect a microphone and try again.");
+          toast.error(
+            "No microphone found. Please connect a microphone and try again.",
+          );
         } else if (error.name === "NotSupportedError") {
           setPermissionStatus("HTTPS required for microphone access");
-          toast.error("This feature requires a secure connection (HTTPS). You may be on localhost without proper setup.");
+          toast.error(
+            "This feature requires a secure connection (HTTPS). You may be on localhost without proper setup.",
+          );
         } else {
           setPermissionStatus(`Permission error: ${error.name}`);
           toast.error(`Microphone error: ${error.message}`);
@@ -158,7 +181,7 @@ export default function VoiceToCode() {
     const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
     if (!apiKey) {
       toast.error(
-        "OpenAI API key not found. Add VITE_OPENAI_API_KEY to .env.local"
+        "OpenAI API key not found. Add VITE_OPENAI_API_KEY to .env.local",
       );
       return;
     }
@@ -166,35 +189,40 @@ export default function VoiceToCode() {
     setIsGenerating(true);
 
     try {
-      const response = await fetch("https://api.openai.com/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${apiKey}`,
+      const response = await fetch(
+        "https://api.openai.com/v1/chat/completions",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${apiKey}`,
+          },
+          body: JSON.stringify({
+            model: "gpt-4-turbo-preview",
+            messages: [
+              {
+                role: "system",
+                content: `You are a code generation expert. Generate clean, production-ready ${language} code based on the user's description. Only return the code with minimal comments. No explanations.`,
+              },
+              {
+                role: "user",
+                content: transcript,
+              },
+            ],
+            temperature: 0.7,
+            max_tokens: 1000,
+          }),
         },
-        body: JSON.stringify({
-          model: "gpt-4-turbo-preview",
-          messages: [
-            {
-              role: "system",
-              content: `You are a code generation expert. Generate clean, production-ready ${language} code based on the user's description. Only return the code with minimal comments. No explanations.`,
-            },
-            {
-              role: "user",
-              content: transcript,
-            },
-          ],
-          temperature: 0.7,
-          max_tokens: 1000,
-        }),
-      });
+      );
 
       if (!response.ok) {
         const error = await response.json();
         if (error.error?.message?.includes("API key")) {
           toast.error("Invalid OpenAI API key. Check your .env.local file.");
         } else {
-          toast.error(`OpenAI error: ${error.error?.message || "Unknown error"}`);
+          toast.error(
+            `OpenAI error: ${error.error?.message || "Unknown error"}`,
+          );
         }
         setIsGenerating(false);
         return;
@@ -209,7 +237,7 @@ export default function VoiceToCode() {
       console.error("Error generating code:", error);
       toast.error(
         error.message ||
-          "Failed to generate code. Check your internet and API key."
+          "Failed to generate code. Check your internet and API key.",
       );
     } finally {
       setIsGenerating(false);
@@ -244,7 +272,8 @@ export default function VoiceToCode() {
               Speech Recognition for Code
             </h1>
             <p className="text-base text-atelier-text-muted max-w-2xl">
-              Transform your spoken words into clean, production-ready code using advanced speech recognition and AI-powered code generation.
+              Transform your spoken words into clean, production-ready code
+              using advanced speech recognition and AI-powered code generation.
             </p>
           </div>
 
@@ -253,13 +282,19 @@ export default function VoiceToCode() {
             <div className="flex items-start gap-3">
               <AlertCircle className="w-5 h-5 text-atelier-secondary flex-shrink-0 mt-0.5" />
               <div className="flex-1 text-sm">
-                <p className="font-semibold text-atelier-text mb-2">System Status</p>
+                <p className="font-semibold text-atelier-text mb-2">
+                  System Status
+                </p>
                 <div className="space-y-1 text-atelier-text-muted text-xs">
                   <p>
                     {browserSupport ? (
-                      <span className="text-atelier-secondary">✓ {browserSupport}</span>
+                      <span className="text-atelier-secondary">
+                        ✓ {browserSupport}
+                      </span>
                     ) : (
-                      <span className="text-atelier-error">✗ Checking browser support...</span>
+                      <span className="text-atelier-error">
+                        ✗ Checking browser support...
+                      </span>
                     )}
                   </p>
                   <p>
@@ -270,7 +305,9 @@ export default function VoiceToCode() {
                     )}
                   </p>
                   <p className="mt-2 text-atelier-text-muted/80">
-                    When you click "Start Recording", your browser will ask for microphone access. You must allow it for the prototype to work.
+                    When you click "Start Recording", your browser will ask for
+                    microphone access. You must allow it for the prototype to
+                    work.
                   </p>
                 </div>
               </div>
@@ -294,9 +331,7 @@ export default function VoiceToCode() {
                       isRecording
                         ? "bg-atelier-error/20 text-atelier-error border border-atelier-error/50 animate-pulse"
                         : "bg-atelier-primary/20 text-atelier-primary border border-atelier-primary/50 hover:bg-atelier-primary/30"
-                    } ${
-                      isGenerating ? "opacity-50 cursor-not-allowed" : ""
-                    }`}
+                    } ${isGenerating ? "opacity-50 cursor-not-allowed" : ""}`}
                   >
                     <Mic className="w-5 h-5" />
                     {isRecording
@@ -437,7 +472,8 @@ export default function VoiceToCode() {
             {[
               {
                 title: "Real-time Recognition",
-                description: "Instant speech-to-text conversion with minimal latency",
+                description:
+                  "Instant speech-to-text conversion with minimal latency",
               },
               {
                 title: "Smart Generation",
@@ -476,7 +512,8 @@ export default function VoiceToCode() {
                 To use this prototype, you need to add your OpenAI API key:
               </p>
               <ol className="text-sm text-atelier-text-muted space-y-2 ml-4 list-decimal">
-                <li>Get an API key from{" "}
+                <li>
+                  Get an API key from{" "}
                   <a
                     href="https://platform.openai.com/api-keys"
                     target="_blank"

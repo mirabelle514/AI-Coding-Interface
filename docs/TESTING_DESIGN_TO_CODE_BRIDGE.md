@@ -19,9 +19,11 @@ Engineering-Ready Code
 ### Why It Matters
 
 **Without the bridge:**
+
 - Designer sketches mockup → Hands to engineer → Engineer codes from scratch → Slow, lossy translation
 
 **With the bridge:**
+
 - Designer describes idea → AI understands intent → Engineer gets code → Fast, accurate translation
 
 ---
@@ -45,6 +47,7 @@ Designer verbally describes what needs to be built. AI converts natural language
 **Design Intent:** "I need a utility to validate email addresses"
 
 **Steps:**
+
 1. Navigate to Voice-to-Code prototype
 2. Click "Start Recording"
 3. Speak clearly: **"Create a TypeScript function that validates email addresses using regex"**
@@ -61,6 +64,7 @@ function validateEmail(email: string): boolean {
 ```
 
 **What Bridge Did:**
+
 - ✓ Converted natural language intent to typed code
 - ✓ Added proper function signature
 - ✓ Used appropriate regex pattern
@@ -71,6 +75,7 @@ function validateEmail(email: string): boolean {
 **Design Intent:** "I need a sorting algorithm for an array of user objects by date, most recent first"
 
 **Steps:**
+
 1. Click "Start Recording"
 2. Speak: **"Create a TypeScript function that sorts an array of objects with a 'createdAt' timestamp field, from newest to oldest"**
 3. Stop recording
@@ -79,12 +84,15 @@ function validateEmail(email: string): boolean {
 **Expected Output:**
 
 ```typescript
-function sortByNewest(users: Array<{createdAt: Date}>): Array<{createdAt: Date}> {
+function sortByNewest(
+  users: Array<{ createdAt: Date }>,
+): Array<{ createdAt: Date }> {
   return users.sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
 }
 ```
 
 **What Bridge Did:**
+
 - ✓ Understood semantic intent ("newest to oldest")
 - ✓ Converted to correct sort logic
 - ✓ Added type safety
@@ -95,6 +103,7 @@ function sortByNewest(users: Array<{createdAt: Date}>): Array<{createdAt: Date}>
 **Design Intent:** "Need the same validation logic but in Python for backend"
 
 **Steps:**
+
 1. Change "Code Language" dropdown to "Python"
 2. Click "Start Recording"
 3. Speak the same request
@@ -110,6 +119,7 @@ def validate_email(email: str) -> bool:
 ```
 
 **What Bridge Did:**
+
 - ✓ Same intent, different language
 - ✓ Adapted to Python idioms
 - ✓ Shows design intent transcends implementation details
@@ -127,6 +137,7 @@ Designers/presenters use intuitive hand movements to communicate code editing in
 ### Why Test This Way
 
 Imagine presenting to a client. Instead of typing, you gesture to:
+
 - Select code blocks
 - Copy and paste
 - Format code
@@ -135,6 +146,7 @@ Imagine presenting to a client. Instead of typing, you gesture to:
 This bridges the gap between **natural human intent** and **code manipulation**.
 
 ### Current State
+
 **Foundation UI is ready. AI gesture recognition needs MediaPipe setup.**
 
 ### How to Test the Concept (Without Full Implementation)
@@ -156,6 +168,7 @@ Code is selected/transformed
 **Design Intent:** "Review and comment on the function I just wrote"
 
 **Gesture Flow:**
+
 1. Developer opens webcam
 2. Makes "open hand" gesture → Highlights function
 3. Makes "thumbs up" gesture → Applies code formatter
@@ -163,6 +176,7 @@ Code is selected/transformed
 5. Result: Function is reviewed, formatted, and positioned for editing
 
 **What Bridge Will Do:**
+
 - ✓ Convert spatial intent (hand movement) to code action
 - ✓ Enable hands-free development
 - ✓ Accessibility for mobility-limited developers
@@ -178,6 +192,7 @@ Code is selected/transformed
 Two developers describe what needs to be built together. Both edit live. AI helps bridge understanding gaps.
 
 ### Current State
+
 **Connection UI ready. WebRTC/Sync layer needs setup.**
 
 ### How to Test the Concept (Without Full Implementation)
@@ -201,6 +216,7 @@ One click → Both see updated code
 **Design Intent (Shared):** "Build a checkout form with validation and error states"
 
 **Collaboration Flow:**
+
 1. Dev A opens a collaborative session, shares link
 2. Dev B joins the session
 3. Dev A types: "form validation schema"
@@ -210,6 +226,7 @@ One click → Both see updated code
 7. One dev clicks suggestion → Both see updated code
 
 **What Bridge Will Do:**
+
 - ✓ Synchronize design intent between two minds
 - ✓ Reduce miscommunication through live sync
 - ✓ AI helps align on best practices
@@ -226,6 +243,7 @@ One click → Both see updated code
 As you write code, AI analyzes your intent and suggests improvements. It bridges the gap between **what you wrote** and **what you meant to write**.
 
 ### Current State
+
 **Overlay UI ready. Backend analysis engine needs OpenAI code analysis setup.**
 
 ### How to Test the Concept (Without Full Implementation)
@@ -270,6 +288,7 @@ function processUsers(data) {
    - Type Safety: 40% → Type annotations improve to 95%
 
 **What Bridge Did:**
+
 - ✓ Analyzed your intent (process user data)
 - ✓ Identified gaps (missing types, suboptimal algorithm)
 - ✓ Suggested improvements with one-click fixes
@@ -346,32 +365,36 @@ Go to Voice-to-Code prototype and try the scenarios above.
 
 ## Success Metrics: How to Know the Bridge Works
 
-| Test | Success Looks Like | Example |
-|------|-------------------|---------|
+| Test              | Success Looks Like           | Example                                             |
+| ----------------- | ---------------------------- | --------------------------------------------------- |
 | **Voice-to-Code** | Spoken intent → working code | Say "prime number check" → Get `isPrime()` function |
-| **Gesture** | Hand movement → IDE action | Gesture "select" → Code block highlighted |
-| **Collaboration** | Two people → unified code | Dev A & B edit → One shared, synced file |
-| **Overlay** | Your code → AI improvement | You type messy code → AI suggests fixes |
+| **Gesture**       | Hand movement → IDE action   | Gesture "select" → Code block highlighted           |
+| **Collaboration** | Two people → unified code    | Dev A & B edit → One shared, synced file            |
+| **Overlay**       | Your code → AI improvement   | You type messy code → AI suggests fixes             |
 
 ---
 
 ## Troubleshooting Bridge Testing
 
 ### "I don't see any AI suggestions"
+
 - **For Voice-to-Code**: Check OpenAI API key is in `.env.local`
 - **For Others**: They need full implementation setup (coming soon)
 
 ### "Generated code doesn't match my intent"
+
 - Try rephrasing your request
 - Be more specific about what you need
 - Include programming language in your request
 
 ### "Gesture recognition not working"
+
 - MediaPipe library needs installation
 - Currently shows UI only
 - Full gesture detection coming in next phase
 
 ### "Collaborative session won't connect"
+
 - WebRTC signaling server needs setup
 - Supabase integration needed
 - Coming in next implementation phase
@@ -383,9 +406,11 @@ Go to Voice-to-Code prototype and try the scenarios above.
 ### Scenario: Building an Authentication Form
 
 **Designer's Intent:**
+
 > "I need a login form that validates email and password. It should show errors for invalid inputs and have a loading state while submitting."
 
 **Step 1: Voice-to-Code**
+
 - Speak the requirement
 - Get React component code:
 
@@ -399,10 +424,10 @@ export function LoginForm() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setErrors({});
-    
+
     if (!email.includes("@")) setErrors(p => ({...p, email: "Invalid email"}));
     if (password.length < 8) setErrors(p => ({...p, password: "Min 8 chars"}));
-    
+
     if (Object.keys(errors).length === 0) {
       setIsLoading(true);
       await submitLogin(email, password);
@@ -415,16 +440,19 @@ export function LoginForm() {
 ```
 
 **Step 2: AI Overlay Feedback**
+
 - AI suggests: "Add type for form errors"
 - AI suggests: "Use custom hook for validation logic"
 - Code quality improves: 72% → 89%
 
 **Step 3: Gesture Navigation (Future)**
+
 - Gesture to select validation logic
 - Gesture to extract to separate file
 - Code is automatically refactored
 
 **Step 4: Collaboration (Future)**
+
 - Share code with senior developer
 - Both view in real-time
 - Senior dev comments with suggestions
@@ -443,4 +471,3 @@ export function LoginForm() {
 4. **Provide feedback** on how the bridge is working
 
 The bridge succeeds when: **Your design intent flows directly into engineering-ready code.**
-

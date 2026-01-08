@@ -1,9 +1,11 @@
 # Quick Start: Connect Real AI (5 Minutes)
 
 ## The Problem
+
 Right now, the prototypes are just UI shells. **Nothing actually works.** To fix that, you need to connect a real AI provider.
 
 ## The Solution
+
 Add an OpenAI API key. Takes 5 minutes.
 
 ---
@@ -25,6 +27,7 @@ Add an OpenAI API key. Takes 5 minutes.
 In your project root folder, create a file called `.env.local`:
 
 **Mac/Linux:**
+
 ```bash
 touch .env.local
 ```
@@ -32,6 +35,7 @@ touch .env.local
 **Windows:** Just create a file called `.env.local` in the root folder
 
 **Inside `.env.local`, paste:**
+
 ```
 VITE_OPENAI_API_KEY=sk-your-api-key-here
 ```
@@ -44,7 +48,7 @@ Stop and restart your dev server:
 
 ```bash
 # Stop: Press Ctrl+C in terminal
-# Start: 
+# Start:
 npm run dev
 ```
 
@@ -63,11 +67,13 @@ npm run dev
 ## What Works Now
 
 **Voice-to-Code** ✓ FULLY WORKING
+
 - Speak → AI generates code
 - Multiple languages supported
 - Copy to clipboard
 
 **The Other 3 Prototypes** (Still UI-only)
+
 - Gesture Recognition - Needs hand pose detection library
 - Collaborative Coding - Needs WebRTC/Supabase setup
 - AI Assistant Overlay - Needs code analysis API
@@ -77,20 +83,24 @@ npm run dev
 ## Troubleshooting
 
 ### "API key not found" Error
+
 - Make sure `.env.local` exists in project root
 - Check the file has `VITE_OPENAI_API_KEY=sk-...`
 - Restart dev server after creating the file
 
 ### "Speech recognition not supported"
+
 - Use Chrome, Edge, or Safari browser
 - Firefox doesn't support Web Speech API yet
 
 ### "Invalid API key"
+
 - Double-check the key is correct (copy-paste from OpenAI)
 - Make sure it starts with `sk-`
 - You might need to generate a new key
 
 ### "No speech detected"
+
 - Make sure microphone permission is granted
 - Speak louder and clearer
 - Check browser console for errors
@@ -108,6 +118,7 @@ npm run dev
 ## Cost Example
 
 Using Voice-to-Code 10 times per day:
+
 - Each request = ~200 tokens
 - Cost per request = ~$0.006
 - 10 requests/day = ~$0.06/day

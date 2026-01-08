@@ -178,7 +178,8 @@ export default function Index() {
               How to Test the Design-to-Code Bridge
             </h2>
             <p className="text-base text-atelier-text-muted mb-8 leading-relaxed">
-              The bridge connects design intent to engineering output. It works when your idea flows directly into production-ready code.
+              The bridge connects design intent to engineering output. It works
+              when your idea flows directly into production-ready code.
             </p>
 
             <div className="space-y-6 mb-8">
@@ -187,7 +188,8 @@ export default function Index() {
                   The Bridge Flow
                 </h3>
                 <p className="text-sm text-atelier-text-muted mb-4">
-                  Design Intent (voice/gesture/collaboration) → AI Processing → Engineering-Ready Code
+                  Design Intent (voice/gesture/collaboration) → AI Processing →
+                  Engineering-Ready Code
                 </p>
                 <ul className="space-y-2 text-sm text-atelier-text-muted">
                   <li className="flex items-start gap-3">
@@ -216,7 +218,9 @@ export default function Index() {
                 <ul className="space-y-2 text-sm text-atelier-text-muted">
                   <li className="flex items-center gap-2">
                     <span className="text-atelier-secondary font-bold">✓</span>
-                    <span>OpenAI API key (free to start, ~$1.80/month for testing)</span>
+                    <span>
+                      OpenAI API key (free to start, ~$1.80/month for testing)
+                    </span>
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="text-atelier-secondary font-bold">✓</span>
