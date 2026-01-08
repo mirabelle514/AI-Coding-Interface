@@ -7,120 +7,124 @@
 
 @layer base {
   /**
-   * Tailwind CSS theme
+   * Atelier Design System Brand Colors
    * tailwind.config.ts expects the following color variables to be expressed as HSL values.
-   * A different format will require also updating the theme in tailwind.config.ts.
+   * Converted from hex colors provided in the Atelier Design System tokens.
   */
   :root {
-    --background: 10 3% 7%;
-    --foreground: 210 7% 92%;
+    /* Atelier Brand Hex to HSL conversion */
+    --background: 214 24% 18%;
+    --foreground: 0 0% 100%;
 
-    --card: 12 5% 12%;
-    --card-foreground: 210 7% 92%;
+    --card: 214 29% 24%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 12 5% 12%;
-    --popover-foreground: 210 7% 92%;
+    --popover: 214 29% 24%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 260 100% 55%;
-    --primary-foreground: 10 3% 7%;
+    --primary: 350 82% 60%;
+    --primary-foreground: 214 24% 18%;
 
-    --secondary: 200 100% 50%;
-    --secondary-foreground: 10 3% 7%;
+    --secondary: 178 62% 55%;
+    --secondary-foreground: 214 24% 18%;
 
-    --muted: 210 5% 30%;
-    --muted-foreground: 210 5% 65%;
+    --muted: 215 14% 34%;
+    --muted-foreground: 220 9% 61%;
 
-    --accent: 260 100% 55%;
-    --accent-foreground: 10 3% 7%;
+    --accent: 350 82% 60%;
+    --accent-foreground: 214 24% 18%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 350 82% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 210 5% 20%;
-    --input: 210 5% 20%;
-    --ring: 260 100% 55%;
+    --border: 270 11% 43%;
+    --input: 214 29% 24%;
+    --ring: 350 82% 60%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --sidebar-background: 12 5% 12%;
-    --sidebar-foreground: 210 7% 92%;
-    --sidebar-primary: 260 100% 55%;
-    --sidebar-primary-foreground: 10 3% 7%;
-    --sidebar-accent: 200 100% 50%;
-    --sidebar-accent-foreground: 10 3% 7%;
-    --sidebar-border: 210 5% 20%;
-    --sidebar-ring: 260 100% 55%;
+    --sidebar-background: 214 29% 24%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 350 82% 60%;
+    --sidebar-primary-foreground: 214 24% 18%;
+    --sidebar-accent: 178 62% 55%;
+    --sidebar-accent-foreground: 214 24% 18%;
+    --sidebar-border: 270 11% 43%;
+    --sidebar-ring: 350 82% 60%;
 
-    --ai-50: 260 100% 95%;
-    --ai-100: 260 100% 90%;
-    --ai-200: 260 100% 75%;
-    --ai-300: 260 100% 65%;
-    --ai-400: 260 100% 60%;
-    --ai-500: 260 100% 55%;
-    --ai-600: 260 100% 45%;
-    --ai-700: 260 100% 35%;
-    --ai-800: 260 100% 25%;
-    --ai-900: 260 100% 15%;
-
-    --voice: 280 95% 50%;
-    --gesture: 180 100% 45%;
-    --collab: 60 100% 50%;
-    --overlay: 20 100% 55%;
+    /* Atelier Brand Extended */
+    --atelier-brand-bg: 214 24% 18%;
+    --atelier-brand-surface: 214 29% 24%;
+    --atelier-brand-surface-elevated: 215 16% 28%;
+    --atelier-brand-primary: 350 82% 60%;
+    --atelier-brand-primary-hover: 350 82% 48%;
+    --atelier-brand-primary-light: 343 91% 79%;
+    --atelier-brand-secondary: 178 62% 55%;
+    --atelier-brand-secondary-light: 174 62% 69%;
+    --atelier-brand-text: 0 0% 100%;
+    --atelier-brand-text-muted: 220 9% 61%;
+    --atelier-brand-text-subtle: 217 12% 43%;
+    --atelier-brand-border: 270 11% 43%;
+    --atelier-brand-border-light: 0 0% 100% / 0.1;
+    --atelier-brand-success: 178 62% 55%;
+    --atelier-brand-warning: 46 100% 50%;
+    --atelier-brand-error: 350 82% 60%;
   }
 
   .dark {
-    --background: 10 3% 7%;
-    --foreground: 210 7% 92%;
+    --background: 214 24% 18%;
+    --foreground: 0 0% 100%;
 
-    --card: 12 5% 12%;
-    --card-foreground: 210 7% 92%;
+    --card: 214 29% 24%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 12 5% 12%;
-    --popover-foreground: 210 7% 92%;
+    --popover: 214 29% 24%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 260 100% 55%;
-    --primary-foreground: 10 3% 7%;
+    --primary: 350 82% 60%;
+    --primary-foreground: 214 24% 18%;
 
-    --secondary: 200 100% 50%;
-    --secondary-foreground: 10 3% 7%;
+    --secondary: 178 62% 55%;
+    --secondary-foreground: 214 24% 18%;
 
-    --muted: 210 5% 30%;
-    --muted-foreground: 210 5% 65%;
+    --muted: 215 14% 34%;
+    --muted-foreground: 220 9% 61%;
 
-    --accent: 260 100% 55%;
-    --accent-foreground: 10 3% 7%;
+    --accent: 350 82% 60%;
+    --accent-foreground: 214 24% 18%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 350 82% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 210 5% 20%;
-    --input: 210 5% 20%;
-    --ring: 260 100% 55%;
+    --border: 270 11% 43%;
+    --input: 214 29% 24%;
+    --ring: 350 82% 60%;
 
-    --sidebar-background: 12 5% 12%;
-    --sidebar-foreground: 210 7% 92%;
-    --sidebar-primary: 260 100% 55%;
-    --sidebar-primary-foreground: 10 3% 7%;
-    --sidebar-accent: 200 100% 50%;
-    --sidebar-accent-foreground: 10 3% 7%;
-    --sidebar-border: 210 5% 20%;
-    --sidebar-ring: 260 100% 55%;
+    --sidebar-background: 214 29% 24%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 350 82% 60%;
+    --sidebar-primary-foreground: 214 24% 18%;
+    --sidebar-accent: 178 62% 55%;
+    --sidebar-accent-foreground: 214 24% 18%;
+    --sidebar-border: 270 11% 43%;
+    --sidebar-ring: 350 82% 60%;
 
-    --ai-50: 260 100% 95%;
-    --ai-100: 260 100% 90%;
-    --ai-200: 260 100% 75%;
-    --ai-300: 260 100% 65%;
-    --ai-400: 260 100% 60%;
-    --ai-500: 260 100% 55%;
-    --ai-600: 260 100% 45%;
-    --ai-700: 260 100% 35%;
-    --ai-800: 260 100% 25%;
-    --ai-900: 260 100% 15%;
-
-    --voice: 280 95% 50%;
-    --gesture: 180 100% 45%;
-    --collab: 60 100% 50%;
-    --overlay: 20 100% 55%;
+    --atelier-brand-bg: 214 24% 18%;
+    --atelier-brand-surface: 214 29% 24%;
+    --atelier-brand-surface-elevated: 215 16% 28%;
+    --atelier-brand-primary: 350 82% 60%;
+    --atelier-brand-primary-hover: 350 82% 48%;
+    --atelier-brand-primary-light: 343 91% 79%;
+    --atelier-brand-secondary: 178 62% 55%;
+    --atelier-brand-secondary-light: 174 62% 69%;
+    --atelier-brand-text: 0 0% 100%;
+    --atelier-brand-text-muted: 220 9% 61%;
+    --atelier-brand-text-subtle: 217 12% 43%;
+    --atelier-brand-border: 270 11% 43%;
+    --atelier-brand-border-light: 0 0% 100% / 0.1;
+    --atelier-brand-success: 178 62% 55%;
+    --atelier-brand-warning: 46 100% 50%;
+    --atelier-brand-error: 350 82% 60%;
   }
 }
 
