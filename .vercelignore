@@ -1,8 +1,0 @@
-docs
-server
-netlify
-.git
-README.md
-AGENTS.md
-pnpm-lock.yaml
-vite.config.server.ts
