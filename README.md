@@ -155,10 +155,9 @@ git log --oneline
 
 See [ARCHITECTURE.md](/docs/ARCHITECTURE.md) for deployment options:
 
-- Netlify (recommended)
-- Vercel
-- Traditional hosting
+- Vercel (recommended)
 - Docker containers
+- Traditional hosting
 
 ---
 
