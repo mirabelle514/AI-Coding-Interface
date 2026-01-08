@@ -152,13 +152,13 @@ git push origin main
 
 All documentation is stored locally in `/docs/`:
 
-- **PROJECT_OVERVIEW.md** - Project goals and value proposition
-- **ARCHITECTURE.md** - Technical architecture and design decisions
-- **PROTOTYPES.md** - Detailed explanation of each prototype
-- **USER_GUIDE.md** - How to use the platform
-- **TECH_STACK.md** - Technologies and dependencies
-- **DESIGN_SYSTEM.md** - Atelier Design System colors and patterns
-- **SETUP.md** - This file
+- **project_overview.md** - Project goals and value proposition
+- **architecture.md** - Technical architecture and design decisions
+- **prototypes.md** - Detailed explanation of each prototype
+- **user_guide.md** - How to use the platform
+- **tech_stack.md** - Technologies and dependencies
+- **design_system.md** - Atelier Design System colors and patterns
+- **setup.md** - This file
 
 **These files are tracked in git and stored locally.** No external GitHub wiki or docs site needed.
 
