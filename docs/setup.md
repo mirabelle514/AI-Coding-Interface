@@ -301,7 +301,7 @@ Start with these in order:
 - Use `pnpm run dev` for development
 - TypeScript will catch errors during development
 - Read Tailwind/React docs for styling/component help
-- Check DESIGN_SYSTEM.md for color tokens
+- Check design_system.md for color tokens
 
 ---
 
