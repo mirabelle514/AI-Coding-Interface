@@ -103,6 +103,7 @@
 - **PROJECT_OVERVIEW.md** - This file
 - **DESIGN_TO_CODE_SCENARIOS.md** - 4 real-world scenarios showing the bridge in action
 - **TESTING_DESIGN_TO_CODE_BRIDGE.md** - Complete testing guide showing how design intent flows to code
+- **INTEGRATIONS_SETUP.md** - Connect your Figma, GitHub, and documentation sources
 - **ARCHITECTURE.md** - Technical architecture and design decisions
 - **PROTOTYPES.md** - Detailed explanation of each prototype
 - **USER_GUIDE.md** - How to use the platform
