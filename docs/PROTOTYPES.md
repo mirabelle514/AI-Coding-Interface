@@ -384,7 +384,7 @@ Security (85%)
 
 ---
 
-## 🎯 How to Choose a Prototype
+## How to Choose a Prototype
 
 **Use Voice-to-Code when:**
 
