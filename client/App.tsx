@@ -28,6 +28,7 @@ const App = () => (
           <Route path="/gesture-recognition" element={<GestureRecognition />} />
           <Route path="/collaborative-coding" element={<CollaborativeCoding />} />
           <Route path="/ai-overlay" element={<AIOverlay />} />
+          <Route path="/integrations" element={<Integrations />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
