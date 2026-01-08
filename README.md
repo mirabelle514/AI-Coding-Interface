@@ -34,21 +34,21 @@ All documentation is located in the `/docs` folder and tracked locally in git:
 
 ---
 
-## 🎯 Four AI Prototypes
+## Four AI Prototypes
 
-### 1. Voice-to-Code 🎤
+### 1. Voice-to-Code
 
 Convert spoken words directly into functional code using speech recognition and AI.
 
-### 2. Gesture Recognition 🤖
+### 2. Gesture Recognition
 
 Control IDE and manipulate code using hand gestures captured via webcam.
 
-### 3. Collaborative Coding 👥
+### 3. Collaborative Coding
 
 Real-time pair programming with AI assistance via WebRTC peer-to-peer connections.
 
-### 4. AI Assistant Overlay ✨
+### 4. AI Assistant Overlay
 
 Context-aware real-time coding assistance with inline suggestions and quality metrics.
 
