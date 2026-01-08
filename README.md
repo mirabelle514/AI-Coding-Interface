@@ -119,7 +119,7 @@ All styling uses the **Atelier Design System**:
 - **Background**: Dark navy (#1a1a2e)
 - **Surface**: Dark blue (#16213e)
 
-See [DESIGN_SYSTEM.md](/docs/DESIGN_SYSTEM.md) for complete color palette and design tokens.
+See [design_system.md](/docs/design_system.md) for complete color palette and design tokens.
 
 ---
 
