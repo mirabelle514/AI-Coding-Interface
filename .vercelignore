@@ -1,9 +1,7 @@
-docs/
-netlify/
-server/
-dist/server/
-.git/
-.gitignore
+docs
+server
+netlify
+.git
 README.md
 AGENTS.md
 pnpm-lock.yaml
