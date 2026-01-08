@@ -276,12 +276,12 @@ pnpm run typecheck
 
 Start with these in order:
 
-1. **PROJECT_OVERVIEW.md** - Understand the vision
-2. **PROTOTYPES.md** - Learn each feature
-3. **USER_GUIDE.md** - How users interact
-4. **ARCHITECTURE.md** - Technical deep dive
-5. **TECH_STACK.md** - Technologies used
-6. **DESIGN_SYSTEM.md** - Design tokens and styling
+1. **project_overview.md** - Understand the vision
+2. **prototypes.md** - Learn each feature
+3. **user_guide.md** - How users interact
+4. **architecture.md** - Technical deep dive
+5. **tech_stack.md** - Technologies used
+6. **design_system.md** - Design tokens and styling
 
 ---
 
