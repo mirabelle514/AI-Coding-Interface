@@ -1,28 +1,28 @@
 import Header from "@/components/Header";
-import { Hand, Zap, Grid3x3 } from "lucide-react";
+import { Hand, Code2, Grid3x3 } from "lucide-react";
 import { useState } from "react";
 
 export default function GestureRecognition() {
   const [isCameraActive, setIsCameraActive] = useState(false);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-atelier-bg">
       <Header />
 
       <main className="pt-24 pb-16 px-4">
         <div className="container max-w-6xl mx-auto">
           {/* Header */}
           <div className="mb-16 animate-slide-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[hsl(180_100%_45%)]/10 border border-[hsl(180_100%_45%)]/20 mb-6">
-              <Hand className="w-4 h-4 text-[hsl(180_100%_45%)]" />
-              <span className="text-sm font-semibold text-[hsl(180_100%_45%)]">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-atelier-secondary/10 border border-atelier-border mb-6">
+              <Hand className="w-4 h-4 text-atelier-secondary" />
+              <span className="text-xs font-semibold text-atelier-secondary uppercase tracking-wide">
                 Gesture Recognition
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h1 className="text-5xl md:text-6xl font-bold text-atelier-text mb-4">
               Control Code with Hand Gestures
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl">
+            <p className="text-base text-atelier-text-muted max-w-2xl">
               Intuitive hand gesture recognition for seamless code manipulation and IDE control without touching your keyboard.
             </p>
           </div>
