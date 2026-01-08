@@ -33,55 +33,55 @@ export default function AIOverlay() {
             <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-6">
                 {/* Code Quality */}
-                <div className="p-6 rounded-2xl border border-border bg-card">
-                  <h3 className="font-semibold text-foreground mb-4">
+                <div className="p-6 rounded-md border border-atelier-border bg-atelier-surface">
+                  <h3 className="font-semibold text-atelier-text mb-4">
                     Code Quality
                   </h3>
                   <div className="space-y-3">
                     <div>
                       <div className="flex items-center justify-between mb-1">
-                        <span className="text-xs font-medium text-muted-foreground">
+                        <span className="text-xs font-medium text-atelier-text-muted">
                           Readability
                         </span>
-                        <span className="text-xs font-bold text-[hsl(60_100%_50%)]">
+                        <span className="text-xs font-bold text-atelier-success">
                           92%
                         </span>
                       </div>
-                      <div className="w-full bg-background rounded-full h-2 overflow-hidden">
+                      <div className="w-full bg-atelier-bg rounded-full h-2 overflow-hidden">
                         <div
-                          className="h-full bg-[hsl(60_100%_50%)]"
+                          className="h-full bg-atelier-success"
                           style={{ width: "92%" }}
                         />
                       </div>
                     </div>
                     <div>
                       <div className="flex items-center justify-between mb-1">
-                        <span className="text-xs font-medium text-muted-foreground">
+                        <span className="text-xs font-medium text-atelier-text-muted">
                           Performance
                         </span>
-                        <span className="text-xs font-bold text-[hsl(180_100%_45%)]">
+                        <span className="text-xs font-bold text-atelier-secondary">
                           78%
                         </span>
                       </div>
-                      <div className="w-full bg-background rounded-full h-2 overflow-hidden">
+                      <div className="w-full bg-atelier-bg rounded-full h-2 overflow-hidden">
                         <div
-                          className="h-full bg-[hsl(180_100%_45%)]"
+                          className="h-full bg-atelier-secondary"
                           style={{ width: "78%" }}
                         />
                       </div>
                     </div>
                     <div>
                       <div className="flex items-center justify-between mb-1">
-                        <span className="text-xs font-medium text-muted-foreground">
+                        <span className="text-xs font-medium text-atelier-text-muted">
                           Security
                         </span>
-                        <span className="text-xs font-bold text-primary">
+                        <span className="text-xs font-bold text-atelier-primary">
                           85%
                         </span>
                       </div>
-                      <div className="w-full bg-background rounded-full h-2 overflow-hidden">
+                      <div className="w-full bg-atelier-bg rounded-full h-2 overflow-hidden">
                         <div
-                          className="h-full bg-primary"
+                          className="h-full bg-atelier-primary"
                           style={{ width: "85%" }}
                         />
                       </div>
@@ -90,9 +90,9 @@ export default function AIOverlay() {
                 </div>
 
                 {/* Issues */}
-                <div className="p-6 rounded-2xl border border-border bg-card">
-                  <h3 className="font-semibold text-foreground mb-4 flex items-center gap-2">
-                    <Lightbulb className="w-4 h-4 text-[hsl(20_100%_55%)]" />
+                <div className="p-6 rounded-md border border-atelier-border bg-atelier-surface">
+                  <h3 className="font-semibold text-atelier-text mb-4 flex items-center gap-2">
+                    <Lightbulb className="w-4 h-4 text-atelier-warning" />
                     Issues Found
                   </h3>
                   <div className="space-y-2">
@@ -102,10 +102,10 @@ export default function AIOverlay() {
                     ].map((issue, idx) => (
                       <div
                         key={idx}
-                        className={`p-2 rounded-lg text-xs font-medium flex items-center gap-2 ${
+                        className={`p-2 rounded-md text-xs font-medium flex items-center gap-2 ${
                           issue.type === "error"
-                            ? "bg-red-600/10 text-red-500 border border-red-600/20"
-                            : "bg-yellow-600/10 text-yellow-500 border border-yellow-600/20"
+                            ? "bg-atelier-error/10 text-atelier-error border border-atelier-error/20"
+                            : "bg-atelier-warning/10 text-atelier-warning border border-atelier-warning/20"
                         }`}
                       >
                         <span className="w-1.5 h-1.5 rounded-full bg-current" />
@@ -120,16 +120,16 @@ export default function AIOverlay() {
             {/* Right: Code Editor with Overlay */}
             <div className="lg:col-span-3">
               {/* Editor */}
-              <div className="p-6 rounded-2xl border border-border bg-card mb-6">
+              <div className="p-6 rounded-md border border-atelier-border bg-atelier-surface mb-6">
                 <div className="flex items-center gap-2 mb-4">
-                  <Code2 className="w-5 h-5 text-primary" />
-                  <h3 className="font-semibold text-foreground">
+                  <Code2 className="w-5 h-5 text-atelier-primary" />
+                  <h3 className="font-semibold text-atelier-text">
                     Code Editor with AI Overlay
                   </h3>
                 </div>
 
                 {/* Code Lines with Overlay */}
-                <div className="rounded-lg bg-background border border-border overflow-hidden">
+                <div className="rounded-md bg-atelier-bg border border-atelier-border overflow-hidden">
                   <div className="font-mono text-sm">
                     {[
                       {
@@ -171,25 +171,25 @@ export default function AIOverlay() {
                     ].map((line) => (
                       <div
                         key={line.num}
-                        className={`border-b border-border/50 transition-colors ${
+                        className={`border-b border-atelier-border/50 transition-colors ${
                           selectedLine === line.num
-                            ? "bg-primary/10"
-                            : "hover:bg-background/50"
+                            ? "bg-atelier-primary/10"
+                            : "hover:bg-atelier-surface/50"
                         }`}
                         onClick={() => setSelectedLine(line.num)}
                       >
                         <div className="flex items-stretch">
-                          <div className="w-12 px-4 py-2 bg-background/30 text-muted-foreground flex items-center justify-end select-none border-r border-border/50">
+                          <div className="w-12 px-4 py-2 bg-atelier-bg/50 text-atelier-text-muted flex items-center justify-end select-none border-r border-atelier-border/50 text-xs">
                             {line.num}
                           </div>
-                          <div className="flex-1 px-4 py-2 text-foreground overflow-x-auto">
+                          <div className="flex-1 px-4 py-2 text-atelier-text overflow-x-auto text-xs">
                             {line.code}
                           </div>
                         </div>
                         {line.suggestion && (
-                          <div className="px-16 py-3 bg-[hsl(20_100%_55%)]/10 border-t border-[hsl(20_100%_55%)]/20 flex items-start gap-3 text-xs">
-                            <Sparkles className="w-4 h-4 text-[hsl(20_100%_55%)] flex-shrink-0 mt-0.5" />
-                            <span className="text-[hsl(20_100%_55%)]">
+                          <div className="px-16 py-3 bg-atelier-warning/10 border-t border-atelier-warning/20 flex items-start gap-3 text-xs">
+                            <Lightbulb className="w-4 h-4 text-atelier-warning flex-shrink-0 mt-0.5" />
+                            <span className="text-atelier-warning">
                               {line.suggestion}
                             </span>
                           </div>
@@ -201,10 +201,10 @@ export default function AIOverlay() {
               </div>
 
               {/* Suggestions Sidebar */}
-              <div className="p-6 rounded-2xl border border-border bg-card">
+              <div className="p-6 rounded-md border border-atelier-border bg-atelier-surface">
                 <div className="flex items-center gap-2 mb-4">
-                  <Zap className="w-5 h-5 text-primary" />
-                  <h3 className="font-semibold text-foreground">
+                  <Zap className="w-5 h-5 text-atelier-primary" />
+                  <h3 className="font-semibold text-atelier-text">
                     Smart Suggestions
                   </h3>
                 </div>
@@ -230,20 +230,20 @@ export default function AIOverlay() {
                   ].map((suggestion, idx) => (
                     <div
                       key={idx}
-                      className="p-4 rounded-lg border border-border bg-background hover:border-primary/50 transition-colors cursor-pointer group"
+                      className="p-4 rounded-md border border-atelier-border bg-atelier-bg hover:border-atelier-primary/50 hover:bg-atelier-surface/50 transition-all duration-200 cursor-pointer group"
                     >
                       <div className="flex items-start justify-between mb-2">
-                        <p className="text-sm font-semibold text-foreground">
+                        <p className="text-sm font-semibold text-atelier-text">
                           {suggestion.title}
                         </p>
-                        <span className="text-xs px-2 py-1 rounded bg-primary/10 text-primary font-semibold">
+                        <span className="text-xs px-2 py-1 rounded-md bg-atelier-primary/10 text-atelier-primary font-semibold">
                           {suggestion.score}
                         </span>
                       </div>
-                      <p className="text-xs text-muted-foreground">
+                      <p className="text-xs text-atelier-text-muted">
                         {suggestion.description}
                       </p>
-                      <button className="mt-2 text-xs font-semibold text-primary hover:underline">
+                      <button className="mt-2 text-xs font-semibold text-atelier-primary hover:underline">
                         Apply Fix →
                       </button>
                     </div>
@@ -277,12 +277,12 @@ export default function AIOverlay() {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className="p-4 rounded-lg border border-border bg-card hover:border-primary/50 transition-colors"
+                className="p-4 rounded-md border border-atelier-border bg-atelier-surface hover:border-atelier-primary hover:bg-atelier-surface-elevated transition-all duration-200"
               >
-                <h4 className="font-semibold text-foreground mb-2">
+                <h4 className="font-semibold text-atelier-text mb-2 text-sm">
                   {feature.title}
                 </h4>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-xs text-atelier-text-muted">
                   {feature.description}
                 </p>
               </div>
