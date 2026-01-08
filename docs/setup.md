@@ -182,7 +182,7 @@ The project is set up for local development:
 - [ ] Configure git user with your name
 - [ ] Run `pnpm run dev`
 - [ ] Open `http://localhost:8080`
-- [ ] Read `/docs/PROJECT_OVERVIEW.md`
+- [ ] Read `/docs/project_overview.md`
 - [ ] Explore a prototype
 - [ ] Make a small change and commit
 - [ ] Verify commit shows your name
