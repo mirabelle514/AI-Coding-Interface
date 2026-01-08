@@ -164,6 +164,85 @@ export default function Index() {
         </div>
       </section>
 
+      {/* How to Test the Bridge Section */}
+      <section className="py-20 md:py-32 px-4 bg-atelier-surface/50">
+        <div className="container max-w-4xl mx-auto">
+          <div className="mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-atelier-secondary/10 border border-atelier-border mb-6">
+              <Code2 className="w-4 h-4 text-atelier-secondary" />
+              <span className="text-xs font-semibold text-atelier-secondary uppercase tracking-wide">
+                Testing Guide
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-atelier-text mb-6">
+              How to Test the Design-to-Code Bridge
+            </h2>
+            <p className="text-base text-atelier-text-muted mb-8 leading-relaxed">
+              The bridge connects design intent to engineering output. It works when your idea flows directly into production-ready code.
+            </p>
+
+            <div className="space-y-6 mb-8">
+              <div className="p-6 rounded-md border border-atelier-border bg-atelier-bg">
+                <h3 className="font-semibold text-atelier-text mb-3 text-lg">
+                  The Bridge Flow
+                </h3>
+                <p className="text-sm text-atelier-text-muted mb-4">
+                  Design Intent (voice/gesture/collaboration) → AI Processing → Engineering-Ready Code
+                </p>
+                <ul className="space-y-2 text-sm text-atelier-text-muted">
+                  <li className="flex items-start gap-3">
+                    <span className="text-atelier-primary font-bold">1.</span>
+                    <span>Speak your design intent (Voice-to-Code)</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-atelier-primary font-bold">2.</span>
+                    <span>AI understands and generates code</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-atelier-primary font-bold">3.</span>
+                    <span>Verify code matches your design intent</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-atelier-primary font-bold">4.</span>
+                    <span>Copy to your editor and use immediately</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="p-6 rounded-md border border-atelier-secondary/30 bg-atelier-secondary/10">
+                <h3 className="font-semibold text-atelier-text mb-3 text-lg">
+                  What You Need
+                </h3>
+                <ul className="space-y-2 text-sm text-atelier-text-muted">
+                  <li className="flex items-center gap-2">
+                    <span className="text-atelier-secondary font-bold">✓</span>
+                    <span>OpenAI API key (free to start, ~$1.80/month for testing)</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-atelier-secondary font-bold">✓</span>
+                    <span>Chrome, Edge, or Safari browser</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="text-atelier-secondary font-bold">✓</span>
+                    <span>Microphone for Voice-to-Code prototype</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <a
+              href="https://github.com/mirabelle/design-to-code-bridge/blob/main/docs/TESTING_DESIGN_TO_CODE_BRIDGE.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-atelier-secondary text-atelier-bg rounded-md font-semibold hover:bg-atelier-secondary-hover transition-colors duration-200"
+            >
+              View Complete Testing Guide
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Tech Stack Section */}
       <section className="py-20 md:py-32 px-4 bg-atelier-bg">
         <div className="container max-w-6xl mx-auto">
