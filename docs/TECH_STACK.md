@@ -389,7 +389,7 @@ pnpm update --interactive
 
 - **Docker** - Containerization
 - **Kubernetes** - Orchestration
-- **Vercel/Netlify** - Hosting
+- **Vercel** - Hosting
 
 ### Performance
 
