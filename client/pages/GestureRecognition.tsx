@@ -33,25 +33,25 @@ export default function GestureRecognition() {
             <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-6">
                 {/* Camera Button */}
-                <div className="p-6 rounded-2xl border border-border bg-card">
-                  <h3 className="font-semibold text-foreground mb-4">
+                <div className="p-6 rounded-md border border-atelier-border bg-atelier-surface">
+                  <h3 className="font-semibold text-atelier-text mb-4">
                     Gesture Control
                   </h3>
                   <button
                     onClick={() => setIsCameraActive(!isCameraActive)}
-                    className={`w-full py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 ${
+                    className={`w-full py-3 rounded-md font-semibold transition-all flex items-center justify-center gap-2 ${
                       isCameraActive
-                        ? "bg-[hsl(180_100%_45%)]/20 text-[hsl(180_100%_45%)] border border-[hsl(180_100%_45%)]/50 animate-pulse"
-                        : "bg-[hsl(180_100%_45%)]/20 text-[hsl(180_100%_45%)] border border-[hsl(180_100%_45%)]/50 hover:bg-[hsl(180_100%_45%)]/30"
+                        ? "bg-atelier-secondary/20 text-atelier-secondary border border-atelier-secondary/50 animate-pulse"
+                        : "bg-atelier-secondary/20 text-atelier-secondary border border-atelier-secondary/50 hover:bg-atelier-secondary/30"
                     }`}
                   >
                     <Hand className="w-5 h-5" />
                     {isCameraActive ? "Stop Camera" : "Start Camera"}
                   </button>
                   {isCameraActive && (
-                    <div className="mt-4 p-3 rounded-lg bg-[hsl(180_100%_45%)]/10 border border-[hsl(180_100%_45%)]/20">
-                      <p className="text-sm text-[hsl(180_100%_45%)] flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-[hsl(180_100%_45%)] animate-pulse" />
+                    <div className="mt-4 p-3 rounded-md bg-atelier-secondary/10 border border-atelier-secondary/20">
+                      <p className="text-xs text-atelier-secondary flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-atelier-secondary animate-pulse" />
                         Camera active
                       </p>
                     </div>
@@ -59,25 +59,25 @@ export default function GestureRecognition() {
                 </div>
 
                 {/* Gesture Reference */}
-                <div className="p-6 rounded-2xl border border-border bg-card">
-                  <h3 className="font-semibold text-foreground mb-4">
+                <div className="p-6 rounded-md border border-atelier-border bg-atelier-surface">
+                  <h3 className="font-semibold text-atelier-text mb-4">
                     Gesture Reference
                   </h3>
-                  <div className="space-y-3 text-sm">
+                  <div className="space-y-2 text-sm">
                     {[
-                      { gesture: "✋ Open Hand", action: "Select Code" },
-                      { gesture: "✌️ Two Fingers", action: "Copy" },
-                      { gesture: "👍 Thumbs Up", action: "Format" },
-                      { gesture: "👊 Fist", action: "Delete" },
+                      { gesture: "Open Hand", action: "Select Code" },
+                      { gesture: "Two Fingers", action: "Copy" },
+                      { gesture: "Thumbs Up", action: "Format" },
+                      { gesture: "Fist", action: "Delete" },
                     ].map((item, idx) => (
                       <div
                         key={idx}
-                        className="flex items-center justify-between p-2 rounded bg-background border border-border/50"
+                        className="flex items-center justify-between p-2 rounded-md bg-atelier-bg border border-atelier-border/50"
                       >
-                        <span className="text-muted-foreground">
+                        <span className="text-atelier-text-muted text-xs">
                           {item.gesture}
                         </span>
-                        <span className="text-foreground font-medium">
+                        <span className="text-atelier-text font-medium text-xs">
                           {item.action}
                         </span>
                       </div>
@@ -90,25 +90,25 @@ export default function GestureRecognition() {
             {/* Right: Camera Feed and Code */}
             <div className="lg:col-span-2">
               {/* Camera Feed */}
-              <div className="p-6 rounded-2xl border border-border bg-card mb-6">
+              <div className="p-6 rounded-md border border-atelier-border bg-atelier-surface mb-6">
                 <div className="flex items-center gap-2 mb-4">
-                  <Grid3x3 className="w-5 h-5 text-[hsl(180_100%_45%)]" />
-                  <h3 className="font-semibold text-foreground">Camera Feed</h3>
+                  <Grid3x3 className="w-5 h-5 text-atelier-secondary" />
+                  <h3 className="font-semibold text-atelier-text">Camera Feed</h3>
                 </div>
-                <div className="aspect-video rounded-lg bg-background border-2 border-dashed border-border flex items-center justify-center relative overflow-hidden">
+                <div className="aspect-video rounded-md bg-atelier-bg border border-dashed border-atelier-border flex items-center justify-center relative overflow-hidden">
                   {isCameraActive ? (
-                    <div className="absolute inset-0 bg-gradient-to-br from-[hsl(180_100%_45%)]/10 to-transparent flex items-center justify-center">
+                    <div className="absolute inset-0 bg-gradient-to-br from-atelier-secondary/10 to-transparent flex items-center justify-center">
                       <div className="text-center">
-                        <Hand className="w-16 h-16 text-[hsl(180_100%_45%)]/30 mx-auto mb-4" />
-                        <p className="text-muted-foreground">
+                        <Hand className="w-16 h-16 text-atelier-secondary/30 mx-auto mb-4" />
+                        <p className="text-atelier-text-muted text-sm">
                           Camera feed would appear here
                         </p>
                       </div>
                     </div>
                   ) : (
                     <div className="text-center">
-                      <Hand className="w-16 h-16 text-muted-foreground/30 mx-auto mb-4" />
-                      <p className="text-muted-foreground">
+                      <Hand className="w-16 h-16 text-atelier-text-muted/30 mx-auto mb-4" />
+                      <p className="text-atelier-text-muted text-sm">
                         Enable camera to start gesture recognition
                       </p>
                     </div>
@@ -117,14 +117,14 @@ export default function GestureRecognition() {
               </div>
 
               {/* Code Editor Preview */}
-              <div className="p-6 rounded-2xl border border-border bg-card">
+              <div className="p-6 rounded-md border border-atelier-border bg-atelier-surface">
                 <div className="flex items-center gap-2 mb-4">
-                  <Zap className="w-5 h-5 text-primary" />
-                  <h3 className="font-semibold text-foreground">
+                  <Code2 className="w-5 h-5 text-atelier-primary" />
+                  <h3 className="font-semibold text-atelier-text">
                     Code Editor
                   </h3>
                 </div>
-                <pre className="p-4 rounded-lg bg-background text-sm font-mono text-foreground overflow-x-auto min-h-48 border border-border">
+                <pre className="p-4 rounded-md bg-atelier-bg text-xs font-mono text-atelier-text-muted overflow-x-auto min-h-48 border border-atelier-border">
                   <code>{`function calculateSum(a, b) {
   // Use gestures to modify code
   const result = a + b;
@@ -163,12 +163,12 @@ export default function GestureRecognition() {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className="p-4 rounded-lg border border-border bg-card hover:border-primary/50 transition-colors"
+                className="p-4 rounded-md border border-atelier-border bg-atelier-surface hover:border-atelier-primary hover:bg-atelier-surface-elevated transition-all duration-200"
               >
-                <h4 className="font-semibold text-foreground mb-2">
+                <h4 className="font-semibold text-atelier-text mb-2 text-sm">
                   {feature.title}
                 </h4>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-xs text-atelier-text-muted">
                   {feature.description}
                 </p>
               </div>
