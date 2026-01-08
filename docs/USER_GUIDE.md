@@ -295,11 +295,11 @@ function calculateTotal(items) {
 
 **System shows:**
 
-1. ⚠️ Line 2: "Add type annotation"
-2. 💡 Line 4: "Use reduce() for cleaner code"
-3. Readability: 92% ✓
-4. Performance: 78% ⚠️
-5. Security: 85% ✓
+1. [Warning] Line 2: "Add type annotation"
+2. [Suggestion] Line 4: "Use reduce() for cleaner code"
+3. Readability: 92% [Pass]
+4. Performance: 78% [Warning]
+5. Security: 85% [Pass]
 
 **You apply suggestion:**
 
