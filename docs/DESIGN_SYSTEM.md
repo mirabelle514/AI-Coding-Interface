@@ -1,6 +1,6 @@
 # Design-to-Code Bridge: Atelier Design System
 
-## 🎨 Color Palette
+## Color Palette
 
 ### Primary Colors
 
@@ -164,7 +164,7 @@ Usage: Errors, destructive actions, failures
 
 ---
 
-## 📐 Typography
+## Typography
 
 ### Font Family
 
@@ -203,7 +203,7 @@ Body:
 
 ---
 
-## 🎯 Spacing System
+## Spacing System
 
 ### Base Unit: 4px
 
@@ -244,7 +244,7 @@ Item spacing: 8px - 12px (2-3 units)
 
 ---
 
-## 🔘 Border Radius
+## Border Radius
 
 ```
 None: 0px
@@ -265,7 +265,7 @@ Full: 9999px (rounded)
 
 ---
 
-## 💫 Animations & Transitions
+## Animations and Transitions
 
 ### Duration
 
@@ -293,7 +293,7 @@ ease-in-out: cubic-bezier(0.4, 0, 0.2, 1)
 
 ---
 
-## 🎭 Shadows
+## Shadows
 
 ```
 Subtle: 0 1px 2px 0 rgba(0, 0, 0, 0.05)
@@ -306,7 +306,7 @@ XL: 0 20px 25px -5px rgba(0, 0, 0, 0.1)
 
 ---
 
-## 📱 Breakpoints
+## Breakpoints
 
 ```
 Mobile: 0px - 640px (default)
@@ -324,7 +324,7 @@ xl: 1280px
 
 ---
 
-## 🖼️ Component Styling Guide
+## Component Styling Guide
 
 ### Buttons
 
@@ -423,7 +423,7 @@ Variants:
 
 ---
 
-## 🎨 Color Usage by Component
+## Color Usage by Component
 
 | Component | Primary | Secondary | Background | Usage      |
 | --------- | ------- | --------- | ---------- | ---------- |
@@ -439,7 +439,7 @@ Variants:
 
 ---
 
-## 💾 CSS Variables (Tailwind Integration)
+## CSS Variables (Tailwind Integration)
 
 ```css
 /* Light/Dark Root Variables */
@@ -488,7 +488,7 @@ Variants:
 
 ---
 
-## 📚 Design Patterns
+## Design Patterns
 
 ### Call-to-Action (CTA)
 
@@ -521,7 +521,7 @@ Variants:
 
 ---
 
-## 🌙 Dark Mode
+## Dark Mode
 
 The design system is dark-mode first:
 
@@ -534,7 +534,7 @@ All colors maintain accessibility (WCAG AA minimum).
 
 ---
 
-## ♿ Accessibility
+## Accessibility
 
 ### Color Contrast
 
@@ -556,7 +556,7 @@ All colors maintain accessibility (WCAG AA minimum).
 
 ---
 
-## 🎓 Design System Usage
+## Design System Usage
 
 ### For Developers
 
@@ -582,7 +582,7 @@ All colors maintain accessibility (WCAG AA minimum).
 
 ---
 
-## 📦 Exporting for Other Projects
+## Exporting for Other Projects
 
 ### CSS File
 
@@ -607,7 +607,7 @@ All tokens configured in `tailwind.config.ts`
 
 ---
 
-## 🔮 Design System Evolution
+## Design System Evolution
 
 ### v1.0 (Current)
 
@@ -629,6 +629,6 @@ All tokens configured in `tailwind.config.ts`
 
 ---
 
-## 📞 Design Questions?
+## Design Questions?
 
 Refer to component styling sections above or check implementation in `/client/global.css`

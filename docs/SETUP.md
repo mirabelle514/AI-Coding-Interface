@@ -1,6 +1,6 @@
-# Design-to-Code Bridge: Setup & Configuration
+# Design-to-Code Bridge: Setup and Configuration
 
-## 🚀 Initial Setup
+## Initial Setup
 
 ### 1. Install Dependencies
 
@@ -43,7 +43,7 @@ Opens at: `http://localhost:8080`
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 design-to-code-bridge/
@@ -69,7 +69,7 @@ design-to-code-bridge/
 
 ---
 
-## 🔧 Available Commands
+## Available Commands
 
 ### Development
 
@@ -101,7 +101,7 @@ pnpm run test         # Run Vitest tests
 
 ---
 
-## 🌐 Environment Variables
+## Environment Variables
 
 Create a `.env` file in the root directory (optional for local development):
 
@@ -115,7 +115,7 @@ VITE_ENV=development
 
 ---
 
-## 📝 Git Workflow
+## Git Workflow
 
 ### Creating Commits
 
@@ -148,7 +148,7 @@ git push origin main
 
 ---
 
-## 📚 Documentation Structure
+## Documentation Structure
 
 All documentation is stored locally in `/docs/`:
 
@@ -164,19 +164,19 @@ All documentation is stored locally in `/docs/`:
 
 ---
 
-## 🔒 Local Development
+## Local Development
 
 The project is set up for local development:
 
-✅ Documentation in `/docs` folder (git tracked)  
-✅ All source code in repository  
-✅ No external dependencies for docs  
-✅ Git configured with your name  
-✅ Hot reload enabled (Vite)
+[+] Documentation in `/docs` folder (git tracked)
+[+] All source code in repository
+[+] No external dependencies for docs
+[+] Git configured with your name
+[+] Hot reload enabled (Vite)
 
 ---
 
-## 🚀 First Time Setup Checklist
+## First Time Setup Checklist
 
 - [ ] Run `pnpm install`
 - [ ] Configure git user with your name
@@ -189,7 +189,7 @@ The project is set up for local development:
 
 ---
 
-## 🔄 Regular Workflow
+## Regular Workflow
 
 ```
 1. Make code changes
@@ -202,7 +202,7 @@ The project is set up for local development:
 
 ---
 
-## 📦 Building for Production
+## Building for Production
 
 ### Local Production Build
 
@@ -226,7 +226,7 @@ See `/docs/ARCHITECTURE.md` for deployment strategies:
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Port Already in Use
 
@@ -273,7 +273,7 @@ pnpm run typecheck
 
 ---
 
-## 📚 Learning Resources
+## Learning Resources
 
 Start with these in order:
 
@@ -286,7 +286,7 @@ Start with these in order:
 
 ---
 
-## 🎯 Next Steps
+## Next Steps
 
 1. **Explore**: Try all 4 prototypes
 2. **Understand**: Read the architecture
@@ -296,7 +296,7 @@ Start with these in order:
 
 ---
 
-## 💡 Tips
+## Tips
 
 - All docs are in `/docs` - check them frequently
 - Use `pnpm run dev` for development
@@ -306,7 +306,7 @@ Start with these in order:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 1. Make changes to code
 2. Test in browser
@@ -317,7 +317,7 @@ Start with these in order:
 
 ---
 
-## 📞 Support
+## Support
 
 - Check `/docs` folder for detailed information
 - Read TROUBLESHOOTING section above
