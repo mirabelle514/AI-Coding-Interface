@@ -348,15 +348,15 @@ function calculateTotal(items: Array<{ price: number }>) {
 
 ---
 
-## 📱 Mobile Usage
+## Mobile Usage
 
 ### Supported Features
 
-- ✅ Homepage browsing
-- ✅ Feature exploration
-- ⚠️ Limited prototype interaction
-- ❌ Gesture recognition (needs camera)
-- ❌ Collaborative coding (touch interaction limited)
+- [+] Homepage browsing
+- [+] Feature exploration
+- [!] Limited prototype interaction
+- [-] Gesture recognition (needs camera)
+- [-] Collaborative coding (touch interaction limited)
 
 ### Recommended
 
