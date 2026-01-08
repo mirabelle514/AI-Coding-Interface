@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import { Mic, Volume2, Code2, Copy, Check } from "lucide-react";
+import { Mic, Volume2, Code2, Copy, Check, AlertCircle } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { toast } from "sonner";
 
@@ -11,27 +11,52 @@ export default function VoiceToCode() {
   const [copied, setCopied] = useState(false);
   const [language, setLanguage] = useState("JavaScript");
   const [inputLanguage, setInputLanguage] = useState("English (US)");
+  const [browserSupport, setBrowserSupport] = useState<string | null>(null);
+  const [permissionStatus, setPermissionStatus] = useState<string | null>(null);
   const recognitionRef = useRef<any>(null);
 
   useEffect(() => {
-    // Initialize speech recognition
+    // Check browser support
     const SpeechRecognition =
       (window as any).SpeechRecognition ||
       (window as any).webkitSpeechRecognition;
 
     if (!SpeechRecognition) {
-      toast.error(
-        "Speech Recognition not supported in your browser. Use Chrome, Edge, or Safari."
-      );
+      const errorMsg = "Speech Recognition not supported in your browser. Use Chrome, Edge, or Safari.";
+      setBrowserSupport(errorMsg);
+      toast.error(errorMsg);
       return;
     }
 
+    setBrowserSupport("Browser supports Speech Recognition");
+
+    // Check microphone permission
+    if (navigator.permissions && navigator.permissions.query) {
+      navigator.permissions.query({ name: "microphone" as any }).then((result) => {
+        setPermissionStatus(`Microphone permission: ${result.state}`);
+        if (result.state === "denied") {
+          toast.error("Microphone permission denied. Please enable it in browser settings.");
+        }
+
+        // Listen for permission changes
+        result.addEventListener("change", () => {
+          setPermissionStatus(`Microphone permission: ${result.state}`);
+        });
+      }).catch(() => {
+        setPermissionStatus("Unable to check microphone permission");
+      });
+    }
+
+    // Initialize speech recognition
     recognitionRef.current = new SpeechRecognition();
     recognitionRef.current.continuous = true;
     recognitionRef.current.interimResults = true;
+    recognitionRef.current.lang = "en-US";
 
     recognitionRef.current.onstart = () => {
+      console.log("Speech recognition started");
       setTranscript("");
+      setPermissionStatus("Recording active - microphone is listening");
     };
 
     recognitionRef.current.onresult = (event: any) => {
@@ -56,11 +81,27 @@ export default function VoiceToCode() {
     };
 
     recognitionRef.current.onerror = (event: any) => {
-      toast.error(`Speech recognition error: ${event.error}`);
+      console.error("Speech recognition error:", event.error);
+
+      if (event.error === "no-speech") {
+        toast.error("No speech detected. Please speak louder or clearer.");
+      } else if (event.error === "network") {
+        toast.error("Network error. Check your internet connection.");
+      } else if (event.error === "permission-denied") {
+        setPermissionStatus("Permission denied - you blocked microphone access");
+        toast.error("Microphone permission denied. Please allow microphone access in browser settings.");
+      } else if (event.error === "not-allowed") {
+        setPermissionStatus("Not allowed - check browser permissions");
+        toast.error("Microphone access not allowed. Check your browser settings.");
+      } else {
+        toast.error(`Speech recognition error: ${event.error}`);
+      }
     };
 
     recognitionRef.current.onend = () => {
+      console.log("Speech recognition ended");
       setIsRecording(false);
+      setPermissionStatus("Recording stopped");
     };
 
     return () => {
