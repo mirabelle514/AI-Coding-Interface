@@ -7,7 +7,7 @@ export default function Header() {
       <nav className="container max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 font-bold text-lg text-atelier-primary">
           <Code2 className="w-5 h-5" />
-          <span>CodeAI</span>
+          <span>D2C Bridge</span>
         </Link>
 
         <div className="flex items-center gap-8">
