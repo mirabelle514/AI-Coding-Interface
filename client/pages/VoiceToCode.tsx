@@ -1,28 +1,28 @@
 import Header from "@/components/Header";
-import { Mic, Volume2, Zap } from "lucide-react";
+import { Mic, Volume2, Code2 } from "lucide-react";
 import { useState } from "react";
 
 export default function VoiceToCode() {
   const [isRecording, setIsRecording] = useState(false);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-atelier-bg">
       <Header />
 
       <main className="pt-24 pb-16 px-4">
         <div className="container max-w-6xl mx-auto">
           {/* Header */}
           <div className="mb-16 animate-slide-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[hsl(280_95%_50%)]/10 border border-[hsl(280_95%_50%)]/20 mb-6">
-              <Mic className="w-4 h-4 text-[hsl(280_95%_50%)]" />
-              <span className="text-sm font-semibold text-[hsl(280_95%_50%)]">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-atelier-primary/10 border border-atelier-border mb-6">
+              <Mic className="w-4 h-4 text-atelier-primary" />
+              <span className="text-xs font-semibold text-atelier-primary uppercase tracking-wide">
                 Voice-to-Code
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h1 className="text-5xl md:text-6xl font-bold text-atelier-text mb-4">
               Speech Recognition for Code
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl">
+            <p className="text-base text-atelier-text-muted max-w-2xl">
               Transform your spoken words into clean, production-ready code using advanced speech recognition and AI-powered code generation.
             </p>
           </div>
