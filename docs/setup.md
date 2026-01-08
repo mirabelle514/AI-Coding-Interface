@@ -218,7 +218,7 @@ Opens at: `http://localhost:3000` (production build)
 
 ### Production Deployment
 
-See `/docs/ARCHITECTURE.md` for deployment strategies:
+See `/docs/architecture.md` for deployment strategies:
 
 - Vercel (recommended)
 - Docker containers
