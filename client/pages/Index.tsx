@@ -1,28 +1,28 @@
-import { Mic, Hand, Users, Sparkles, ArrowRight, Zap } from "lucide-react";
+import { Mic, Hand, Users, Lightbulb, ArrowRight, Code2, Volume2, GestureIcon } from "lucide-react";
 import Header from "@/components/Header";
 import FeatureCard from "@/components/FeatureCard";
 import { Link } from "react-router-dom";
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background via-background to-card/30">
+    <div className="min-h-screen bg-atelier-bg">
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 md:pt-40 md:pb-32">
+      <section className="pt-32 pb-20 px-4 md:pt-40 md:pb-32 bg-gradient-to-b from-atelier-bg via-atelier-bg to-atelier-surface/50">
         <div className="container max-w-6xl mx-auto">
           <div className="flex flex-col items-center text-center mb-16 animate-slide-in">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
-              <Zap className="w-4 h-4 text-primary" />
-              <span className="text-sm font-semibold text-primary">Advanced AI Coding</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-atelier-primary/10 border border-atelier-border mb-6">
+              <Code2 className="w-4 h-4 text-atelier-primary" />
+              <span className="text-xs font-semibold text-atelier-primary uppercase tracking-wide">Advanced AI Coding</span>
             </div>
 
             {/* Main headline */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-atelier-text mb-6 leading-tight">
               Advanced AI Coding
               <br />
-              <span className="bg-gradient-to-r from-primary via-[hsl(280_95%_50%)] to-[hsl(180_100%_45%)] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-atelier-primary to-atelier-secondary bg-clip-text text-transparent">
                 Interfaces for Real-Time
               </span>
               <br />
@@ -30,7 +30,7 @@ export default function Index() {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8 leading-relaxed">
+            <p className="text-base md:text-lg text-atelier-text-muted max-w-2xl mb-8 leading-relaxed">
               Experience the future of coding with voice-to-code, gesture recognition, and collaborative pair programming powered by AI. Real-time, WebRTC-driven development at your fingertips.
             </p>
 
@@ -38,14 +38,14 @@ export default function Index() {
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <Link
                 to="/voice-to-code"
-                className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center gap-2"
+                className="px-8 py-3 bg-atelier-primary text-atelier-bg rounded-md font-semibold hover:bg-atelier-primary-hover transition-colors duration-200 flex items-center gap-2"
               >
                 Explore Prototypes
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a
                 href="#features"
-                className="px-8 py-3 border border-primary text-primary rounded-lg font-semibold hover:bg-primary/5 transition-colors"
+                className="px-8 py-3 border border-atelier-border text-atelier-text hover:bg-atelier-surface rounded-md font-semibold transition-colors duration-200"
               >
                 Learn More
               </a>
@@ -54,23 +54,20 @@ export default function Index() {
 
           {/* Hero Visual */}
           <div className="relative mx-auto max-w-4xl">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-primary/10 to-transparent blur-3xl rounded-3xl" />
-            <div className="relative bg-card/50 border border-border rounded-2xl p-8 md:p-12 backdrop-blur-sm">
+            <div className="relative bg-atelier-surface border border-atelier-border rounded-md p-8 md:p-12">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {[
-                  { label: "Voice-to-Code", icon: "🎤" },
-                  { label: "Gesture Recognition", icon: "🤖" },
-                  { label: "Real-time Collab", icon: "👥" },
-                  { label: "AI Assistance", icon: "✨" },
+                  { label: "Voice-to-Code", icon: Mic },
+                  { label: "Gesture Recognition", icon: Hand },
+                  { label: "Real-time Collab", icon: Users },
+                  { label: "AI Assistance", icon: Lightbulb },
                 ].map((item) => (
                   <div
                     key={item.label}
-                    className="flex flex-col items-center justify-center p-4 rounded-lg border border-border/50 bg-background/30 hover:bg-background/60 transition-colors group cursor-pointer"
+                    className="flex flex-col items-center justify-center p-4 rounded-md border border-atelier-border/50 bg-atelier-bg/30 hover:bg-atelier-bg/60 hover:border-atelier-primary transition-all duration-200 group cursor-pointer"
                   >
-                    <span className="text-3xl md:text-4xl mb-2 group-hover:scale-110 transition-transform">
-                      {item.icon}
-                    </span>
-                    <span className="text-xs md:text-sm font-medium text-muted-foreground text-center group-hover:text-foreground transition-colors">
+                    <item.icon className="w-6 h-6 mb-2 text-atelier-secondary group-hover:text-atelier-primary group-hover:scale-110 transition-all duration-200" />
+                    <span className="text-xs md:text-sm font-medium text-atelier-text-muted text-center group-hover:text-atelier-text transition-colors">
                       {item.label}
                     </span>
                   </div>
