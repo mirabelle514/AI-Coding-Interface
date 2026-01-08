@@ -367,7 +367,7 @@ function calculateTotal(items: Array<{ price: number }>) {
 
 ---
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### General Issues
 
