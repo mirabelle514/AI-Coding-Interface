@@ -1,6 +1,6 @@
 # Design-to-Code Bridge: User Guide
 
-## 🎯 Getting Started
+## Getting Started
 
 ### For Individual Developers
 
@@ -37,7 +37,7 @@
 
 ---
 
-## 🎤 Voice-to-Code Tutorial
+## Voice-to-Code Tutorial
 
 ### Setup
 
@@ -83,7 +83,7 @@
 
 ---
 
-## 🤖 Gesture Recognition Tutorial
+## Gesture Recognition Tutorial
 
 ### Setup
 
@@ -158,7 +158,7 @@ Fist to **delete**:
 
 ---
 
-## 👥 Collaborative Coding Tutorial
+## Collaborative Coding Tutorial
 
 ### Initiating a Session
 
@@ -206,11 +206,11 @@ Your partner should:
 
 ### Best Practices
 
-✅ Use for code reviews  
-✅ Perfect for onboarding  
-✅ Great for debugging together  
-✅ Quick for pair programming  
-✅ Excellent for remote teams
+[+] Use for code reviews
+[+] Perfect for onboarding
+[+] Great for debugging together
+[+] Quick for pair programming
+[+] Excellent for remote teams
 
 ### Common Issues
 
@@ -225,7 +225,7 @@ Your partner should:
 
 ---
 
-## ✨ AI Assistant Overlay Tutorial
+## AI Assistant Overlay Tutorial
 
 ### Basic Usage
 
@@ -317,11 +317,11 @@ function calculateTotal(items: Array<{ price: number }>) {
 
 ### Learning Tips
 
-✅ Read explanations for why  
-✅ Try applying suggestions  
-✅ Watch quality scores improve  
-✅ Build good habits early  
-✅ Refactor old code using this
+[+] Read explanations for why
+[+] Try applying suggestions
+[+] Watch quality scores improve
+[+] Build good habits early
+[+] Refactor old code using this
 
 ### Common Use Cases
 
@@ -427,7 +427,7 @@ function calculateTotal(items: Array<{ price: number }>) {
 
 ---
 
-## 💡 Tips & Tricks
+## Tips and Tricks
 
 ### Productivity Hacks
 
@@ -457,7 +457,7 @@ function calculateTotal(items: Array<{ price: number }>) {
 
 ---
 
-## 📚 Additional Resources
+## Additional Resources
 
 - See **ARCHITECTURE.md** for technical details
 - See **PROTOTYPES.md** for prototype features
@@ -466,7 +466,7 @@ function calculateTotal(items: Array<{ price: number }>) {
 
 ---
 
-## ❓ FAQ
+## FAQ
 
 **Q: Is my code private?**  
 A: In demo mode, code isn't stored. Future versions will have privacy controls.
@@ -485,7 +485,7 @@ A: Only if granted permission. Check license terms.
 
 ---
 
-## 🎓 Getting Help
+## Getting Help
 
 1. **Read the docs** - Most questions answered here
 2. **Try again** - Refresh and retry
@@ -494,7 +494,7 @@ A: Only if granted permission. Check license terms.
 
 ---
 
-## 🚀 Ready to Get Started?
+## Ready to Get Started?
 
 1. Choose a prototype
 2. Follow the tutorial above
@@ -502,4 +502,4 @@ A: Only if granted permission. Check license terms.
 4. Apply what you learn
 5. Share your experience!
 
-Happy coding! 🎉
+Happy coding!
