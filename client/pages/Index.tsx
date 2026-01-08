@@ -320,7 +320,8 @@ export default function Index() {
               Connect Your Design System
             </h2>
             <p className="text-base text-atelier-text-muted max-w-2xl mx-auto">
-              Integrate your Figma libraries, GitHub repositories, and documentation to power smarter code generation
+              Integrate your Figma libraries, GitHub repositories, and
+              documentation to power smarter code generation
             </p>
           </div>
 
@@ -333,7 +334,8 @@ export default function Index() {
                 </h3>
               </div>
               <p className="text-sm text-atelier-text-muted mb-4">
-                Connect your design system file to extract components, colors, and patterns for code generation.
+                Connect your design system file to extract components, colors,
+                and patterns for code generation.
               </p>
               <ul className="space-y-2 text-sm text-atelier-text-muted">
                 <li className="flex items-center gap-2">
@@ -359,7 +361,8 @@ export default function Index() {
                 </h3>
               </div>
               <p className="text-sm text-atelier-text-muted mb-4">
-                Link your design system repository to learn your coding patterns and conventions.
+                Link your design system repository to learn your coding patterns
+                and conventions.
               </p>
               <ul className="space-y-2 text-sm text-atelier-text-muted">
                 <li className="flex items-center gap-2">
@@ -385,7 +388,8 @@ export default function Index() {
                 </h3>
               </div>
               <p className="text-sm text-atelier-text-muted mb-4">
-                Connect your design documentation to provide AI context for guidelines and best practices.
+                Connect your design documentation to provide AI context for
+                guidelines and best practices.
               </p>
               <ul className="space-y-2 text-sm text-atelier-text-muted">
                 <li className="flex items-center gap-2">

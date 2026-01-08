@@ -78,6 +78,7 @@ Your Figma API token is stored locally in your browser only. It is never sent to
 ### What We Access
 
 When connected to GitHub, the Bridge:
+
 - Reads the repository metadata and structure
 - Indexes component files and code patterns
 - Extracts naming conventions and patterns
@@ -107,6 +108,7 @@ When connected to GitHub, the Bridge:
    - Click "Save Integrations"
 
 2. **Examples**
+
    ```
    Storybook: https://storybook.company.com
    Notion: https://notion.so/Design-System-abc123...
@@ -132,6 +134,7 @@ After connecting integrations, when you speak a design description:
 ```
 
 The AI will:
+
 1. Reference your Figma components
 2. Check your GitHub patterns
 3. Consult your documentation guidelines
@@ -166,15 +169,18 @@ The AI overlay analyzes your code in context of:
 ### Figma Connection Issues
 
 **Token expired or invalid**
+
 - Create a new token at [figma.com/developers](https://www.figma.com/developers)
 - Paste the new token and save
 
 **File ID not found**
+
 - Verify the ID from the URL
 - Ensure you have access to the file
 - Check for extra spaces or special characters
 
 **Status shows "Error"**
+
 - Clear the token and re-enter it
 - Try with a different file to test
 - Verify your internet connection
@@ -182,11 +188,13 @@ The AI overlay analyzes your code in context of:
 ### GitHub Connection Issues
 
 **Repository not found**
+
 - Verify the URL format: `https://github.com/owner/repo`
 - Ensure the repository is public (or token is valid)
 - Check for typos in the repository name
 
 **Private repository access**
+
 - Create a personal access token
 - Select `repo` scope
 - Paste the token in the GitHub Token field
@@ -194,6 +202,7 @@ The AI overlay analyzes your code in context of:
 ### Documentation Connection Issues
 
 **Site not accessible**
+
 - Verify the URL is publicly accessible
 - Check for authentication requirements
 - Try without trailing slashes (e.g., `example.com` not `example.com/`)

@@ -101,9 +101,7 @@ export default function Integrations() {
       try {
         const response = await fetch(config.docsUrl, {
           method: "HEAD",
-        }).catch(() =>
-          fetch(config.docsUrl, { method: "GET" })
-        );
+        }).catch(() => fetch(config.docsUrl, { method: "GET" }));
         newStatus.docs = response.ok ? "connected" : "error";
       } catch (error) {
         newStatus.docs = "error";
@@ -172,7 +170,8 @@ export default function Integrations() {
               Design System Integrations
             </h1>
             <p className="text-lg text-atelier-text/70">
-              Connect your Figma libraries, GitHub repositories, and documentation to enable seamless design-to-code generation.
+              Connect your Figma libraries, GitHub repositories, and
+              documentation to enable seamless design-to-code generation.
             </p>
           </div>
 
@@ -187,7 +186,8 @@ export default function Integrations() {
                       Figma Integration
                     </h2>
                     <p className="text-sm text-atelier-text/60 mt-1">
-                      Connect your Figma workspace to extract design systems and components
+                      Connect your Figma workspace to extract design systems and
+                      components
                     </p>
                   </div>
                 </div>
@@ -395,7 +395,8 @@ export default function Integrations() {
                   )}
                 </div>
                 <p className="text-xs text-atelier-text/50 mt-1">
-                  Supports any documentation site (Notion, Storybook, GitHub Wiki, etc.)
+                  Supports any documentation site (Notion, Storybook, GitHub
+                  Wiki, etc.)
                 </p>
               </div>
             </div>
@@ -436,26 +437,27 @@ export default function Integrations() {
                 <li className="flex gap-2">
                   <span className="text-atelier-primary">+</span>
                   <span>
-                    AI uses your design system components as context for code generation
+                    AI uses your design system components as context for code
+                    generation
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-atelier-primary">+</span>
                   <span>
-                    Generated code follows your existing patterns and naming conventions
+                    Generated code follows your existing patterns and naming
+                    conventions
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-atelier-primary">+</span>
                   <span>
-                    Voice-to-Code, Gesture Recognition, and Real-time Collaboration use your design system automatically
+                    Voice-to-Code, Gesture Recognition, and Real-time
+                    Collaboration use your design system automatically
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-atelier-primary">+</span>
-                  <span>
-                    Settings are saved locally in your browser
-                  </span>
+                  <span>Settings are saved locally in your browser</span>
                 </li>
               </ul>
             </div>

@@ -25,7 +25,10 @@ export const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/voice-to-code" element={<VoiceToCode />} />
           <Route path="/gesture-recognition" element={<GestureRecognition />} />
-          <Route path="/collaborative-coding" element={<CollaborativeCoding />} />
+          <Route
+            path="/collaborative-coding"
+            element={<CollaborativeCoding />}
+          />
           <Route path="/ai-overlay" element={<AIOverlay />} />
           <Route path="/integrations" element={<Integrations />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
