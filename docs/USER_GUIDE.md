@@ -311,9 +311,9 @@ function calculateTotal(items: Array<{ price: number }>) {
 
 **New scores:**
 
-1. Readability: 95% ✅
-2. Performance: 95% ✅
-3. Security: 90% ✓
+1. Readability: 95% [Pass]
+2. Performance: 95% [Pass]
+3. Security: 90% [Pass]
 
 ### Learning Tips
 
