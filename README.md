@@ -175,9 +175,9 @@ See [architecture.md](/docs/architecture.md) for deployment options:
 ## Questions?
 
 1. Check the relevant documentation in `/docs`
-2. Read [SETUP.md](/docs/SETUP.md) for configuration help
-3. See [USER_GUIDE.md](/docs/USER_GUIDE.md) for usage help
-4. Review [ARCHITECTURE.md](/docs/ARCHITECTURE.md) for technical details
+2. Read [setup.md](/docs/setup.md) for configuration help
+3. See [user_guide.md](/docs/user_guide.md) for usage help
+4. Review [architecture.md](/docs/architecture.md) for technical details
 
 ---
 
