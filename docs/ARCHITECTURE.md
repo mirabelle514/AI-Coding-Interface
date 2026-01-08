@@ -1,6 +1,6 @@
 # Design-to-Code Bridge: Architecture
 
-## 🏗️ System Architecture
+## System Architecture
 
 ### High-Level Overview
 
@@ -44,7 +44,7 @@
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 design-to-code-bridge/
@@ -96,7 +96,7 @@ design-to-code-bridge/
 
 ---
 
-## 🔄 Data Flow
+## Data Flow
 
 ### Voice-to-Code Flow
 
@@ -160,7 +160,7 @@ User sees suggestions inline
 
 ---
 
-## 🔐 Security Considerations
+## Security Considerations
 
 ### Authentication
 
@@ -181,7 +181,7 @@ User sees suggestions inline
 
 ---
 
-## 🚀 Performance Optimizations
+## Performance Optimizations
 
 ### Frontend
 
@@ -204,7 +204,7 @@ User sees suggestions inline
 
 ---
 
-## 🔌 API Endpoints (Future)
+## API Endpoints (Future)
 
 ### Voice-to-Code
 
@@ -258,7 +258,7 @@ POST /api/apply-suggestion
 
 ---
 
-## 🧪 Testing Strategy
+## Testing Strategy
 
 ### Unit Tests
 
@@ -280,7 +280,7 @@ POST /api/apply-suggestion
 
 ---
 
-## 📈 Scalability
+## Scalability
 
 ### Horizontal Scaling
 
@@ -296,7 +296,7 @@ POST /api/apply-suggestion
 
 ---
 
-## 🔮 Future Architecture Improvements
+## Future Architecture Improvements
 
 1. **Microservices** - Separate services for speech, gestures, AI
 2. **Message Queue** - Use Redis/RabbitMQ for async processing
@@ -307,7 +307,7 @@ POST /api/apply-suggestion
 
 ---
 
-## 📚 Design Decisions
+## Design Decisions
 
 ### Why WebRTC over WebSockets?
 
