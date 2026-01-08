@@ -51,13 +51,13 @@ design-to-code-bridge/
 ├── server/                 # Express backend
 ├── shared/                 # Shared types
 ├── docs/                   # Documentation (locally tracked)
-│   ├── PROJECT_OVERVIEW.md
-│   ├── ARCHITECTURE.md
-│   ├── PROTOTYPES.md
-│   ├── USER_GUIDE.md
-│   ├── TECH_STACK.md
-│   ├── DESIGN_SYSTEM.md
-│   └── SETUP.md (this file)
+│   ├── project_overview.md
+│   ├── architecture.md
+│   ├── prototypes.md
+│   ├── user_guide.md
+│   ├── tech_stack.md
+│   ├── design_system.md
+│   └── setup.md (this file)
 ├── public/                 # Static assets
 ├── package.json
 ├── tailwind.config.ts
