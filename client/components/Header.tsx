@@ -55,6 +55,14 @@ export default function Header() {
                 Overlay
               </Link>
             </li>
+            <li>
+              <Link
+                to="/integrations"
+                className="text-atelier-text hover:text-atelier-primary transition-colors duration-200"
+              >
+                Integrations
+              </Link>
+            </li>
           </ul>
 
           <Link
