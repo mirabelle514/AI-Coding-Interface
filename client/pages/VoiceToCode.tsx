@@ -109,7 +109,7 @@ export default function VoiceToCode() {
     };
   }, []);
 
-  const handleStartStop = () => {
+  const handleStartStop = async () => {
     if (isRecording) {
       recognitionRef.current?.stop();
       setIsRecording(false);
@@ -118,10 +118,34 @@ export default function VoiceToCode() {
         generateCode();
       }
     } else {
-      setTranscript("");
-      setGeneratedCode("");
-      recognitionRef.current?.start();
-      setIsRecording(true);
+      // Request microphone permission explicitly
+      try {
+        setPermissionStatus("Requesting microphone access...");
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        // Permission granted, now start recording
+        stream.getTracks().forEach(track => track.stop()); // Stop the stream, we just needed permission
+        setPermissionStatus("Microphone access granted");
+
+        setTranscript("");
+        setGeneratedCode("");
+        recognitionRef.current?.start();
+        setIsRecording(true);
+      } catch (error: any) {
+        console.error("Microphone permission error:", error);
+        if (error.name === "NotAllowedError" || error.name === "PermissionDeniedError") {
+          setPermissionStatus("Microphone permission denied by user");
+          toast.error("Microphone access denied. Please allow microphone access in your browser settings and try again.");
+        } else if (error.name === "NotFoundError") {
+          setPermissionStatus("No microphone found");
+          toast.error("No microphone found. Please connect a microphone and try again.");
+        } else if (error.name === "NotSupportedError") {
+          setPermissionStatus("HTTPS required for microphone access");
+          toast.error("This feature requires a secure connection (HTTPS). You may be on localhost without proper setup.");
+        } else {
+          setPermissionStatus(`Permission error: ${error.name}`);
+          toast.error(`Microphone error: ${error.message}`);
+        }
+      }
     }
   };
 
