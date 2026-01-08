@@ -75,11 +75,11 @@
 
 ### Tips for Best Results
 
-✅ Speak like you're explaining to a colleague  
-✅ Use technical terms naturally  
-✅ Be specific about requirements  
-✅ One function per recording  
-✅ Describe edge cases if important
+[+] Speak like you're explaining to a colleague
+[+] Use technical terms naturally
+[+] Be specific about requirements
+[+] One function per recording
+[+] Describe edge cases if important
 
 ---
 
@@ -144,11 +144,11 @@ Fist to **delete**:
 
 ### Tips for Best Recognition
 
-✅ Clear, well-lit environment  
-✅ Steady hand position  
-✅ Complete the gesture fully  
-✅ One gesture at a time  
-✅ Practice a few times
+[+] Clear, well-lit environment
+[+] Steady hand position
+[+] Complete the gesture fully
+[+] One gesture at a time
+[+] Practice a few times
 
 ### Troubleshooting
 
