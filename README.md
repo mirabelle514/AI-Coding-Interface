@@ -154,7 +154,7 @@ git log --oneline
 
 ## Deployment
 
-See [ARCHITECTURE.md](/docs/ARCHITECTURE.md) for deployment options:
+See [architecture.md](/docs/architecture.md) for deployment options:
 
 - Vercel (recommended)
 - Docker containers
