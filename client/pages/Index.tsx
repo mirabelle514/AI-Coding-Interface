@@ -233,136 +233,25 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-atelier-border py-12 px-4 bg-atelier-bg">
+      <footer className="border-t border-atelier-border py-8 px-4 bg-atelier-bg">
         <div className="container max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center gap-2 font-bold text-lg text-atelier-primary mb-4">
-                <Code2 className="w-5 h-5" />
-                D2C Bridge
-              </div>
-              <p className="text-sm text-atelier-text-muted">
-                Design-to-Code Bridge: Advanced AI coding interfaces for the
-                future of development.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold text-atelier-text mb-4">
-                Prototypes
-              </h4>
-              <ul className="space-y-2 text-sm text-atelier-text-muted">
-                <li>
-                  <Link
-                    to="/voice-to-code"
-                    className="hover:text-atelier-primary transition-colors duration-200"
-                  >
-                    Voice-to-Code
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/gesture-recognition"
-                    className="hover:text-atelier-primary transition-colors duration-200"
-                  >
-                    Gesture Recognition
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/collaborative-coding"
-                    className="hover:text-atelier-primary transition-colors duration-200"
-                  >
-                    Collaborative Coding
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-atelier-text mb-4">
-                Technology
-              </h4>
-              <ul className="space-y-2 text-sm text-atelier-text-muted">
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-atelier-primary transition-colors duration-200"
-                  >
-                    WebRTC
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-atelier-primary transition-colors duration-200"
-                  >
-                    React
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-atelier-primary transition-colors duration-200"
-                  >
-                    Go Backend
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-atelier-text mb-4">
-                Resources
-              </h4>
-              <ul className="space-y-2 text-sm text-atelier-text-muted">
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-atelier-primary transition-colors duration-200"
-                  >
-                    Documentation
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-atelier-primary transition-colors duration-200"
-                  >
-                    GitHub
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-atelier-primary transition-colors duration-200"
-                  >
-                    Support
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-atelier-border pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-atelier-text-muted">
-            <p>&copy; 2024 Design-to-Code Bridge. All rights reserved.</p>
-            <div className="flex gap-6 mt-4 md:mt-0">
+          <div className="text-center text-sm text-atelier-text-muted space-y-3">
+            <p>
+              Part of{" "}
               <a
-                href="#"
-                className="hover:text-atelier-primary transition-colors duration-200"
+                href="https://www.thewednesdaycollective.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-atelier-primary hover:text-atelier-secondary transition-colors duration-200 font-semibold"
               >
-                Privacy
+                The Wednesday Collective
               </a>
-              <a
-                href="#"
-                className="hover:text-atelier-primary transition-colors duration-200"
-              >
-                Terms
-              </a>
-              <a
-                href="#"
-                className="hover:text-atelier-primary transition-colors duration-200"
-              >
-                Contact
-              </a>
-            </div>
+              {" "}| copyright © {new Date().getFullYear()} Mirabelle
+            </p>
+            <p className="flex items-center justify-center gap-2">
+              Powered by my{" "}
+              <Heart className="w-4 h-4 text-atelier-primary fill-atelier-primary" aria-label="heart" /> for Wednesday
+            </p>
           </div>
         </div>
       </footer>
