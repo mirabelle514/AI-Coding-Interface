@@ -1,4 +1,12 @@
-import { Mic, Hand, Users, Lightbulb, ArrowRight, Code2, Heart } from "lucide-react";
+import {
+  Mic,
+  Hand,
+  Users,
+  Lightbulb,
+  ArrowRight,
+  Code2,
+  Heart,
+} from "lucide-react";
 import Header from "@/components/Header";
 import FeatureCard from "@/components/FeatureCard";
 import { Link } from "react-router-dom";
@@ -245,12 +253,16 @@ export default function Index() {
                 className="text-atelier-primary hover:text-atelier-secondary transition-colors duration-200 font-semibold"
               >
                 The Wednesday Collective
-              </a>
-              {" "}| copyright © {new Date().getFullYear()} Mirabelle
+              </a>{" "}
+              | copyright © {new Date().getFullYear()} Mirabelle
             </p>
             <p className="flex items-center justify-center gap-2">
               Powered by my{" "}
-              <Heart className="w-4 h-4 text-atelier-primary fill-atelier-primary" aria-label="heart" /> for Wednesday
+              <Heart
+                className="w-4 h-4 text-atelier-primary fill-atelier-primary"
+                aria-label="heart"
+              />{" "}
+              for Wednesday
             </p>
           </div>
         </div>
