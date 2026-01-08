@@ -2,7 +2,7 @@
 
 Advanced AI coding interfaces with voice-to-code, gesture recognition, collaborative coding, and AI-powered code suggestions.
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Install dependencies
@@ -20,7 +20,7 @@ Visit: `http://localhost:8080`
 
 ---
 
-## 📚 Documentation
+## Documentation
 
 All documentation is located in the `/docs` folder and tracked locally in git:
 
@@ -54,7 +54,7 @@ Context-aware real-time coding assistance with inline suggestions and quality me
 
 ---
 
-## 🏗️ Tech Stack
+## Tech Stack
 
 - **Frontend**: React 18 + TypeScript + Tailwind CSS
 - **Styling**: Atelier Design System
@@ -67,7 +67,7 @@ See [TECH_STACK.md](/docs/TECH_STACK.md) for details.
 
 ---
 
-## 💻 Available Commands
+## Available Commands
 
 ```bash
 # Development
@@ -87,7 +87,7 @@ pnpm run test             # Run tests with Vitest
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 design-to-code-bridge/
@@ -109,7 +109,7 @@ design-to-code-bridge/
 
 ---
 
-## 🎨 Design System
+## Design System
 
 All styling uses the **Atelier Design System**:
 
@@ -122,7 +122,7 @@ See [DESIGN_SYSTEM.md](/docs/DESIGN_SYSTEM.md) for complete color palette and de
 
 ---
 
-## 🔐 Git Configuration
+## Git Configuration
 
 Make sure commits are under your name:
 
@@ -141,7 +141,7 @@ git log --oneline
 
 ---
 
-## 📖 Getting Started
+## Getting Started
 
 1. **Read** [PROJECT_OVERVIEW.md](/docs/PROJECT_OVERVIEW.md) to understand the vision
 2. **Explore** [PROTOTYPES.md](/docs/PROTOTYPES.md) to learn each feature
@@ -151,7 +151,7 @@ git log --oneline
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
 See [ARCHITECTURE.md](/docs/ARCHITECTURE.md) for deployment options:
 
@@ -162,17 +162,17 @@ See [ARCHITECTURE.md](/docs/ARCHITECTURE.md) for deployment options:
 
 ---
 
-## 📝 Notes
+## Notes
 
-- ✅ All documentation stored locally in `/docs`
-- ✅ Documentation tracked in git
-- ✅ No external wiki or docs site needed
-- ✅ Git commits configured with your name
-- ✅ Fully customizable with Atelier Design System
+- [+] All documentation stored locally in `/docs`
+- [+] Documentation tracked in git
+- [+] No external wiki or docs site needed
+- [+] Git commits configured with your name
+- [+] Fully customizable with Atelier Design System
 
 ---
 
-## 📞 Questions?
+## Questions?
 
 1. Check the relevant documentation in `/docs`
 2. Read [SETUP.md](/docs/SETUP.md) for configuration help
@@ -181,13 +181,13 @@ See [ARCHITECTURE.md](/docs/ARCHITECTURE.md) for deployment options:
 
 ---
 
-## 🎓 License
+## License
 
 Proprietary - Design-to-Code Bridge
 
 ---
 
-## 🙋 About
+## About
 
 **Design-to-Code Bridge** is an innovative platform showcasing four cutting-edge AI-assisted development interfaces designed to revolutionize how developers write, collaborate, and optimize code.
 
