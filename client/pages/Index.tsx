@@ -15,18 +15,18 @@ export default function Index() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-atelier-primary/10 border border-atelier-border mb-6">
               <Code2 className="w-4 h-4 text-atelier-primary" />
-              <span className="text-xs font-semibold text-atelier-primary uppercase tracking-wide">Advanced AI Coding</span>
+              <span className="text-xs font-semibold text-atelier-primary uppercase tracking-wide">Design-to-Code Bridge</span>
             </div>
 
             {/* Main headline */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-atelier-text mb-6 leading-tight">
-              Advanced AI Coding
+              Design-to-Code
               <br />
               <span className="bg-gradient-to-r from-atelier-primary to-atelier-secondary bg-clip-text text-transparent">
-                Interfaces for Real-Time
+                Bridge
               </span>
               <br />
-              Development
+              AI Development
             </h1>
 
             {/* Subtitle */}
