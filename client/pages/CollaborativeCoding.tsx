@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import { Users, Video, MessageSquare, Share2, Code2 } from "lucide-react";
+import { Users, Video, MessageSquare, Share2, Code2, Lightbulb } from "lucide-react";
 import { useState } from "react";
 
 export default function CollaborativeCoding() {
