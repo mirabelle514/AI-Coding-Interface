@@ -220,9 +220,8 @@ Opens at: `http://localhost:3000` (production build)
 
 See `/docs/ARCHITECTURE.md` for deployment strategies:
 
-- Netlify/Vercel (recommended)
+- Vercel (recommended)
 - Docker containers
-- Traditional hosting
 
 ---
 
