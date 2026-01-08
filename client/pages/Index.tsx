@@ -6,6 +6,9 @@ import {
   ArrowRight,
   Code2,
   Heart,
+  Figma,
+  Github,
+  FileText,
 } from "lucide-react";
 import Header from "@/components/Header";
 import FeatureCard from "@/components/FeatureCard";
