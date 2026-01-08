@@ -309,7 +309,7 @@ export default function Index() {
           </div>
 
           <div className="border-t border-atelier-border pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-atelier-text-muted">
-            <p>&copy; 2024 CodeAI. All rights reserved.</p>
+            <p>&copy; 2024 Design-to-Code Bridge. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
               <a href="#" className="hover:text-atelier-primary transition-colors duration-200">
                 Privacy
