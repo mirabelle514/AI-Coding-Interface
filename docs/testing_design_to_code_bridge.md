@@ -1,6 +1,6 @@
-# Testing the Design-to-Code Bridge Concept
+# Testing the AI-Coding-Interface Concept
 
-## What Is the "Design-to-Code Bridge"?
+## What Is "AI-Coding-Interface"?
 
 The bridge connects **design intent** (what a designer/developer wants to build) to **engineering output** (clean, working code).
 

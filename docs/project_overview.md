@@ -1,8 +1,8 @@
-# Design-to-Code Bridge: Project Overview
+# AI-Coding-Interface: Project Overview
 
-## What is Design-to-Code Bridge?
+## What is AI-Coding-Interface?
 
-**Design-to-Code Bridge** is an innovative platform that showcases four cutting-edge AI-assisted development interfaces designed to revolutionize how developers write, collaborate, and optimize code. It's a proof-of-concept demonstrating the future of developer tooling powered by artificial intelligence.
+**AI-Coding-Interface** is an innovative platform that showcases four cutting-edge AI-assisted development interfaces designed to revolutionize how developers write, collaborate, and optimize code. It's a proof-of-concept demonstrating the future of developer tooling powered by artificial intelligence.
 
 ---
 
@@ -17,7 +17,7 @@
 5. **Context Loss** - Developers lose productivity context switching between tools
 6. **Lack of Real-Time Feedback** - No immediate guidance on code quality, performance, or security
 
-### How Design-to-Code Bridge Addresses These
+### How AI-Coding-Interface Addresses These
 
 - **Voice input** for rapid code generation
 - **Gesture-based IDE control** (hands-free interaction)
@@ -64,7 +64,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                Design-to-Code Bridge Platform               │
+│                  AI-Coding-Interface Platform               │
 ├─────────────────────────────────────────────────────────────┤
 │                                                               │
 │  Frontend (React 18 + TypeScript)                            │

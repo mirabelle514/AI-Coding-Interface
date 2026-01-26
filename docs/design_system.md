@@ -1,4 +1,4 @@
-# Design-to-Code Bridge: Atelier Design System
+# AI-Coding-Interface: Atelier Design System
 
 ## Color Palette
 

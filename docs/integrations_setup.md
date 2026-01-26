@@ -1,10 +1,10 @@
 # Design System Integrations Setup Guide
 
-This guide explains how to connect your design system sources (Figma, GitHub, Documentation) to the Design-to-Code Bridge.
+This guide explains how to connect your design system sources (Figma, GitHub, Documentation) to AI-Coding-Interface.
 
 ## Overview
 
-The Design-to-Code Bridge uses your design system as context for AI code generation. By connecting your sources, you enable:
+AI-Coding-Interface uses your design system as context for AI code generation. By connecting your sources, you enable:
 
 - **Design System Components**: Figma libraries become reference data for component generation
 - **Code Patterns**: GitHub repositories provide context for naming conventions and architecture
@@ -31,7 +31,7 @@ The Design-to-Code Bridge uses your design system as context for AI code generat
    - Copy the ID from the URL: `figma.com/file/[YOUR_ID_HERE]/ProjectName`
    - This is the string between `/file/` and `/`
 
-3. **Add to Design-to-Code Bridge**
+3. **Add to AI-Coding-Interface**
    - Go to Integrations page
    - Paste your Figma API Token
    - Paste your Figma File ID

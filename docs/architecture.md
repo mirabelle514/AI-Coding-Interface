@@ -1,4 +1,4 @@
-# Design-to-Code Bridge: Architecture
+# AI-Coding-Interface: Architecture
 
 ## System Architecture
 
@@ -47,7 +47,7 @@
 ## Project Structure
 
 ```
-design-to-code-bridge/
+ai-coding-interface/
 ├── client/                          # React Frontend
 │   ├── pages/
 │   │   ├── Index.tsx               # Homepage

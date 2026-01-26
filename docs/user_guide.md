@@ -1,4 +1,4 @@
-# Design-to-Code Bridge: User Guide
+# AI-Coding-Interface: User Guide
 
 ## Getting Started
 
@@ -6,7 +6,7 @@
 
 #### Step 1: Explore Features
 
-1. Visit the **Design-to-Code Bridge** homepage
+1. Visit the **AI-Coding-Interface** homepage
 2. Read about the four prototypes:
    - Voice-to-Code
    - Gesture Recognition

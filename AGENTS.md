@@ -6,7 +6,7 @@ While the starter comes with a express server, only create endpoint when strictl
 
 ## Tech Stack
 
-- **PNPM**: Prefer pnpm
+- **NPM**: Use npm
 - **Frontend**: React 18 + React Router 6 (spa) + TypeScript + Vite + TailwindCSS 3
 - **Backend**: Express server integrated with Vite dev server
 - **Testing**: Vitest
@@ -90,11 +90,11 @@ Path aliases:
 ## Development Commands
 
 ```bash
-pnpm dev        # Start dev server (client + server)
-pnpm build      # Production build
-pnpm start      # Start production server
-pnpm typecheck  # TypeScript validation
-pnpm test          # Run Vitest tests
+npm run dev        # Start dev server (client + server)
+npm run build      # Production build
+npm run start      # Start production server
+npm run typecheck  # TypeScript validation
+npm run test       # Run Vitest tests
 ```
 
 ## Adding Features
@@ -150,7 +150,7 @@ const data: MyRouteResponse = await response.json();
 
 ## Production Deployment
 
-- **Standard**: `pnpm build`
+- **Standard**: `npm run build`
 - **Binary**: Self-contained executables (Linux, macOS, Windows)
 - **Cloud Deployment**: Use either Netlify or Vercel via their MCP integrations for easy deployment. Both providers work well with this starter template.
 
@@ -162,3 +162,7 @@ const data: MyRouteResponse = await response.json();
 - Production-ready with multiple deployment options
 - Comprehensive UI component library included
 - Type-safe API communication via shared interfaces
+
+## Author
+
+Mirabelle Doiron - In Progress

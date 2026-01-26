@@ -1,4 +1,4 @@
-# Design-to-Code Bridge
+# AI-Coding-Interface
 
 Advanced AI coding interfaces with voice-to-code, gesture recognition, collaborative coding, and AI-powered code suggestions.
 
@@ -6,14 +6,14 @@ Advanced AI coding interfaces with voice-to-code, gesture recognition, collabora
 
 ```bash
 # Install dependencies
-pnpm install
+npm install
 
 # Configure git with your name (IMPORTANT)
 git config user.name "Mirabelle Doiron"
 git config user.email "your.email@example.com"
 
 # Start development server
-pnpm run dev
+npm run dev
 ```
 
 Visit: `http://localhost:8080`
@@ -62,7 +62,7 @@ Context-aware real-time coding assistance with inline suggestions and quality me
 - **Real-time**: WebRTC + WebSocket
 - **Backend**: Go 1.21 + Express
 - **Build**: Vite
-- **Package Manager**: pnpm
+- **Package Manager**: npm
 
 See [TECH_STACK.md](/docs/TECH_STACK.md) for details.
 
@@ -72,18 +72,18 @@ See [TECH_STACK.md](/docs/TECH_STACK.md) for details.
 
 ```bash
 # Development
-pnpm run dev              # Start dev server
+npm run dev              # Start dev server
 
 # Build & Production
-pnpm run build            # Build for production
-pnpm run start            # Start production server
+npm run build            # Build for production
+npm run start            # Start production server
 
 # Code Quality
-pnpm run typecheck        # TypeScript checking
-pnpm run format.fix       # Format with Prettier
+npm run typecheck        # TypeScript checking
+npm run format.fix       # Format with Prettier
 
 # Testing
-pnpm run test             # Run tests with Vitest
+npm run test             # Run tests with Vitest
 ```
 
 ---
@@ -183,12 +183,12 @@ See [architecture.md](/docs/architecture.md) for deployment options:
 
 ## License
 
-Proprietary - Design-to-Code Bridge
+Proprietary - AI-Coding-Interface
 
 ---
 
 ## About
 
-**Design-to-Code Bridge** is an innovative platform showcasing four cutting-edge AI-assisted development interfaces designed to revolutionize how developers write, collaborate, and optimize code.
+**AI-Coding-Interface** is an innovative platform showcasing four cutting-edge AI-assisted development interfaces designed to revolutionize how developers write, collaborate, and optimize code.
 
-Start exploring: `pnpm run dev`
+Start exploring: `npm run dev`

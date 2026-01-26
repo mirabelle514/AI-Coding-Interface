@@ -1,6 +1,6 @@
-# 4 Real-World Scenarios: Design-to-Code Bridge in Action
+# 4 Real-World Scenarios: AI-Coding-Interface in Action
 
-This document shows **exactly how** the Design-to-Code Bridge solves real problems for designers and engineers working together.
+This document shows **exactly how** AI-Coding-Interface solves real problems for designers and engineers working together.
 
 ---
 

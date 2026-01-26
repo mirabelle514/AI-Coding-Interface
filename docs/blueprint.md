@@ -1,4 +1,4 @@
-# Design-to-Code Bridge: Complete Blueprint & Security Analysis
+# AI-Coding-Interface: Complete Blueprint & Security Analysis
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@
 
 ### Problem Statement
 
-**Design-to-Code Bridge** addresses critical challenges in modern software development:
+**AI-Coding-Interface** addresses critical challenges in modern software development:
 
 #### 1. **Slow Code Writing**
 
@@ -48,7 +48,7 @@
 
 ### What This React Web App Provides
 
-**Design-to-Code Bridge** is a **proof-of-concept platform** showcasing four AI-assisted development interfaces:
+**AI-Coding-Interface** is a **proof-of-concept platform** showcasing four AI-assisted development interfaces:
 
 #### Four Core Prototypes
 
@@ -158,7 +158,7 @@ Express 5.1.0 (TypeScript)
 #### Build & Deployment
 
 - **Build Tool**: Vite for fast HMR and optimized builds
-- **Package Manager**: pnpm for efficient dependency management
+- **Package Manager**: npm for dependency management
 - **Deployment**: Vercel-ready configuration
 - **File Structure**: Monorepo with client/server separation
 
@@ -168,10 +168,10 @@ Express 5.1.0 (TypeScript)
 
 ```bash
 # Install dependencies
-npm install  # or pnpm install
+npm install
 
 # Start development server
-npm run dev  # or pnpm dev
+npm run dev
 
 # Visit http://localhost:8080
 ```

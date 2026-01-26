@@ -1,11 +1,11 @@
-# Design-to-Code Bridge: Setup and Configuration
+# AI-Coding-Interface: Setup and Configuration
 
 ## Initial Setup
 
 ### 1. Install Dependencies
 
 ```bash
-pnpm install
+npm install
 ```
 
 ### 2. Configure Git User (Important!)
@@ -36,7 +36,7 @@ git config user.email
 ### 3. Start Development Server
 
 ```bash
-pnpm run dev
+npm run dev
 ```
 
 Opens at: `http://localhost:8080`
@@ -74,29 +74,29 @@ design-to-code-bridge/
 ### Development
 
 ```bash
-pnpm run dev          # Start dev server (Vite + Express)
+npm run dev          # Start dev server (Vite + Express)
 ```
 
 ### Build & Production
 
 ```bash
-pnpm run build        # Build for production
-pnpm run build:client # Build client only
-pnpm run build:server # Build server only
-pnpm run start        # Start production server
+npm run build        # Build for production
+npm run build:client # Build client only
+npm run build:server # Build server only
+npm run start        # Start production server
 ```
 
 ### Code Quality
 
 ```bash
-pnpm run typecheck    # TypeScript type checking
-pnpm run format.fix   # Format code with Prettier
+npm run typecheck    # TypeScript type checking
+npm run format.fix   # Format code with Prettier
 ```
 
 ### Testing
 
 ```bash
-pnpm run test         # Run Vitest tests
+npm run test         # Run Vitest tests
 ```
 
 ---
@@ -178,9 +178,9 @@ The project is set up for local development:
 
 ## First Time Setup Checklist
 
-- [ ] Run `pnpm install`
+- [ ] Run `npm install`
 - [ ] Configure git user with your name
-- [ ] Run `pnpm run dev`
+- [ ] Run `npm run dev`
 - [ ] Open `http://localhost:8080`
 - [ ] Read `/docs/project_overview.md`
 - [ ] Explore a prototype
@@ -208,10 +208,10 @@ The project is set up for local development:
 
 ```bash
 # Build both client and server
-pnpm run build
+npm run build
 
 # Start production server
-pnpm run start
+npm run start
 ```
 
 Opens at: `http://localhost:3000` (production build)
@@ -255,19 +255,19 @@ git config user.email "your.email@example.com"
 
 ```bash
 # Clear cache and reinstall
-rm -rf node_modules pnpm-lock.yaml
-pnpm install
+rm -rf node_modules package-lock.json
+npm install
 ```
 
 ### Build Failures
 
 ```bash
 # Clean build
-pnpm run build:client
-pnpm run build:server
+npm run build:client
+npm run build:server
 
 # Check for TypeScript errors
-pnpm run typecheck
+npm run typecheck
 ```
 
 ---
@@ -298,7 +298,7 @@ Start with these in order:
 ## Tips
 
 - All docs are in `/docs` - check them frequently
-- Use `pnpm run dev` for development
+- Use `npm run dev` for development
 - TypeScript will catch errors during development
 - Read Tailwind/React docs for styling/component help
 - Check design_system.md for color tokens

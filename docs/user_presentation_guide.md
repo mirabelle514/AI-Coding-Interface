@@ -1,8 +1,8 @@
-# Design-to-Code Bridge - How to Use & Present It
+# AI-Coding-Interface - How to Use & Present It
 
 ## Quick Overview
 
-**Design-to-Code Bridge** is a showcase of 4 cutting-edge AI prototypes that demonstrate the future of coding. It's not a complete IDE replacement—it's a **proof of concept** showing what's possible when you combine voice, gestures, real-time collaboration, and AI assistance.
+**AI-Coding-Interface** is a showcase of 4 cutting-edge AI prototypes that demonstrate the future of coding. It's not a complete IDE replacement—it's a **proof of concept** showing what's possible when you combine voice, gestures, real-time collaboration, and AI assistance.
 
 Think of it as: "What if coding was as natural as talking, gesturing, and collaborating in person?"
 

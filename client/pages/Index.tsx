@@ -27,19 +27,22 @@ export default function Index() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-atelier-primary/10 border border-atelier-border mb-6">
               <Code2 className="w-4 h-4 text-atelier-primary" />
               <span className="text-xs font-semibold text-atelier-primary uppercase tracking-wide">
-                Design-to-Code Bridge
+                AI-Coding-Interface
+              </span>
+              <span className="ml-1 inline-flex items-center rounded-sm border border-atelier-border bg-atelier-bg/40 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-atelier-text-muted">
+                In Progress
               </span>
             </div>
 
             {/* Main headline */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-atelier-text mb-6 leading-tight">
-              Design-to-Code
+              AI-Coding
               <br />
               <span className="bg-gradient-to-r from-atelier-primary to-atelier-secondary bg-clip-text text-transparent">
-                Bridge
+                Interface
               </span>
               <br />
-              AI Development
+              Prototypes
             </h1>
 
             {/* Subtitle */}
@@ -178,11 +181,11 @@ export default function Index() {
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-atelier-text mb-6">
-              How to Test the Design-to-Code Bridge
+              How to Test AI-Coding-Interface
             </h2>
             <p className="text-base text-atelier-text-muted mb-8 leading-relaxed">
-              The bridge connects design intent to engineering output. It works
-              when your idea flows directly into production-ready code.
+              This tool explores faster, more natural ways to build software. It
+              works when your idea flows directly into production-ready code.
             </p>
 
             <div className="space-y-6 mb-8">
@@ -238,7 +241,7 @@ export default function Index() {
             </div>
 
             <a
-              href="https://github.com/mirabelle/design-to-code-bridge/blob/main/docs/TESTING_DESIGN_TO_CODE_BRIDGE.md"
+              href="https://github.com/mirabelle/design-to-code-bridge/blob/main/docs/testing_design_to_code_bridge.md"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-atelier-secondary text-atelier-bg rounded-md font-semibold hover:bg-atelier-secondary-hover transition-colors duration-200"

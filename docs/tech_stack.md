@@ -1,4 +1,4 @@
-# Design-to-Code Bridge: Tech Stack
+# AI-Coding-Interface: Tech Stack
 
 ## Complete Technology Stack
 
@@ -140,8 +140,8 @@
 
 ## Package Management
 
-- **pnpm 10.14.0** - Fast, disk space efficient package manager
-- **pnpm-lock.yaml** - Locked dependency versions for reproducible installs
+- **npm** - Node.js package manager
+- **package-lock.json** - Locked dependency versions for reproducible installs
 
 ---
 
@@ -196,7 +196,7 @@
 | Express      | 5.1.0   | Backend Server      |
 | Go           | 1.21    | Backend Runtime     |
 | Node.js      | 18+     | Runtime Environment |
-| pnpm         | 10.14.0 | Package Manager     |
+| npm          | (bundled with Node) | Package Manager     |
 
 ---
 
@@ -270,31 +270,30 @@ Route bundles: Variable size
 ### Requirements
 
 - Node.js 18 or higher
-- pnpm 10.14.0 or higher
 - Git
 
 ### Install Dependencies
 
 ```bash
-pnpm install
+npm install
 ```
 
 ### Development
 
 ```bash
-pnpm run dev
+npm run dev
 ```
 
 ### Production Build
 
 ```bash
-pnpm run build
+npm run build
 ```
 
 ### Type Checking
 
 ```bash
-pnpm run typecheck
+npm run typecheck
 ```
 
 ---
@@ -311,8 +310,8 @@ pnpm run typecheck
 ### Outdated Packages
 
 ```bash
-pnpm outdated
-pnpm update --interactive
+npm outdated
+npm update
 ```
 
 ---
@@ -359,13 +358,11 @@ pnpm update --interactive
 - [+] Improved performance
 - [+] Data loaders
 
-### pnpm
+### npm
 
-- [+] Faster than npm/yarn
-- [+] Disk space efficient
-- [+] Better dependency resolution
-- [+] Monorepo support
-- [+] Strict dependency management
+- [+] Comes with Node.js by default
+- [+] Works everywhere with minimal setup
+- [+] Standard lockfile format (`package-lock.json`)
 
 ---
 
