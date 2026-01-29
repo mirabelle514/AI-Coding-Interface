@@ -261,3 +261,9 @@ Proprietary - AI-Coding-Interface
 **AI-Coding-Interface** is an innovative platform showcasing four cutting-edge AI-assisted development interfaces designed to revolutionize how developers write, collaborate, and optimize code.
 
 Start exploring: `npm run dev`
+
+---
+
+## Author
+
+Built by [Mirabelle](https://www.mirabelledoiron.com/) as part of [The Wednesday Collective](https://www.thewednesdaycollective.com/)
