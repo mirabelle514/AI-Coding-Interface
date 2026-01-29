@@ -55,6 +55,75 @@ Context-aware real-time coding assistance with inline suggestions and quality me
 
 ---
 
+## Development Process
+
+### Challenge
+Design and prototype four experimental AI-assisted coding interfaces focused on accessibility, exploring how voice control, gesture recognition, collaborative coding, and real-time AI assistance can make development more inclusive for developers with different abilities.
+
+### Technical Decisions
+
+**Voice-to-Code Architecture**
+- Web Speech API for browser-native speech recognition (no external dependencies)
+- Custom natural language parser to convert spoken words into code syntax
+- Debouncing and confirmation flow to prevent accidental code generation
+
+**Gesture Recognition System**
+- MediaPipe Hands for hand tracking via webcam
+- Custom gesture vocabulary for common IDE actions (scroll, select, delete)
+- Calibration system for different hand sizes and camera positions
+
+**Collaborative Coding**
+- WebRTC for peer-to-peer real-time code synchronization (no server needed)
+- Operational transformation for conflict resolution during simultaneous editing
+- Voice chat integration for pair programming conversations
+
+**AI Assistant Overlay**
+- Real-time code quality analysis with inline suggestions
+- Context-aware completions based on surrounding code
+- Performance metrics dashboard (code complexity, maintainability scores)
+
+**Accessibility Focus**
+- Keyboard navigation for all interfaces
+- Screen reader announcements for AI suggestions
+- High contrast mode and customizable text sizes
+- Alternative input methods for developers with motor impairments
+
+### My Contribution
+
+**What I Built:**
+- Designed the four prototype concepts and interaction patterns
+- Implemented the voice-to-code natural language parser
+- Built the gesture recognition system with MediaPipe integration
+- Created the WebRTC peer-to-peer collaborative coding infrastructure
+- Designed the AI assistant overlay with real-time analysis
+- Integrated Atelier Design System for consistent, accessible UI
+- Set up the development environment and documentation structure
+
+**AI-Assisted Development:**
+- Used Claude for initial React component structure and TypeScript types
+- Iterated on WebRTC signaling logic with AI debugging assistance
+- Refined gesture recognition algorithms with AI suggestions for accuracy improvements
+- Debugged complex MediaPipe hand tracking edge cases
+
+**Skills Demonstrated:**
+- Experimental UI/UX prototyping
+- Web Speech API and natural language processing
+- Computer vision integration (MediaPipe)
+- WebRTC peer-to-peer networking
+- Real-time collaborative editing algorithms
+- Accessibility-first design principles
+- TypeScript advanced patterns for real-time systems
+
+### Project Status
+
+This is an IN PROGRESS exploration of accessibility-focused development tools. The goal is to demonstrate:
+- Understanding of diverse developer needs and accessibility requirements
+- Ability to integrate cutting-edge web APIs (Speech, MediaPipe, WebRTC)
+- Innovative thinking about human-computer interaction in coding environments
+- Practical prototyping skills for experimental interfaces
+
+---
+
 ## Tech Stack
 
 - **Frontend**: React 18 + TypeScript + Tailwind CSS
